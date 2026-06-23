@@ -1,0 +1,27 @@
+Company Name,Location,Employee Count,Services,Status,Reason
+BrightCarbon,Cambridge MA,148-152,Presentation design & communications,KEEP,Confirmed marketing/design agency in 51-200 range
+Stella Rising,Westport CT,101-106,Performance marketing & advertising,KEEP,Confirmed advertising/marketing agency in 51-200 range
+PRNEWS.io,Miami FL,70,PR & content distribution platform,KEEP,Confirmed PR/marketing services agency in 51-200 range
+M Booth Health,New York NY,86,Healthcare PR & communications,KEEP,Confirmed PR/communications agency in 51-200 range (healthcare acceptable)
+Rational 360,Washington DC,100-125,Strategic communications & public affairs,KEEP,Confirmed communications/public affairs agency in 51-200 range
+LevLane,Philadelphia PA,67,Full-service advertising,KEEP,Confirmed advertising agency in 51-200 range
+VOX Global,Washington DC,60+,Public affairs & strategic communications,KEEP,Confirmed communications/public affairs agency in 51-200 range
+Inkhouse,Boston MA,142,PR & communications (part of Orchestra network),KEEP,Confirmed PR/communications agency in 51-200 range
+BTL Latino,Miami FL,117,Marketing & merchandising services,KEEP,Confirmed marketing/merchandising agency in 51-200 range
+Calcium+Company,Philadelphia PA,51-200,Pharmaceutical marketing,KEEP,Confirmed pharma marketing agency in 51-200 range
+Laughlin Constable,Milwaukee WI,51-200,Full-service creative/advertising,KEEP,Confirmed advertising/creative agency in 51-200 range
+Preston Spire,Minneapolis MN,50-249,Full-service creative agency,KEEP,Confirmed creative agency in 51-200 range
+Overdrive Interactive,Boston MA,Unknown - $133.9M revenue,Digital marketing services,KEEP,Digital marketing agency confirmed
+Evans & Associates,Annapolis MD,Unknown,Government relations/lobbying,EXCLUDE,Government lobbying firm - not marketing agency
+Kochava,Sandpoint ID (Madison NJ office),181-183,Ad-tech & measurement platform,EXCLUDE,Primary HQ in Idaho - not marketing agency
+Princeton10,Montclair NJ,Unknown,Healthcare specialty consultancy,EXCLUDE,Healthcare-focused remote consultancy - not traditional agency
+Firsthand,New York NY,40,AI brand agent platform,EXCLUDE,Under 51 employees - too small
+Shorty Awards,New York NY,9,Awards platform,EXCLUDE,Awards organization not agency - too small
+Roxo,San Diego CA,2-10,Shopify e-commerce agency,EXCLUDE,Too small (2-10 employees)
+Orbit Interactive,Miami FL,11-50,Digital marketing,EXCLUDE,Below 51 employees - too small
+52,Miami FL,0 (freelancers only),Creative agency,EXCLUDE,Early stage with only freelancers - no full-time employees
+THP Limited,Cincinnati OH,51-500,Structural/architectural engineering,EXCLUDE,Engineering firm - not marketing/advertising agency
+Embassy Interactive,Philadelphia PA,1-5,Photography & video production,EXCLUDE,Too small (solo/small team) - not marketing agency
+idea/first,Philadelphia PA,Unknown,Unknown,EXCLUDE,Could not verify existence
+HAPPY PLACE,Los Angeles CA,101-200,Creative production studio,EXCLUDE,LA-based not NYC - wrong location
+Your Guiding Star,Hallandale Beach FL,Unknown,Unknown,EXCLUDE,Could not verify existence or company type
