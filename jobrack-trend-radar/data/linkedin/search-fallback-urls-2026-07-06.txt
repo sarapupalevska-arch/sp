@@ -1,0 +1,6 @@
+Open these searches to find indexed post URLs (engagement will be marked unavailable):
+
+  Nick Huber: https://www.google.com/search?q=site%3Alinkedin.com/posts%20sweatystartup
+  Go Carpathian: https://www.google.com/search?q=site%3Alinkedin.com/posts%20gocarpathian
+  Kadraa (Mike + Haaken): https://www.google.com/search?q=site%3Alinkedin.com/posts%20kadraa
+  Monty Ngan: https://www.google.com/search?q=site%3Alinkedin.com/posts%20montyngan

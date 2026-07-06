@@ -1,0 +1,36 @@
+X advanced searches. Open, note top posts and recurring accounts
+(new voices appearing repeatedly = leading indicator). Paste findings
+into data/manual/x-notes-2026-07-06.txt if worth tracking.
+
+[core]
+  remote hiring: https://x.com/search?q=min_faves%3A100%20%22remote%20hiring%22%20since%3A2026-05-07&f=top
+  offshore talent: https://x.com/search?q=min_faves%3A100%20%22offshore%20talent%22%20since%3A2026-05-07&f=top
+  hire remote employees: https://x.com/search?q=min_faves%3A100%20%22hire%20remote%20employees%22%20since%3A2026-05-07&f=top
+  staffing agency alternative: https://x.com/search?q=min_faves%3A100%20%22staffing%20agency%20alternative%22%20since%3A2026-05-07&f=top
+  remote team: https://x.com/search?q=min_faves%3A100%20%22remote%20team%22%20since%3A2026-05-07&f=top
+
+[regions]
+  hire in Eastern Europe: https://x.com/search?q=min_faves%3A100%20%22hire%20in%20Eastern%20Europe%22%20since%3A2026-05-07&f=top
+  Serbian developers: https://x.com/search?q=min_faves%3A100%20%22Serbian%20developers%22%20since%3A2026-05-07&f=top
+  hire South Africa: https://x.com/search?q=min_faves%3A100%20%22hire%20South%20Africa%22%20since%3A2026-05-07&f=top
+  remote talent South Africa: https://x.com/search?q=min_faves%3A100%20%22remote%20talent%20South%20Africa%22%20since%3A2026-05-07&f=top
+  Balkan talent: https://x.com/search?q=min_faves%3A100%20%22Balkan%20talent%22%20since%3A2026-05-07&f=top
+  hire Macedonia: https://x.com/search?q=min_faves%3A100%20%22hire%20Macedonia%22%20since%3A2026-05-07&f=top
+  hire Serbia: https://x.com/search?q=min_faves%3A100%20%22hire%20Serbia%22%20since%3A2026-05-07&f=top
+  hire Bosnia: https://x.com/search?q=min_faves%3A100%20%22hire%20Bosnia%22%20since%3A2026-05-07&f=top
+  hire Romania: https://x.com/search?q=min_faves%3A100%20%22hire%20Romania%22%20since%3A2026-05-07&f=top
+
+[buyer_intent]
+  agency hiring: https://x.com/search?q=min_faves%3A100%20%22agency%20hiring%22%20since%3A2026-05-07&f=top
+  hire operations manager remote: https://x.com/search?q=min_faves%3A100%20%22hire%20operations%20manager%20remote%22%20since%3A2026-05-07&f=top
+  virtual assistant vs employee: https://x.com/search?q=min_faves%3A100%20%22virtual%20assistant%20vs%20employee%22%20since%3A2026-05-07&f=top
+  offshore executive assistant: https://x.com/search?q=min_faves%3A100%20%22offshore%20executive%20assistant%22%20since%3A2026-05-07&f=top
+
+[adjacent_emerging]
+  AI employees: https://x.com/search?q=min_faves%3A100%20%22AI%20employees%22%20since%3A2026-05-07&f=top
+  AI agents vs hiring: https://x.com/search?q=min_faves%3A100%20%22AI%20agents%20vs%20hiring%22%20since%3A2026-05-07&f=top
+  employer of record: https://x.com/search?q=min_faves%3A100%20%22employer%20of%20record%22%20since%3A2026-05-07&f=top
+  global payroll: https://x.com/search?q=min_faves%3A100%20%22global%20payroll%22%20since%3A2026-05-07&f=top
+  nearshoring: https://x.com/search?q=min_faves%3A100%20%22nearshoring%22%20since%3A2026-05-07&f=top
+  AI-native talent: https://x.com/search?q=min_faves%3A100%20%22AI-native%20talent%22%20since%3A2026-05-07&f=top
+  hire AI-fluent: https://x.com/search?q=min_faves%3A100%20%22hire%20AI-fluent%22%20since%3A2026-05-07&f=top

@@ -1,0 +1,53 @@
+{
+  "collected": "2026-07-06",
+  "method": "web search for indexed post URLs (priority 3 fallback; scripted collection blocked by sandbox network policy)",
+  "notes": "Only posts published on each founder's or company's own profile URL are included (attribution rule). hook_text is the indexed title snippet, not the full post. Engagement fields are unavailable by definition for this method. Dates are derived from the LinkedIn activity ID timestamp encoding (id >> 22 = ms epoch).",
+  "founders": {
+    "Nick Huber": {
+      "handle": "sweatystartup",
+      "posts": [
+        {"url": "https://www.linkedin.com/posts/sweatystartup_a-lot-of-people-are-worried-about-an-overseas-activity-7166793857681088512-OZQu", "title": "A lot of people are worried about an overseas employee managing their inbox"},
+        {"url": "https://www.linkedin.com/posts/sweatystartup_real-estate-is-the-best-business-in-the-world-activity-7437615507559563265-Cg51", "title": "Real estate is the best business in the world if you have..."},
+        {"url": "https://www.linkedin.com/posts/sweatystartup_how-to-print-millions-out-of-thin-air-in-activity-7341916664868847618-I3QN", "title": "How To Print Millions Out Of Thin Air in Real Estate"},
+        {"url": "https://www.linkedin.com/posts/sweatystartup_my-20-essential-tools-to-start-any-business-activity-7286159106078396417-uC2L", "title": "My 20+ essential tools to start any business."},
+        {"url": "https://lk.linkedin.com/posts/sweatystartup_sweaty-startup-email-newsletter-activity-7033860021624967168-48f7", "title": "Sweaty Startup Email Newsletter"}
+      ]
+    },
+    "Go Carpathian": {
+      "handle": "go-carpathian",
+      "posts": [
+        {"url": "https://www.linkedin.com/posts/go-carpathian_top-10-best-remote-recruitment-agencies-in-activity-7378798422197239808-J44H", "title": "Characteristics of top remote recruitment agencies (Top 10 best remote recruitment agencies)"},
+        {"url": "https://www.linkedin.com/posts/go-carpathian_how-to-hire-an-employee-for-a-small-business-activity-7396309840110796801-Ih_X", "title": "How to hire smarter for your small business"},
+        {"url": "https://www.linkedin.com/posts/go-carpathian_top-16-accounting-and-finance-recruitment-activity-7394492521726431232-GwhU", "title": "How to hire finance talent in half the time with the right recruiter"},
+        {"url": "https://www.linkedin.com/posts/nathanfales_our-first-client-left-us-a-scathing-review-activity-7379240726720802816-_D7k", "title": "Our first client left us a scathing review (lessons from Go Carpathian's first client)"},
+        {"url": "https://www.linkedin.com/posts/nathanfales_lean-leverage-go-carpathian-activity-7271886715118579712-Pz91", "title": "Lean Leverage by Go Carpathian"},
+        {"url": "https://www.linkedin.com/posts/nathanfales_if-you-have-the-resources-and-patience-to-activity-7257376309046063104-fjzf", "title": "If you have the resources and patience to..."},
+        {"url": "https://www.linkedin.com/posts/nathanfales_a-bit-late-but-go-carpathian-won-second-place-activity-7185647513792581633-hhNh", "title": "A bit late but Go Carpathian won second place"}
+      ]
+    },
+    "Kadraa (Mike + Haaken)": {
+      "handle": "kadraa",
+      "posts": [
+        {"url": "https://www.linkedin.com/posts/kadraa_kadraa-digitalmarketing-recruiters-activity-7188793816575885312-ATbT", "title": "#kadraa #digitalmarketing #recruiters #offshorehiring"},
+        {"url": "https://www.linkedin.com/posts/kadraa_remoteseojobs-remoteseoroles-digitalmarketingjobs-activity-7115257220665081857-xIvN", "title": "#remoteseojobs #remoteseoroles #digitalmarketingjobs"},
+        {"url": "https://www.linkedin.com/posts/michael-prince-97280648_kadraa-digitalmarketing-recruiters-activity-7188793815506325504-_5xP", "title": "Michael Prince: #kadraa #digitalmarketing #recruiters (founder share)"}
+      ]
+    },
+    "Monty Ngan": {
+      "handle": "montyngan",
+      "posts": [
+        {"url": "https://www.linkedin.com/posts/montyngan_catena-is-nowpearl-talent-growing-up-activity-7207034578450935809-A4gu", "title": "Catena is now... Pearl Talent! Growing up"},
+        {"url": "https://www.linkedin.com/posts/montyngan_folks-always-ask-me-why-i-started-pearl-talent-activity-7260652315152453632-DvFt", "title": "Folks always ask me why I started Pearl Talent"},
+        {"url": "https://www.linkedin.com/posts/montyngan_pearl-talent-customer-success-director-activity-7333887349182914560-L8so", "title": "Customer Success Director (Internal Role)"},
+        {"url": "https://www.linkedin.com/posts/montyngan_this-email-changed-my-life-two-years-ago-activity-7226210608679964672-aEgd", "title": "This email changed my life. Two years ago..."},
+        {"url": "https://www.linkedin.com/posts/montyngan_pineapple-list-the-best-agencies-activity-7067198135059582978-hVa_", "title": "Pineapple List - The Best Agencies"}
+      ]
+    },
+    "Angel Salinas": {
+      "handle": "salinassandino",
+      "posts": [
+        {"url": "https://www.linkedin.com/posts/salinassandino_remotetalent-recruitment-latam-activity-7275555874717282304-abYd", "title": "#remotetalent #recruitment #latam"}
+      ]
+    }
+  }
+}

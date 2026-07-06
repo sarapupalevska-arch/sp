@@ -1,0 +1,470 @@
+{
+  "generated_at": "2026-07-06T22:13:47.077933",
+  "post_count": 21,
+  "founders": [
+    "Angel Salinas",
+    "Go Carpathian",
+    "Kadraa (Mike + Haaken)",
+    "Monty Ngan",
+    "Nick Huber"
+  ],
+  "theme_method": "keyword-rules",
+  "followers": {},
+  "normalization_available": false,
+  "rotation": {
+    "Angel Salinas": {
+      "post_count": 1,
+      "theme_pct": {
+        "region-advocacy": 100.0
+      },
+      "weekly_sequence": {
+        "2024-W51": [
+          "region-advocacy"
+        ]
+      }
+    },
+    "Go Carpathian": {
+      "post_count": 7,
+      "theme_pct": {
+        "other": 71.4,
+        "delegation-advice": 28.6
+      },
+      "weekly_sequence": {
+        "2024-W16": [
+          "other"
+        ],
+        "2024-W44": [
+          "other"
+        ],
+        "2024-W50": [
+          "other"
+        ],
+        "2025-W40": [
+          "other",
+          "other"
+        ],
+        "2025-W46": [
+          "delegation-advice"
+        ],
+        "2025-W47": [
+          "delegation-advice"
+        ]
+      }
+    },
+    "Kadraa (Mike + Haaken)": {
+      "post_count": 3,
+      "theme_pct": {
+        "other": 100.0
+      },
+      "weekly_sequence": {
+        "2023-W40": [
+          "other"
+        ],
+        "2024-W17": [
+          "other",
+          "other"
+        ]
+      }
+    },
+    "Monty Ngan": {
+      "post_count": 5,
+      "theme_pct": {
+        "other": 100.0
+      },
+      "weekly_sequence": {
+        "2023-W21": [
+          "other"
+        ],
+        "2024-W24": [
+          "other"
+        ],
+        "2024-W32": [
+          "other"
+        ],
+        "2024-W45": [
+          "other"
+        ],
+        "2025-W22": [
+          "other"
+        ]
+      }
+    },
+    "Nick Huber": {
+      "post_count": 5,
+      "theme_pct": {
+        "other": 100.0
+      },
+      "weekly_sequence": {
+        "2023-W08": [
+          "other"
+        ],
+        "2024-W08": [
+          "other"
+        ],
+        "2025-W03": [
+          "other"
+        ],
+        "2025-W25": [
+          "other"
+        ],
+        "2026-W11": [
+          "other"
+        ]
+      }
+    }
+  },
+  "theme_rank": {
+    "metric": "engagement",
+    "pooled": {
+      "other": 0.0,
+      "delegation-advice": 0.0,
+      "region-advocacy": 0
+    },
+    "per_founder": {
+      "Angel Salinas": {
+        "region-advocacy": 0
+      },
+      "Go Carpathian": {
+        "other": 0,
+        "delegation-advice": 0.0
+      },
+      "Kadraa (Mike + Haaken)": {
+        "other": 0
+      },
+      "Monty Ngan": {
+        "other": 0
+      },
+      "Nick Huber": {
+        "other": 0
+      }
+    }
+  },
+  "hooks": {},
+  "white_space": [
+    {
+      "differentiator": "eastern-europe-narrative",
+      "themes": [
+        "region-advocacy"
+      ],
+      "competitor_volume_pct": 4.8,
+      "median_engagement": null,
+      "competitors_active": [
+        "Angel Salinas"
+      ]
+    },
+    {
+      "differentiator": "candidate-voice-stories",
+      "themes": [
+        "candidate-voice"
+      ],
+      "competitor_volume_pct": 0.0,
+      "median_engagement": null,
+      "competitors_active": []
+    },
+    {
+      "differentiator": "agency-specific-ops-content",
+      "themes": [
+        "delegation-advice"
+      ],
+      "competitor_volume_pct": 9.5,
+      "median_engagement": null,
+      "competitors_active": [
+        "Go Carpathian"
+      ]
+    },
+    {
+      "differentiator": "retention-led-claims",
+      "themes": [
+        "hire-success-story",
+        "compliance-education"
+      ],
+      "competitor_volume_pct": 0.0,
+      "median_engagement": null,
+      "competitors_active": []
+    },
+    {
+      "differentiator": "original-data-reports",
+      "themes": [
+        "data-report"
+      ],
+      "competitor_volume_pct": 0.0,
+      "median_engagement": null,
+      "competitors_active": []
+    }
+  ],
+  "posts": [
+    {
+      "founder": "Nick Huber",
+      "date": "2024-02-23",
+      "post_url": "https://www.linkedin.com/posts/sweatystartup_a-lot-of-people-are-worried-about-an-overseas-activity-7166793857681088512-OZQu",
+      "hook_text": "A lot of people are worried about an overseas employee managing their inbox",
+      "themes": [
+        "other"
+      ],
+      "hook_type": "other",
+      "engagement": 0,
+      "eng_per_1k": null,
+      "source": "websearch:2026-07-06"
+    },
+    {
+      "founder": "Nick Huber",
+      "date": "2026-03-11",
+      "post_url": "https://www.linkedin.com/posts/sweatystartup_real-estate-is-the-best-business-in-the-world-activity-7437615507559563265-Cg51",
+      "hook_text": "Real estate is the best business in the world if you have...",
+      "themes": [
+        "other"
+      ],
+      "hook_type": "bold-claim",
+      "engagement": 0,
+      "eng_per_1k": null,
+      "source": "websearch:2026-07-06"
+    },
+    {
+      "founder": "Nick Huber",
+      "date": "2025-06-20",
+      "post_url": "https://www.linkedin.com/posts/sweatystartup_how-to-print-millions-out-of-thin-air-in-activity-7341916664868847618-I3QN",
+      "hook_text": "How To Print Millions Out Of Thin Air in Real Estate",
+      "themes": [
+        "other"
+      ],
+      "hook_type": "question",
+      "engagement": 0,
+      "eng_per_1k": null,
+      "source": "websearch:2026-07-06"
+    },
+    {
+      "founder": "Nick Huber",
+      "date": "2025-01-17",
+      "post_url": "https://www.linkedin.com/posts/sweatystartup_my-20-essential-tools-to-start-any-business-activity-7286159106078396417-uC2L",
+      "hook_text": "My 20+ essential tools to start any business.",
+      "themes": [
+        "other"
+      ],
+      "hook_type": "other",
+      "engagement": 0,
+      "eng_per_1k": null,
+      "source": "websearch:2026-07-06"
+    },
+    {
+      "founder": "Nick Huber",
+      "date": "2023-02-21",
+      "post_url": "https://lk.linkedin.com/posts/sweatystartup_sweaty-startup-email-newsletter-activity-7033860021624967168-48f7",
+      "hook_text": "Sweaty Startup Email Newsletter",
+      "themes": [
+        "other"
+      ],
+      "hook_type": "other",
+      "engagement": 0,
+      "eng_per_1k": null,
+      "source": "websearch:2026-07-06"
+    },
+    {
+      "founder": "Go Carpathian",
+      "date": "2025-09-30",
+      "post_url": "https://www.linkedin.com/posts/go-carpathian_top-10-best-remote-recruitment-agencies-in-activity-7378798422197239808-J44H",
+      "hook_text": "Characteristics of top remote recruitment agencies (Top 10 best remote recruitment agencies)",
+      "themes": [
+        "other"
+      ],
+      "hook_type": "bold-claim",
+      "engagement": 0,
+      "eng_per_1k": null,
+      "source": "websearch:2026-07-06"
+    },
+    {
+      "founder": "Go Carpathian",
+      "date": "2025-11-17",
+      "post_url": "https://www.linkedin.com/posts/go-carpathian_how-to-hire-an-employee-for-a-small-business-activity-7396309840110796801-Ih_X",
+      "hook_text": "How to hire smarter for your small business",
+      "themes": [
+        "delegation-advice"
+      ],
+      "hook_type": "question",
+      "engagement": 0,
+      "eng_per_1k": null,
+      "source": "websearch:2026-07-06"
+    },
+    {
+      "founder": "Go Carpathian",
+      "date": "2025-11-12",
+      "post_url": "https://www.linkedin.com/posts/go-carpathian_top-16-accounting-and-finance-recruitment-activity-7394492521726431232-GwhU",
+      "hook_text": "How to hire finance talent in half the time with the right recruiter",
+      "themes": [
+        "delegation-advice"
+      ],
+      "hook_type": "question",
+      "engagement": 0,
+      "eng_per_1k": null,
+      "source": "websearch:2026-07-06"
+    },
+    {
+      "founder": "Go Carpathian",
+      "date": "2025-10-01",
+      "post_url": "https://www.linkedin.com/posts/nathanfales_our-first-client-left-us-a-scathing-review-activity-7379240726720802816-_D7k",
+      "hook_text": "Our first client left us a scathing review (lessons from Go Carpathian's first client)",
+      "themes": [
+        "other"
+      ],
+      "hook_type": "other",
+      "engagement": 0,
+      "eng_per_1k": null,
+      "source": "websearch:2026-07-06"
+    },
+    {
+      "founder": "Go Carpathian",
+      "date": "2024-12-09",
+      "post_url": "https://www.linkedin.com/posts/nathanfales_lean-leverage-go-carpathian-activity-7271886715118579712-Pz91",
+      "hook_text": "Lean Leverage by Go Carpathian",
+      "themes": [
+        "other"
+      ],
+      "hook_type": "other",
+      "engagement": 0,
+      "eng_per_1k": null,
+      "source": "websearch:2026-07-06"
+    },
+    {
+      "founder": "Go Carpathian",
+      "date": "2024-10-30",
+      "post_url": "https://www.linkedin.com/posts/nathanfales_if-you-have-the-resources-and-patience-to-activity-7257376309046063104-fjzf",
+      "hook_text": "If you have the resources and patience to...",
+      "themes": [
+        "other"
+      ],
+      "hook_type": "other",
+      "engagement": 0,
+      "eng_per_1k": null,
+      "source": "websearch:2026-07-06"
+    },
+    {
+      "founder": "Go Carpathian",
+      "date": "2024-04-15",
+      "post_url": "https://www.linkedin.com/posts/nathanfales_a-bit-late-but-go-carpathian-won-second-place-activity-7185647513792581633-hhNh",
+      "hook_text": "A bit late but Go Carpathian won second place",
+      "themes": [
+        "other"
+      ],
+      "hook_type": "other",
+      "engagement": 0,
+      "eng_per_1k": null,
+      "source": "websearch:2026-07-06"
+    },
+    {
+      "founder": "Kadraa (Mike + Haaken)",
+      "date": "2024-04-24",
+      "post_url": "https://www.linkedin.com/posts/kadraa_kadraa-digitalmarketing-recruiters-activity-7188793816575885312-ATbT",
+      "hook_text": "#kadraa #digitalmarketing #recruiters #offshorehiring",
+      "themes": [
+        "other"
+      ],
+      "hook_type": "other",
+      "engagement": 0,
+      "eng_per_1k": null,
+      "source": "websearch:2026-07-06"
+    },
+    {
+      "founder": "Kadraa (Mike + Haaken)",
+      "date": "2023-10-04",
+      "post_url": "https://www.linkedin.com/posts/kadraa_remoteseojobs-remoteseoroles-digitalmarketingjobs-activity-7115257220665081857-xIvN",
+      "hook_text": "#remoteseojobs #remoteseoroles #digitalmarketingjobs",
+      "themes": [
+        "other"
+      ],
+      "hook_type": "other",
+      "engagement": 0,
+      "eng_per_1k": null,
+      "source": "websearch:2026-07-06"
+    },
+    {
+      "founder": "Kadraa (Mike + Haaken)",
+      "date": "2024-04-24",
+      "post_url": "https://www.linkedin.com/posts/michael-prince-97280648_kadraa-digitalmarketing-recruiters-activity-7188793815506325504-_5xP",
+      "hook_text": "Michael Prince: #kadraa #digitalmarketing #recruiters (founder share)",
+      "themes": [
+        "other"
+      ],
+      "hook_type": "other",
+      "engagement": 0,
+      "eng_per_1k": null,
+      "source": "websearch:2026-07-06"
+    },
+    {
+      "founder": "Monty Ngan",
+      "date": "2024-06-13",
+      "post_url": "https://www.linkedin.com/posts/montyngan_catena-is-nowpearl-talent-growing-up-activity-7207034578450935809-A4gu",
+      "hook_text": "Catena is now... Pearl Talent! Growing up",
+      "themes": [
+        "other"
+      ],
+      "hook_type": "other",
+      "engagement": 0,
+      "eng_per_1k": null,
+      "source": "websearch:2026-07-06"
+    },
+    {
+      "founder": "Monty Ngan",
+      "date": "2024-11-08",
+      "post_url": "https://www.linkedin.com/posts/montyngan_folks-always-ask-me-why-i-started-pearl-talent-activity-7260652315152453632-DvFt",
+      "hook_text": "Folks always ask me why I started Pearl Talent",
+      "themes": [
+        "other"
+      ],
+      "hook_type": "bold-claim",
+      "engagement": 0,
+      "eng_per_1k": null,
+      "source": "websearch:2026-07-06"
+    },
+    {
+      "founder": "Monty Ngan",
+      "date": "2025-05-29",
+      "post_url": "https://www.linkedin.com/posts/montyngan_pearl-talent-customer-success-director-activity-7333887349182914560-L8so",
+      "hook_text": "Customer Success Director (Internal Role)",
+      "themes": [
+        "other"
+      ],
+      "hook_type": "other",
+      "engagement": 0,
+      "eng_per_1k": null,
+      "source": "websearch:2026-07-06"
+    },
+    {
+      "founder": "Monty Ngan",
+      "date": "2024-08-05",
+      "post_url": "https://www.linkedin.com/posts/montyngan_this-email-changed-my-life-two-years-ago-activity-7226210608679964672-aEgd",
+      "hook_text": "This email changed my life. Two years ago...",
+      "themes": [
+        "other"
+      ],
+      "hook_type": "other",
+      "engagement": 0,
+      "eng_per_1k": null,
+      "source": "websearch:2026-07-06"
+    },
+    {
+      "founder": "Monty Ngan",
+      "date": "2023-05-24",
+      "post_url": "https://www.linkedin.com/posts/montyngan_pineapple-list-the-best-agencies-activity-7067198135059582978-hVa_",
+      "hook_text": "Pineapple List - The Best Agencies",
+      "themes": [
+        "other"
+      ],
+      "hook_type": "bold-claim",
+      "engagement": 0,
+      "eng_per_1k": null,
+      "source": "websearch:2026-07-06"
+    },
+    {
+      "founder": "Angel Salinas",
+      "date": "2024-12-19",
+      "post_url": "https://www.linkedin.com/posts/salinassandino_remotetalent-recruitment-latam-activity-7275555874717282304-abYd",
+      "hook_text": "#remotetalent #recruitment #latam",
+      "themes": [
+        "region-advocacy"
+      ],
+      "hook_type": "other",
+      "engagement": 0,
+      "eng_per_1k": null,
+      "source": "websearch:2026-07-06"
+    }
+  ]
+}

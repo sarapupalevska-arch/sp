@@ -1,0 +1,57 @@
+{
+  "linkedin_apify": {
+    "status": "skipped",
+    "detail": "No APIFY_TOKEN in .env",
+    "at": "2026-07-06T22:09:34.131963+00:00"
+  },
+  "gtrends": {
+    "status": "failed",
+    "detail": "HTTPSConnectionPool(host='trends.google.com', port=443): Max retries exceeded with url: /trends/explore/?geo=US (Caused by ProxyError('Unable to connect to proxy', OSError('Tunnel connection failed: 4",
+    "at": "2026-07-06T22:09:42.450461+00:00"
+  },
+  "x_search": {
+    "status": "needs_input",
+    "detail": "Search URLs generated at x-search-urls-2026-07-06.txt; no scraping token provided",
+    "at": "2026-07-06T22:09:42.453815+00:00"
+  },
+  "reddit": {
+    "status": "failed",
+    "detail": "0 matching threads across 0 subreddits; 14 fetch failures (r/agency/top: HTTPSConnectionPool(host='www.reddit.com', port=443): Max retries exceeded with url: /r/agency/top.json?limit=100&t=month (Caused by ProxyError('Unable to connect to proxy', OSError('Tunnel connection failed: 403 Forbidden'))))",
+    "at": "2026-07-06T22:09:46.473708+00:00"
+  },
+  "near_blog": {
+    "status": "failed",
+    "detail": "HTTPSConnectionPool(host='www.hirewithnear.com', port=443): Max retries exceeded with url: /blog (Caused by ProxyError('",
+    "at": "2026-07-06T22:09:47.537331+00:00"
+  },
+  "somewhere_blog": {
+    "status": "failed",
+    "detail": "HTTPSConnectionPool(host='somewhere.com', port=443): Max retries exceeded with url: /blog (Caused by ProxyError('Unable ",
+    "at": "2026-07-06T22:09:47.537589+00:00"
+  },
+  "google_news": {
+    "status": "failed",
+    "detail": "HTTPSConnectionPool(host='news.google.com', port=443): Max retries exceeded with url: /rss/search?q=remote%20hiring+when",
+    "at": "2026-07-06T22:09:47.538016+00:00"
+  },
+  "exploding_topics": {
+    "status": "failed",
+    "detail": "HTTPSConnectionPool(host='explodingtopics.com', port=443): Max retries exceeded with url: /hr-topics (Caused by ProxyErr",
+    "at": "2026-07-06T22:09:47.538313+00:00"
+  },
+  "websearch_signals": {
+    "status": "ok",
+    "detail": "5 news/report signals collected via harness web search on 2026-07-06",
+    "at": "2026-07-06T22:13:46.949138+00:00"
+  },
+  "linkedin_websearch": {
+    "status": "ok",
+    "detail": "21 new indexed post URLs ingested; engagement unavailable for this method; hook_text is the indexed title snippet only",
+    "at": "2026-07-06T22:13:47.021646+00:00"
+  },
+  "analysis": {
+    "status": "ok",
+    "detail": "21 posts analyzed, themes via keyword-rules, normalization OFF (no follower counts)",
+    "at": "2026-07-06T22:13:47.078774+00:00"
+  }
+}

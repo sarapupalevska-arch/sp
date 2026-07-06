@@ -1,0 +1,29 @@
+{
+  "generated": "2026-07-06",
+  "websearch_news": {
+    "collected": "2026-07-06",
+    "method": "web search via harness (direct RSS/blog fetches blocked by sandbox network policy)",
+    "items": [
+      {
+        "title": "Near releases 2026 State of LatAm Hiring Report: demand for LatAm software engineers up 250% YoY; 2,000+ placements analyzed; 84% of 2025 placements mid/senior; speed-to-hire and talent quality cited above cost; $35k+ saved per hire",
+        "url": "https://www.hirewithnear.com/state-of-latam-hiring-report"
+      },
+      {
+        "title": "Remote Recruit launches AI-powered video-based hiring platform for offshore talent (India, Philippines, Africa)",
+        "url": "https://www.barchart.com/story/news/36930670/remote-recruit-launches-aipowered-videobased-hiring-platform-for-offshore-talent"
+      },
+      {
+        "title": "Somewhere pushes 'Smart Offshore Hiring: Build Your Global Team with Somewhere in 2026' PR placement",
+        "url": "https://www.openpr.com/news/4317881/smart-offshore-hiring-build-your-global-team-with-somewhere"
+      },
+      {
+        "title": "'Global talent shortage 2026' framing spreading across offshore-provider blogs (Optimar, Outsourced.co, Sourcefit, Penbrothers): offshore as strategic necessity, 'core + augmented' team model",
+        "url": "https://www.optimarconsulting.com/blog/global-talent-shortage-offshore-team/"
+      },
+      {
+        "title": "Near blog actively publishing buyer-intent SEO content: Brazil hiring guide, US vs LatAm salary guide, best LatAm staffing firms",
+        "url": "https://www.hirewithnear.com/blog/how-us-companies-hire-in-latin-america"
+      }
+    ]
+  }
+}

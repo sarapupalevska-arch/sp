@@ -1,0 +1,20 @@
+{
+  "generated": "2026-07-06",
+  "results": {},
+  "failed": [
+    "r/agency/top: HTTPSConnectionPool(host='www.reddit.com', port=443): Max retries exceeded with url: /r/agency/top.json?limit=100&t=month (Caused by ProxyError('Unable to connect to proxy', OSError('Tunnel connection failed: 403 Forbidden')))",
+    "r/agency/rising: HTTPSConnectionPool(host='www.reddit.com', port=443): Max retries exceeded with url: /r/agency/rising.json?limit=50 (Caused by ProxyError('Unable to connect to proxy', OSError('Tunnel connection failed: 403 Forbidden')))",
+    "r/Entrepreneur/top: HTTPSConnectionPool(host='www.reddit.com', port=443): Max retries exceeded with url: /r/Entrepreneur/top.json?limit=100&t=month (Caused by ProxyError('Unable to connect to proxy', OSError('Tunnel connection failed: 403 Forbidden')))",
+    "r/Entrepreneur/rising: HTTPSConnectionPool(host='www.reddit.com', port=443): Max retries exceeded with url: /r/Entrepreneur/rising.json?limit=50 (Caused by ProxyError('Unable to connect to proxy', OSError('Tunnel connection failed: 403 Forbidden')))",
+    "r/smallbusiness/top: HTTPSConnectionPool(host='www.reddit.com', port=443): Max retries exceeded with url: /r/smallbusiness/top.json?limit=100&t=month (Caused by ProxyError('Unable to connect to proxy', OSError('Tunnel connection failed: 403 Forbidden')))",
+    "r/smallbusiness/rising: HTTPSConnectionPool(host='www.reddit.com', port=443): Max retries exceeded with url: /r/smallbusiness/rising.json?limit=50 (Caused by ProxyError('Unable to connect to proxy', OSError('Tunnel connection failed: 403 Forbidden')))",
+    "r/digital_marketing/top: HTTPSConnectionPool(host='www.reddit.com', port=443): Max retries exceeded with url: /r/digital_marketing/top.json?limit=100&t=month (Caused by ProxyError('Unable to connect to proxy', OSError('Tunnel connection failed: 403 Forbidden')))",
+    "r/digital_marketing/rising: HTTPSConnectionPool(host='www.reddit.com', port=443): Max retries exceeded with url: /r/digital_marketing/rising.json?limit=50 (Caused by ProxyError('Unable to connect to proxy', OSError('Tunnel connection failed: 403 Forbidden')))",
+    "r/msp/top: HTTPSConnectionPool(host='www.reddit.com', port=443): Max retries exceeded with url: /r/msp/top.json?limit=100&t=month (Caused by ProxyError('Unable to connect to proxy', OSError('Tunnel connection failed: 403 Forbidden')))",
+    "r/msp/rising: HTTPSConnectionPool(host='www.reddit.com', port=443): Max retries exceeded with url: /r/msp/rising.json?limit=50 (Caused by ProxyError('Unable to connect to proxy', OSError('Tunnel connection failed: 403 Forbidden')))",
+    "r/Ecommerce/top: HTTPSConnectionPool(host='www.reddit.com', port=443): Max retries exceeded with url: /r/Ecommerce/top.json?limit=100&t=month (Caused by ProxyError('Unable to connect to proxy', OSError('Tunnel connection failed: 403 Forbidden')))",
+    "r/Ecommerce/rising: HTTPSConnectionPool(host='www.reddit.com', port=443): Max retries exceeded with url: /r/Ecommerce/rising.json?limit=50 (Caused by ProxyError('Unable to connect to proxy', OSError('Tunnel connection failed: 403 Forbidden')))",
+    "r/startups/top: HTTPSConnectionPool(host='www.reddit.com', port=443): Max retries exceeded with url: /r/startups/top.json?limit=100&t=month (Caused by ProxyError('Unable to connect to proxy', OSError('Tunnel connection failed: 403 Forbidden')))",
+    "r/startups/rising: HTTPSConnectionPool(host='www.reddit.com', port=443): Max retries exceeded with url: /r/startups/rising.json?limit=50 (Caused by ProxyError('Unable to connect to proxy', OSError('Tunnel connection failed: 403 Forbidden')))"
+  ]
+}

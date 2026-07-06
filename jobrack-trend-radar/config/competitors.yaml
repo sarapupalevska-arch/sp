@@ -1,0 +1,110 @@
+# JobRack competitor watch list.
+# Edit freely: add a new entry under tier1 or tier2 with the same fields.
+# proximity: 1 (barely overlaps with JobRack) to 5 (direct competitor).
+# linkedin_url must be the person's or company's own profile URL.
+# Attribution rule: a post only counts as theirs if collected from that URL.
+
+tier1:  # check every run
+  - name: Nick Huber
+    company: Somewhere.com
+    linkedin_url: https://www.linkedin.com/in/sweatystartup
+    company_page: https://www.linkedin.com/company/somewhere-com
+    website: https://somewhere.com
+    regions: [South Africa, LatAm, Philippines]
+    icp: US SMB owners
+    proximity: 4
+    followers: null        # ask Sara each run; fill in manually
+    followers_as_of: null  # date the count was taken
+
+  - name: Go Carpathian
+    company: Go Carpathian
+    linkedin_url: https://www.linkedin.com/in/nathanfales   # Nathan Fales, co-founder (found via web search 2026-07-06)
+    company_page: https://www.linkedin.com/company/go-carpathian
+    website: https://gocarpathian.com
+    regions: [Eastern Europe, South Africa, LatAm]
+    icp: agencies
+    proximity: 5
+    followers: null
+    followers_as_of: null
+    notes: Co-founders Nathan Fales (linkedin.com/in/nathanfales) and Tim Erickson (profile URL TBD). Track both plus company page.
+
+  - name: Kadraa (Mike + Haaken)
+    company: Kadraa
+    linkedin_url: https://www.linkedin.com/in/michael-prince-97280648   # Michael Prince (found via web search 2026-07-06; confirm this is "Mike")
+    company_page: https://www.linkedin.com/company/kadraa
+    website: https://kadraa.com
+    regions: [South Africa]
+    icp: UK digital agencies
+    proximity: 5
+    followers: null
+    followers_as_of: null
+    notes: Michael Prince profile found via search; Haaken's profile URL TBD. Also company page.
+
+  - name: Monty Ngan
+    company: Pearl Talent
+    linkedin_url: https://www.linkedin.com/in/montyngan
+    company_page: https://www.linkedin.com/company/pearl-talent
+    website: https://pearltalent.com
+    regions: [Philippines, LatAm, South Africa]
+    icp: funded startups
+    proximity: 3
+    followers: null
+    followers_as_of: null
+
+  - name: Angel Salinas
+    company: Remote Talent LATAM
+    linkedin_url: https://www.linkedin.com/in/salinassandino   # found via web search 2026-07-06
+    company_page: null
+    website: https://remotetalentlatam.com
+    regions: [LatAm]
+    icp: US marketing agencies
+    proximity: 4
+    followers: null
+    followers_as_of: null
+
+tier2:  # check monthly
+  - name: Samuel Brooksworth
+    company: Remoteli
+    linkedin_url: null
+    company_page: https://www.linkedin.com/company/remoteli
+    website: https://remoteli.io
+    regions: [Africa]
+    icp: UK/US businesses
+    proximity: 3
+    followers: null
+    followers_as_of: null
+
+  - name: Near
+    company: Near (hirewithnear.com)
+    linkedin_url: null
+    company_page: https://www.linkedin.com/company/hirewithnear
+    website: https://www.hirewithnear.com
+    regions: [LatAm]
+    icp: US companies
+    proximity: 3
+    followers: null
+    followers_as_of: null
+    notes: Company content; they publish data reports (State of LatAm Hiring) that shape niche talking points. Watch blog weekly.
+
+  - name: Somewhere company page
+    company: Somewhere.com
+    linkedin_url: null
+    company_page: https://www.linkedin.com/company/somewhere-com
+    website: https://somewhere.com
+    regions: [South Africa, LatAm, Philippines]
+    icp: US SMB owners
+    proximity: 4
+    followers: null
+    followers_as_of: null
+    notes: Watch their Success Stories series cadence.
+
+  - name: Marshall Haas
+    company: Somewhere.com (founder, now advisor)
+    linkedin_url: https://www.linkedin.com/in/marshallhaas
+    company_page: null
+    website: null
+    regions: [South Africa, LatAm, Philippines]
+    icp: US SMB owners
+    proximity: 3
+    followers: null
+    followers_as_of: null

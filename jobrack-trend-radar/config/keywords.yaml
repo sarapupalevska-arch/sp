@@ -1,0 +1,53 @@
+# Trend keyword sets for Google Trends, X search URL generation, and Reddit matching.
+# pytrends compares max 5 keywords per request, so keep each group at 5 or fewer,
+# or scripts/trends.py will chunk them automatically.
+
+core:
+  - remote hiring
+  - offshore talent
+  - hire remote employees
+  - staffing agency alternative
+  - remote team
+
+regions:
+  - hire in Eastern Europe
+  - Serbian developers
+  - hire South Africa
+  - remote talent South Africa
+  - Balkan talent
+  - hire Macedonia
+  - hire Serbia
+  - hire Bosnia
+  - hire Romania
+
+buyer_intent:
+  - agency hiring
+  - hire operations manager remote
+  - virtual assistant vs employee
+  - offshore executive assistant
+
+adjacent_emerging:
+  - AI employees
+  - AI agents vs hiring
+  - employer of record
+  - global payroll
+  - nearshoring
+  - AI-native talent
+  - hire AI-fluent
+
+# Head-to-head region comparison charted every run
+region_race:
+  - hire South Africa
+  - hire Philippines
+  - hire Eastern Europe
+  - hire LatAm
+
+# Subreddits scanned by trends.py
+subreddits:
+  - agency
+  - Entrepreneur
+  - smallbusiness
+  - digital_marketing
+  - msp
+  - Ecommerce
+  - startups
