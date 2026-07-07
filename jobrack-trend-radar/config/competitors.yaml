@@ -38,7 +38,7 @@ tier1:  # check every run
     proximity: 5
     followers: null
     followers_as_of: null
-    notes: Michael Prince profile found via search; Haaken's profile URL TBD. Also company page.
+    notes: Michael Prince (linkedin.com/in/michael-prince-97280648) and Haaken Mordt (linkedin.com/in/haaken-mordt-7b2a66196), both found via web search 2026-07-07. Also company page.
 
   - name: Monty Ngan
     company: Pearl Talent
@@ -76,7 +76,7 @@ tier2:  # check monthly
 
   - name: Near
     company: Near (hirewithnear.com)
-    linkedin_url: null
+    linkedin_url: https://www.linkedin.com/in/hayden-cohen-near   # CEO Hayden Cohen, active founder-led content (found 2026-07-07)
     company_page: https://www.linkedin.com/company/hirewithnear
     website: https://www.hirewithnear.com
     regions: [LatAm]

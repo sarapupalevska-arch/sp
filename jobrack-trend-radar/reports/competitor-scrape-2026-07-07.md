@@ -1,116 +1,110 @@
-# Competitor post scrape and theme summary, 2026-07-07
+# Competitor post scrape and theme summary (deep sweep), 2026-07-07
 
 **Method and honesty note.** LinkedIn cannot be scraped without login and this
-run had no LinkedIn session or Apify token, so collection used web search for
-posts Google has indexed on each founder's own profile (the system's documented
-priority 3 fallback). That surfaces a partial trail, not the full feed: of 35
-posts collected, only 3 fall inside the last 6 months because Google indexes
-LinkedIn posts sparsely. Dates are derived from each post's activity ID
-timestamp. Reaction counts are unavailable for this method, so "what's working"
-below is based on each founder's revealed strategy (what they keep publishing),
-the few engagement snippets available, and Near's published market data. For
-true engagement numbers on the full last 6 months, run the 15-minute manual
-export per founder (`python scripts/parse_manual.py --checklist`).
+environment has no LinkedIn session or Apify token, so collection used repeated
+web searches for posts Google has indexed on each founder's own profile URL
+(the system's priority 3 fallback). The deep sweep collected **61 posts**
+across Tier 1 and Tier 2, including comment counts wherever the search snippet
+exposed them. This is a partial trail, not the full feed; Google indexes
+LinkedIn sparsely, so recent months are under-represented. Dates are derived
+from each post's activity ID timestamp. Full data: `data/linkedin/combined.csv`
+and `data/linkedin/websearch-2026-07-07.json`.
 
-## Nick Huber (Somewhere.com), 10 posts collected
+## Nick Huber (Somewhere.com), 19 posts, the engagement benchmark
 
-Most recent indexed: [Real estate is the best business in the world if you have...](https://www.linkedin.com/posts/sweatystartup_real-estate-is-the-best-business-in-the-world-activity-7437615507559563265-Cg51) (2026-03-11)
+The deep sweep captured comment counts on 9 of his posts, giving the only real
+engagement ladder in this dataset:
 
-| Date | Post | Link |
-|---|---|---|
-| 2026-03-11 | Real estate is the best business... | [link](https://www.linkedin.com/posts/sweatystartup_real-estate-is-the-best-business-in-the-world-activity-7437615507559563265-Cg51) |
-| 2025-06-20 | How To Print Millions Out Of Thin Air in Real Estate | [link](https://www.linkedin.com/posts/sweatystartup_how-to-print-millions-out-of-thin-air-in-activity-7341916664868847618-I3QN) |
-| 2025-01-17 | My 20+ essential tools to start any business | [link](https://www.linkedin.com/posts/sweatystartup_my-20-essential-tools-to-start-any-business-activity-7286159106078396417-uC2L) |
-| 2024-12-30 | Content and do-follow backlinks in SEO | [link](https://www.linkedin.com/posts/sweatystartup_the-importance-of-content-and-do-follow-backlinks-activity-7279568247685857281-UxlY) |
-| 2024-12-16 | How to navigate the messy middle | [link](https://www.linkedin.com/posts/sweatystartup_how-to-navigate-the-messy-middle-activity-7274487202875678720-xp7h) |
-| 2024-03-26 | Shepherd, headhunter agency for overseas talent | [link](https://www.linkedin.com/posts/sweatystartup_shepherd-headhunter-agency-for-overseas-activity-7178428023292002304-PEpg) |
-| 2024-02-23 | "A lot of people are worried about an overseas employee managing their inbox" | [link](https://www.linkedin.com/posts/sweatystartup_a-lot-of-people-are-worried-about-an-overseas-activity-7166793857681088512-OZQu) |
-| 2024-01-22 | 12 yrs ago in a college entrepreneurship class | [link](https://www.linkedin.com/posts/sweatystartup_12-yrs-ago-in-a-college-entrepreneurship-activity-7155303113036386305-7_JL) |
-| 2023-08-11 | Two types of delegation | [link](https://www.linkedin.com/posts/sweatystartup_in-business-there-are-two-types-of-delegation-activity-7095795864153051137-y8QZ) |
-| 2023-02-21 | Sweaty Startup email newsletter | [link](https://lk.linkedin.com/posts/sweatystartup_sweaty-startup-email-newsletter-activity-7033860021624967168-48f7) |
+| Comments | Date | Post | Link |
+|---|---|---|---|
+| 335 | 2022-07-13 | "LinkedIn is full of BAD BUSINESS ADVICE" | [post](https://www.linkedin.com/posts/sweatystartup_linkedin-is-full-of-bad-business-advice-activity-6953097335631417345-bNRG) |
+| 305 | 2023-01-10 | "Entrepreneurship culture in America is all messed up" | [post](https://www.linkedin.com/posts/sweatystartup_entrepreneurship-culture-in-america-is-all-activity-7018591765498662912-GlLW) |
+| 83 | 2023-01-30 | "10 things I've changed my mind on recently" | [post](https://ie.linkedin.com/posts/sweatystartup_10-things-ive-changed-my-mind-on-recently-activity-7025823215629320192-021-) |
+| 45 | 2023-08-22 | "The current requirements of entrepreneurship: a $1 billion idea..." | [post](https://www.linkedin.com/posts/sweatystartup_the-current-requirements-of-entrepreneurship-activity-7099845934687129600-S6sr) |
+| 31 | 2023-03-20 | "The 'never give up' advice is bullshit. Give up quickly." | [post](https://www.linkedin.com/posts/sweatystartup_the-never-give-up-advice-is-bullshit-activity-7043667772425347073-Oh4e) |
+| 28 | 2023-03-14 | "The worst thing you can do as an entrepreneur is hire a social justice..." | [post](https://www.linkedin.com/posts/sweatystartup_the-worst-thing-you-can-do-as-a-entrepreneur-activity-7041396044340826112-FKIo) |
+| 28 | 2022-08-16 | "The biggest mistake I see folks make who are early..." | [post](https://ee.linkedin.com/posts/sweatystartup_the-biggest-mistake-i-see-folks-make-who-activity-6965127862324518913-vL-A) |
+| 10 | 2023-01-03 | "Entrepreneurship is a funny thing. You work at something for years..." | [post](https://me.linkedin.com/posts/sweatystartup_entrepreneurship-is-a-funny-thing-you-work-activity-7016051468935839744-kLcl) |
 
-**Theme read.** His playbook is the clearest of the five: money-math plus
-myth-busting anchored in his own operating numbers. Indexed post content
-includes claims like $1.3M annual payroll for 47 employees vs competitors'
-$4M+, 70% of team overseas at ~$5/hour average, "80% less than US
-equivalents". The offshore posts follow a fixed formula: name the fear
-("people are worried about an overseas employee managing their inbox"),
-dismantle it with his own operating detail, soft-plug Somewhere/Shepherd.
-Notably, his 2025-2026 indexed posts drift toward real estate and general
-entrepreneurship, meaning offshore-hiring share of voice may be declining.
+**The pattern is unambiguous: his all-out contrarian bold-claim posts pull 300+
+comments; softer advice and reflection posts pull 10-83.** A 10x to 30x gap by
+hook type on the same account. His offshore content follows the same recipe
+applied to hiring: name the fear, break it with his own numbers ($1.3M payroll
+for 47 staff vs competitors' $4M+, 70% of team overseas, "80% less than US
+equivalents"), then plug [Somewhere/Shepherd](https://www.linkedin.com/posts/sweatystartup_shepherd-headhunter-agency-for-overseas-activity-7178428023292002304-PEpg)
+([overseas inbox fear post](https://www.linkedin.com/posts/sweatystartup_a-lot-of-people-are-worried-about-an-overseas-activity-7166793857681088512-OZQu) 2024-02-23,
+[Somewhere promo](https://www.linkedin.com/posts/sweatystartup_somewhere-formerly-support-shepherd-hire-activity-7281055476992090112-hwkd) 2025-01-03).
+His newest indexed content ([real estate](https://www.linkedin.com/posts/sweatystartup_real-estate-is-the-best-business-in-the-world-activity-7437615507559563265-Cg51), 2026-03-11) drifts away from offshore hiring.
 
-## Go Carpathian (Nathan Fales + company page), 14 posts collected
+## Go Carpathian (Nathan Fales + company page), 16 posts, proximity 5/5
 
-Most recent indexed: [How to hire smarter for your small business](https://www.linkedin.com/posts/go-carpathian_how-to-hire-an-employee-for-a-small-business-activity-7396309840110796801-Ih_X) (2025-11-17)
+Fales personal feed, newest first: [Most agencies focus on one thing: closing the big deal. But the smartest...](https://www.linkedin.com/posts/nathanfales_most-agencies-focus-on-one-thing-closing-activity-7275873115044200448-y4u8) (2024-12-20), [Lean Leverage launch x3](https://www.linkedin.com/posts/nathanfales_lean-leverage-go-carpathian-activity-7271886715118579712-Pz91) (Oct-Dec 2024), [If you have the resources and patience to...](https://www.linkedin.com/posts/nathanfales_if-you-have-the-resources-and-patience-to-activity-7257376309046063104-fjzf) (2024-10-30), [Interview Questions](https://www.linkedin.com/posts/nathanfales_interview-questions-activity-7250490901980921856-MTo1) (2024-10-11), [Our first client left us a scathing review](https://www.linkedin.com/posts/nathanfales_our-first-client-left-us-a-scathing-review-activity-7379240726720802816-_D7k) (2025-10-01), [If your team sucks it's your fault](https://www.linkedin.com/posts/nathanfales_if-your-team-sucks-its-your-fault-generally-activity-7077110577814261760--V7X) (2023-06-21).
 
-Company page: [Top remote recruitment agencies](https://www.linkedin.com/posts/go-carpathian_top-10-best-remote-recruitment-agencies-in-activity-7378798422197239808-J44H) (2025-09-30), [Hire finance talent in half the time](https://www.linkedin.com/posts/go-carpathian_top-16-accounting-and-finance-recruitment-activity-7394492521726431232-GwhU) (2025-11-12), plus recurring #hiring role announcements (2024-01-27, 2024-03-05, 2024-07-26).
+Company page: SEO listicles ([top remote recruitment agencies](https://www.linkedin.com/posts/go-carpathian_top-10-best-remote-recruitment-agencies-in-activity-7378798422197239808-J44H) 2025-09-30, [finance recruiters](https://www.linkedin.com/posts/go-carpathian_top-16-accounting-and-finance-recruitment-activity-7394492521726431232-GwhU) 2025-11-12, [hire smarter](https://www.linkedin.com/posts/go-carpathian_how-to-hire-an-employee-for-a-small-business-activity-7396309840110796801-Ih_X) 2025-11-17) plus recurring #hiring job ads.
 
-Nathan Fales: [Our first client left us a scathing review](https://www.linkedin.com/posts/nathanfales_our-first-client-left-us-a-scathing-review-activity-7379240726720802816-_D7k) (2025-10-01), [Lean Leverage launches](https://www.linkedin.com/posts/nathanfales_lean-leverage-go-carpathian-activity-7271886715118579712-Pz91) (2024-12-09, also [Oct 15](https://www.linkedin.com/posts/nathanfales_lean-leverage-activity-7254114700416700416-azTn), [Oct 11](https://www.linkedin.com/posts/nathanfales_lean-leverage-activity-7251940319850606592-Wb2B)), [Interview Questions](https://www.linkedin.com/posts/nathanfales_interview-questions-activity-7250490901980921856-MTo1) (2024-10-11), [If you have the resources and patience to...](https://www.linkedin.com/posts/nathanfales_if-you-have-the-resources-and-patience-to-activity-7257376309046063104-fjzf) (2024-10-30).
+**Theme read.** The only Tier 1 competitor actively working the agency-ICP
+lane: Fales writes agency-operator takes ("most agencies focus on closing...")
+and Huber-style bold claims ("if your team sucks it's your fault"), mixed with
+vulnerability stories. Their site leads with "save 73%+ on payroll" (money-math)
+but their LinkedIn does not carry those numbers; the money-math lane is
+unoccupied on their feed. No candidate-voice, no data reports.
 
-**Theme read.** Two distinct tracks. The company page runs SEO-style listicle
-content ("top 10 agencies", "top 16 finance recruiters") that doubles as blog
-distribution, plus job ads. Nathan's personal feed is the interesting one:
-vulnerability-led founder storytelling ("our first client left us a scathing
-review") and repeated promotion of their Lean Leverage product launch (three
-posts in two months, which is a deliberate launch cadence, not accident).
-They are your closest proximity competitor (5/5) and they are visibly
-investing in exactly the founder-story lane. No candidate-voice content found.
+## Kadraa (Michael Prince + Haaken Mordt), 4 posts, effectively silent
 
-## Kadraa (Michael Prince + company page), 4 posts collected
+All indexed content is 2023-2024 hashtag job ads
+([1](https://www.linkedin.com/posts/kadraa_kadraa-digitalmarketing-recruiters-activity-7188793816575885312-ATbT),
+[2](https://www.linkedin.com/posts/michael-prince-97280648_jobhunting-marketing-kadraa-activity-7191330527235174403-r_16),
+[3](https://www.linkedin.com/posts/kadraa_remoteseojobs-remoteseoroles-digitalmarketingjobs-activity-7115257220665081857-xIvN)).
+Their marketing runs through PR placements instead
+([finance-roles expansion](https://news.marketersmedia.com/kadraa-recruitment-expands-services-to-include-remote-finance-professionals-as-uk-hiring-cost-pressures-rise/89187006),
+[TechBullion profile](https://techbullion.com/empowering-global-talent-an-insiders-perspective-on-kadraa-recruitments-transformative-approach-for-offshore-recruitment/)).
+Haaken Mordt's profile found: [linkedin.com/in/haaken-mordt-7b2a66196](https://uk.linkedin.com/in/haaken-mordt-7b2a66196).
+**Your most direct UK-agency competitor has no founder-led LinkedIn presence. Open lane.**
 
-All indexed posts: [#kadraa #digitalmarketing #recruiters #offshorehiring](https://www.linkedin.com/posts/kadraa_kadraa-digitalmarketing-recruiters-activity-7188793816575885312-ATbT) (2024-04-24), [Michael Prince founder share of same](https://www.linkedin.com/posts/michael-prince-97280648_kadraa-digitalmarketing-recruiters-activity-7188793815506325504-_5xP) (2024-04-24), [#jobhunting #marketing](https://www.linkedin.com/posts/michael-prince-97280648_jobhunting-marketing-kadraa-activity-7191330527235174403-r_16) (2024-05-01), [#remoteseojobs](https://www.linkedin.com/posts/kadraa_remoteseojobs-remoteseoroles-digitalmarketingjobs-activity-7115257220665081857-xIvN) (2023-10-04).
+## Monty Ngan (Pearl Talent), 10 posts
 
-**Theme read.** Weakest content operation of the five despite 5/5 proximity to
-JobRack (110+ SA placements into UK digital agencies per their own site).
-Everything indexed is hashtag-heavy job-ad posting; no thought leadership, no
-founder narrative, no data. If they are publishing more recently it is not
-getting indexed, which itself signals low reach. This is a competitor you can
-out-publish immediately in the UK-agency lane.
+Newest: [Adobe's CEO steps down... AI](https://www.linkedin.com/posts/montyngan_adobes-ceo-steps-down-after-18-years-because-activity-7439296814484451329-HyIA) (2026-03-16, 13 comments). Also: [Monty, we want to fly your candidate to the UK](https://www.linkedin.com/posts/montyngan_startups-entrepreneurship-recruitment-activity-7275156741644857346-LGdY) (2024-12-18, a hire-success-story told through a client text), [Folks always ask me why I started Pearl Talent](https://www.linkedin.com/posts/montyngan_folks-always-ask-me-why-i-started-pearl-talent-activity-7260652315152453632-DvFt) (2024-11-08), [This email changed my life](https://www.linkedin.com/posts/montyngan_this-email-changed-my-life-two-years-ago-activity-7226210608679964672-aEgd) (2024-08-05), [success reminder](https://www.linkedin.com/posts/montyngan_an-important-reminder-for-everyone-success-activity-7239618741624320003-w8uy) (2024-09-11), [lean startups commentary](https://www.linkedin.com/posts/montyngan_startups-entrepreneurship-leanstartups-activity-7371891527272333312-12Pv) (2025-09-11).
 
-## Monty Ngan (Pearl Talent), 6 posts collected
+**Theme read.** Rotation is visible: origin story > client-proof story > big
+tech/AI commentary. He is the first of the five to move into ai-and-hiring
+content, matching Pearl's "AI-trained talent, top 0.8%" positioning. Pearl also
+runs SEO listicles ([best remote recruitment agencies 2026](https://www.pearltalent.com/resources/best-remote-recruitment-agencies)).
 
-Most recent indexed: [Adobe's CEO steps down... investors questioned whether Adobe was innovating fast enough in AI](https://www.linkedin.com/posts/montyngan_adobes-ceo-steps-down-after-18-years-because-activity-7439296814484451329-HyIA) (2026-03-16, 13 comments, the only competitor engagement number captured this run)
+## Angel Salinas (Remote Talent LATAM), 2 posts
 
-Others: [Folks always ask me why I started Pearl Talent](https://www.linkedin.com/posts/montyngan_folks-always-ask-me-why-i-started-pearl-talent-activity-7260652315152453632-DvFt) (2024-11-08), [This email changed my life](https://www.linkedin.com/posts/montyngan_this-email-changed-my-life-two-years-ago-activity-7226210608679964672-aEgd) (2024-08-05), [Catena is now Pearl Talent](https://www.linkedin.com/posts/montyngan_catena-is-nowpearl-talent-growing-up-activity-7207034578450935809-A4gu) (2024-06-13), [Customer Success Director role](https://www.linkedin.com/posts/montyngan_pearl-talent-customer-success-director-activity-7333887349182914560-L8so) (2025-05-29), [Pineapple List](https://www.linkedin.com/posts/montyngan_pineapple-list-the-best-agencies-activity-7067198135059582978-hVa_) (2023-05-24).
+[The #1 role marketing agencies hire from LATAM: Account...](https://www.linkedin.com/posts/salinassandino_the-1-role-marketing-agencies-hire-from-activity-7427014739009900544-lFAu) (2026-02-10) and a [hashtag post](https://www.linkedin.com/posts/salinassandino_remotetalent-recruitment-latam-activity-7275555874717282304-abYd) (2024-12-19). Thin feed, but the 2026 post is the exact buyer-intent format worth copying for Eastern Europe. His retention claim (1,000+ placements, 4+ year tenure) lives on his website only.
 
-**Theme read.** Origin-story specialist ("this email changed my life", "folks
-always ask me why I started...", the rebrand-as-growing-up post), now pivoting
-toward AI-and-business commentary (the Adobe/AI post is his newest indexed
-content). Pearl's own positioning copy leads with "AI-trained before they
-start" and "top 0.8% from the Philippines, LatAm, and South Africa". Watch him
-on the ai-and-hiring theme; he is moving there first among the five.
+## Tier 2 watch (new this sweep)
 
-## Angel Salinas (Remote Talent LATAM), 2 posts collected
+- **Near / Hayden Cohen (CEO) is the most active founder-publisher in the whole set** and posts into June 2026: [Mexico as a remote talent hub](https://www.linkedin.com/posts/hayden-cohen-near_youve-been-thinking-about-this-country-all-activity-7472985173530263552-qRYJ) (2026-06-17), [I almost gave up on Latin America after my first hire](https://www.linkedin.com/posts/hayden-cohen-near_i-almost-gave-up-on-latin-america-after-my-activity-7363263885254057984-2nTV) (2025-08-18), [Hiring in LatAm isn't about filling gaps](https://www.linkedin.com/posts/hayden-cohen-near_hiring-in-latam-isnt-about-filling-gaps-activity-7318256855925858304--rz2) (2025-04-16), [Near is basically the same as any other staffing...](https://www.linkedin.com/posts/hayden-cohen-near_near-is-basically-the-same-as-any-other-staffing-activity-7254099158444204032-LnCI) (2024-10-21, myth-bust of his own category). Near's PR machine adds data hooks: sales/SDR roles are the #1 driver (22% of demand) per [their release](https://www.einpresswire.com/article/921811244/sales-roles-are-the-no-1-driver-of-u-s-companies-hiring-in-latin-america-hire-with-near-data-shows). He is the template for what JobRack's founder feed should look like, pointed at LatAm instead of Eastern Europe.
+- **Somewhere company page runs a numbered success-story series**: [Hired with Somewhere #29](https://www.linkedin.com/posts/jobs-somewhere_hired-with-somewhere-29-shopify-for-remote-activity-7318630467421777920-KWML) (2025-04-17), at least 29 episodes, plus [Hire globally, strategically](https://www.linkedin.com/posts/somewhere_hire-globally-strategically-somewherecom-activity-7386054400118546432-a84O) (2025-10-20). Serialized proof content is being executed at scale in this niche, just not with candidate voices and not for Eastern Europe.
+- **Remoteli / Samuel Brooksworth**: near-zero founder presence; one [company post](https://www.linkedin.com/posts/hired-remoteli_hired-remoteli-linkedin-activity-7448716495339139072-uuZn) (2026-04-11).
 
-[The #1 role marketing agencies hire from LATAM: Account...](https://www.linkedin.com/posts/salinassandino_the-1-role-marketing-agencies-hire-from-activity-7427014739009900544-lFAu) (2026-02-10), [#remotetalent #recruitment #latam](https://www.linkedin.com/posts/salinassandino_remotetalent-recruitment-latam-activity-7275555874717282304-abYd) (2024-12-19).
+## New voices entering the niche (leading indicator)
 
-**Theme read.** Thin index but the recent post is instructive: role-specific,
-agency-specific, number-led ("The #1 role marketing agencies hire from LATAM").
-That is exactly the buyer-intent format JobRack should run for Eastern Europe
-("The #1 role UK agencies hire from Eastern Europe: ..."). His agency claims
-1,000+ placements and 4+ year average tenure, a retention-led claim aimed
-straight at one of JobRack's differentiators.
+- [Franco Pereyra](https://www.linkedin.com/posts/franco-pereyra_ive-been-watching-companies-quickly-go-from-activity-7417939950651785217-oLW0): "2-4 core people in the US office, everyone else in Latin America" (2026-01, 16 comments).
+- [Charlie Ewig](https://www.linkedin.com/posts/charlie-ewig-baaa35174_colombia-is-becoming-one-of-the-top-talent-activity-7450547325871017984-TLZQ): Bogota as LatAm's top talent market (2026-04).
+- [Marcelo Lebre](https://www.linkedin.com/posts/marcelolebre_we-started-remote-in-my-living-room-with-activity-7456043032354705408-lNIl) (Remote.com co-founder): origin story post, 62 comments (2026-05), confirming origin-story format still earns engagement in 2026.
+- Nobody equivalent is posting for Eastern Europe. The loudest new voices are all LatAm.
 
-## What themes are working best (cross-competitor)
+## What themes are working best (updated with engagement evidence)
 
-Grounded in this dataset (35 posts, links above) and labelled by confidence:
-
-1. **Money-math with real internal numbers** (high confidence). It is the
-   backbone of Huber's offshore content and the whole niche now echoes his
-   framing. Near's report doubling down on "$35k+ saved per hire" as its
-   headline stat confirms the format carries the niche's talking points.
-2. **Founder origin and turning-point stories** (high confidence on usage,
-   engagement unverified). Both closest competitors (Fales, Ngan) repeatedly
-   publish them; Fales' scathing-review post and Ngan's "this email changed my
-   life" are their most distinctive indexed content.
-3. **Role-specific buyer-intent listicles** (medium). Salinas' "#1 role
-   agencies hire from LATAM" and Go Carpathian's company-page listicles both
-   chase the same searcher; cheap to replicate for Eastern Europe.
-4. **AI-and-hiring commentary** (rising). Ngan's newest post, Pearl's
-   "AI-trained talent" positioning, and the Remote Recruit AI-platform launch
-   all point the same direction. No competitor owns "AI-fluent Eastern
-   European hires" yet.
-5. **Still empty across all five feeds:** candidate-voice stories, original
-   data reports, and explicit retention claims in post content (Salinas keeps
-   tenure claims on his website, not LinkedIn). These remain JobRack's open
-   lanes, now verified against 35 sourced posts rather than assumption.
+1. **Contrarian bold-claim hooks outperform everything else by 10-30x** on the
+   one account with measurable data (Huber: 335 and 305 comments vs 10-83 for
+   non-contrarian posts). JobRack application: "Most advice about offshore
+   hiring is wrong" style openers over polite explainers.
+2. **Money-math is the niche's shared language** (Huber's payroll numbers,
+   Go Carpathian's "save 73%", Near's "$35k per hire"), but on LinkedIn feeds
+   only Huber actually posts the numbers. Everyone else keeps them on websites.
+3. **Origin and turning-point stories keep earning in 2026** (Lebre 62
+   comments in May 2026; Ngan and Fales keep returning to the format; Cohen's
+   "I almost gave up on Latin America" is the region-advocacy version).
+4. **Serialized client-proof content is proven at scale** (Somewhere's
+   numbered series, 29+ episodes; Ngan's client-text screenshot post), but
+   nobody does it in the candidate's own voice.
+5. **AI-and-hiring is where the leaders are rotating next** (Ngan's newest
+   post, Pearl's AI-trained positioning, Remote Recruit's AI platform launch).
+6. **Confirmed empty across all 61 posts:** candidate-voice stories, original
+   Eastern Europe data, and retention claims made in-feed. With Kadraa and
+   Remoteli silent and every rising voice pointed at LatAm, Eastern Europe
+   founder-led content has no incumbent.

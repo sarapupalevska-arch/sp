@@ -1,12 +1,15 @@
 {
-  "generated_at": "2026-07-07T07:16:52.955512",
-  "post_count": 35,
+  "generated_at": "2026-07-07T07:23:58.604641",
+  "post_count": 61,
   "founders": [
     "Angel Salinas",
     "Go Carpathian",
     "Kadraa (Mike + Haaken)",
     "Monty Ngan",
-    "Nick Huber"
+    "Near",
+    "Nick Huber",
+    "Samuel Brooksworth",
+    "Somewhere company page"
   ],
   "theme_method": "keyword-rules",
   "followers": {},
@@ -27,12 +30,15 @@
       }
     },
     "Go Carpathian": {
-      "post_count": 13,
+      "post_count": 15,
       "theme_pct": {
-        "other": 76.9,
-        "delegation-advice": 23.1
+        "other": 80.0,
+        "delegation-advice": 20.0
       },
       "weekly_sequence": {
+        "2023-W25": [
+          "other"
+        ],
         "2024-W04": [
           "other"
         ],
@@ -58,6 +64,9 @@
           "other"
         ],
         "2024-W50": [
+          "other"
+        ],
+        "2024-W51": [
           "other"
         ],
         "2025-W40": [
@@ -91,10 +100,10 @@
       }
     },
     "Monty Ngan": {
-      "post_count": 6,
+      "post_count": 10,
       "theme_pct": {
-        "other": 83.3,
-        "ai-and-hiring": 16.7
+        "other": 90.0,
+        "ai-and-hiring": 10.0
       },
       "weekly_sequence": {
         "2023-W21": [
@@ -106,10 +115,22 @@
         "2024-W32": [
           "other"
         ],
+        "2024-W33": [
+          "other"
+        ],
+        "2024-W37": [
+          "other"
+        ],
         "2024-W45": [
           "other"
         ],
+        "2024-W51": [
+          "other"
+        ],
         "2025-W22": [
+          "other"
+        ],
+        "2025-W37": [
           "other"
         ],
         "2026-W12": [
@@ -117,18 +138,70 @@
         ]
       }
     },
-    "Nick Huber": {
-      "post_count": 10,
+    "Near": {
+      "post_count": 5,
       "theme_pct": {
-        "other": 90.0,
-        "delegation-advice": 10.0
+        "region-advocacy": 60.0,
+        "myth-busting": 20.0,
+        "other": 20.0
       },
       "weekly_sequence": {
+        "2024-W43": [
+          "myth-busting"
+        ],
+        "2024-W47": [
+          "region-advocacy"
+        ],
+        "2025-W16": [
+          "region-advocacy"
+        ],
+        "2025-W34": [
+          "region-advocacy"
+        ],
+        "2026-W25": [
+          "other"
+        ]
+      }
+    },
+    "Nick Huber": {
+      "post_count": 19,
+      "theme_pct": {
+        "other": 78.9,
+        "compliance-education": 5.3,
+        "hire-success-story": 5.3,
+        "delegation-advice": 5.3,
+        "money-math": 5.3
+      },
+      "weekly_sequence": {
+        "2022-W28": [
+          "other"
+        ],
+        "2022-W33": [
+          "compliance-education"
+        ],
+        "2023-W01": [
+          "other"
+        ],
+        "2023-W02": [
+          "other"
+        ],
+        "2023-W05": [
+          "other"
+        ],
         "2023-W08": [
+          "other"
+        ],
+        "2023-W11": [
+          "hire-success-story"
+        ],
+        "2023-W12": [
           "other"
         ],
         "2023-W32": [
           "delegation-advice"
+        ],
+        "2023-W34": [
+          "money-math"
         ],
         "2024-W04": [
           "other"
@@ -143,6 +216,7 @@
           "other"
         ],
         "2025-W01": [
+          "other",
           "other"
         ],
         "2025-W03": [
@@ -155,15 +229,54 @@
           "other"
         ]
       }
+    },
+    "Samuel Brooksworth": {
+      "post_count": 1,
+      "theme_pct": {
+        "other": 100.0
+      },
+      "weekly_sequence": {
+        "2026-W15": [
+          "other"
+        ]
+      }
+    },
+    "Somewhere company page": {
+      "post_count": 5,
+      "theme_pct": {
+        "other": 60.0,
+        "hire-success-story": 40.0
+      },
+      "weekly_sequence": {
+        "2024-W25": [
+          "other"
+        ],
+        "2024-W41": [
+          "other"
+        ],
+        "2025-W05": [
+          "hire-success-story"
+        ],
+        "2025-W16": [
+          "hire-success-story"
+        ],
+        "2025-W43": [
+          "other"
+        ]
+      }
     }
   },
   "theme_rank": {
     "metric": "engagement",
     "pooled": {
+      "money-math": 45,
+      "compliance-education": 28,
       "ai-and-hiring": 13,
-      "other": 0.0,
+      "other": 0,
       "delegation-advice": 0.0,
-      "region-advocacy": 0.0
+      "region-advocacy": 0,
+      "hire-success-story": 0,
+      "myth-busting": 0
     },
     "per_founder": {
       "Angel Salinas": {
@@ -180,16 +293,39 @@
         "ai-and-hiring": 13,
         "other": 0
       },
+      "Near": {
+        "other": 0,
+        "region-advocacy": 0,
+        "myth-busting": 0
+      },
       "Nick Huber": {
+        "money-math": 45,
+        "hire-success-story": 28,
+        "compliance-education": 28,
         "other": 0,
         "delegation-advice": 0
+      },
+      "Samuel Brooksworth": {
+        "other": 0
+      },
+      "Somewhere company page": {
+        "hire-success-story": 0.0,
+        "other": 0
       }
     }
   },
   "hooks": {
     "other": {
-      "share_of_all": 100.0,
-      "share_of_top_quartile": 100.0
+      "share_of_all": 55.6,
+      "share_of_top_quartile": 66.7
+    },
+    "bold-claim": {
+      "share_of_all": 22.2,
+      "share_of_top_quartile": 0.0
+    },
+    "number-led": {
+      "share_of_all": 22.2,
+      "share_of_top_quartile": 33.3
     }
   },
   "white_space": [
@@ -198,10 +334,11 @@
       "themes": [
         "region-advocacy"
       ],
-      "competitor_volume_pct": 5.7,
+      "competitor_volume_pct": 8.2,
       "median_engagement": null,
       "competitors_active": [
-        "Angel Salinas"
+        "Angel Salinas",
+        "Near"
       ]
     },
     {
@@ -218,7 +355,7 @@
       "themes": [
         "delegation-advice"
       ],
-      "competitor_volume_pct": 11.4,
+      "competitor_volume_pct": 6.6,
       "median_engagement": null,
       "competitors_active": [
         "Go Carpathian",
@@ -231,9 +368,12 @@
         "hire-success-story",
         "compliance-education"
       ],
-      "competitor_volume_pct": 0.0,
-      "median_engagement": null,
-      "competitors_active": []
+      "competitor_volume_pct": 6.6,
+      "median_engagement": 28,
+      "competitors_active": [
+        "Nick Huber",
+        "Somewhere company page"
+      ]
     },
     {
       "differentiator": "original-data-reports",
@@ -695,6 +835,344 @@
       "hook_text": "The #1 role marketing agencies hire from LATAM: Account...",
       "themes": [
         "region-advocacy"
+      ],
+      "hook_type": "other",
+      "engagement": 0,
+      "eng_per_1k": null,
+      "source": "websearch:2026-07-07"
+    },
+    {
+      "founder": "Nick Huber",
+      "date": "2025-01-03",
+      "post_url": "https://www.linkedin.com/posts/sweatystartup_somewhere-formerly-support-shepherd-hire-activity-7281055476992090112-hwkd",
+      "hook_text": "Somewhere (formerly Support Shepherd), hire...",
+      "themes": [
+        "other"
+      ],
+      "hook_type": "other",
+      "engagement": 0,
+      "eng_per_1k": null,
+      "source": "websearch:2026-07-07"
+    },
+    {
+      "founder": "Nick Huber",
+      "date": "2022-07-13",
+      "post_url": "https://www.linkedin.com/posts/sweatystartup_linkedin-is-full-of-bad-business-advice-activity-6953097335631417345-bNRG",
+      "hook_text": "LinkedIn is full of BAD BUSINESS ADVICE. Spewed by people who do a lot of...",
+      "themes": [
+        "other"
+      ],
+      "hook_type": "other",
+      "engagement": 335,
+      "eng_per_1k": null,
+      "source": "websearch:2026-07-07"
+    },
+    {
+      "founder": "Nick Huber",
+      "date": "2023-01-10",
+      "post_url": "https://www.linkedin.com/posts/sweatystartup_entrepreneurship-culture-in-america-is-all-activity-7018591765498662912-GlLW",
+      "hook_text": "Entrepreneurship culture in America is all messed up and it's a...",
+      "themes": [
+        "other"
+      ],
+      "hook_type": "other",
+      "engagement": 305,
+      "eng_per_1k": null,
+      "source": "websearch:2026-07-07"
+    },
+    {
+      "founder": "Nick Huber",
+      "date": "2023-01-30",
+      "post_url": "https://ie.linkedin.com/posts/sweatystartup_10-things-ive-changed-my-mind-on-recently-activity-7025823215629320192-021-",
+      "hook_text": "10 things I've changed my mind on recently",
+      "themes": [
+        "other"
+      ],
+      "hook_type": "number-led",
+      "engagement": 83,
+      "eng_per_1k": null,
+      "source": "websearch:2026-07-07"
+    },
+    {
+      "founder": "Nick Huber",
+      "date": "2023-08-22",
+      "post_url": "https://www.linkedin.com/posts/sweatystartup_the-current-requirements-of-entrepreneurship-activity-7099845934687129600-S6sr",
+      "hook_text": "The current requirements of entrepreneurship: a $1 billion idea...",
+      "themes": [
+        "money-math"
+      ],
+      "hook_type": "number-led",
+      "engagement": 45,
+      "eng_per_1k": null,
+      "source": "websearch:2026-07-07"
+    },
+    {
+      "founder": "Nick Huber",
+      "date": "2023-03-20",
+      "post_url": "https://www.linkedin.com/posts/sweatystartup_the-never-give-up-advice-is-bullshit-activity-7043667772425347073-Oh4e",
+      "hook_text": "The 'never give up' advice is bullshit. Give up quickly.",
+      "themes": [
+        "other"
+      ],
+      "hook_type": "bold-claim",
+      "engagement": 31,
+      "eng_per_1k": null,
+      "source": "websearch:2026-07-07"
+    },
+    {
+      "founder": "Nick Huber",
+      "date": "2023-03-14",
+      "post_url": "https://www.linkedin.com/posts/sweatystartup_the-worst-thing-you-can-do-as-a-entrepreneur-activity-7041396044340826112-FKIo",
+      "hook_text": "The worst thing you can do as a entrepreneur is hire a social justice...",
+      "themes": [
+        "hire-success-story"
+      ],
+      "hook_type": "bold-claim",
+      "engagement": 28,
+      "eng_per_1k": null,
+      "source": "websearch:2026-07-07"
+    },
+    {
+      "founder": "Nick Huber",
+      "date": "2022-08-16",
+      "post_url": "https://ee.linkedin.com/posts/sweatystartup_the-biggest-mistake-i-see-folks-make-who-activity-6965127862324518913-vL-A",
+      "hook_text": "The biggest mistake I see folks make who are early in their...",
+      "themes": [
+        "compliance-education"
+      ],
+      "hook_type": "other",
+      "engagement": 28,
+      "eng_per_1k": null,
+      "source": "websearch:2026-07-07"
+    },
+    {
+      "founder": "Nick Huber",
+      "date": "2023-01-03",
+      "post_url": "https://me.linkedin.com/posts/sweatystartup_entrepreneurship-is-a-funny-thing-you-work-activity-7016051468935839744-kLcl",
+      "hook_text": "Entrepreneurship is a funny thing. You work at something for years...",
+      "themes": [
+        "other"
+      ],
+      "hook_type": "other",
+      "engagement": 10,
+      "eng_per_1k": null,
+      "source": "websearch:2026-07-07"
+    },
+    {
+      "founder": "Go Carpathian",
+      "date": "2024-12-20",
+      "post_url": "https://www.linkedin.com/posts/nathanfales_most-agencies-focus-on-one-thing-closing-activity-7275873115044200448-y4u8",
+      "hook_text": "Most agencies focus on one thing: closing the big deal. But the smartest...",
+      "themes": [
+        "other"
+      ],
+      "hook_type": "other",
+      "engagement": 0,
+      "eng_per_1k": null,
+      "source": "websearch:2026-07-07"
+    },
+    {
+      "founder": "Go Carpathian",
+      "date": "2023-06-21",
+      "post_url": "https://www.linkedin.com/posts/nathanfales_if-your-team-sucks-its-your-fault-generally-activity-7077110577814261760--V7X",
+      "hook_text": "If your team sucks it's your fault. Generally it's one of 3...",
+      "themes": [
+        "other"
+      ],
+      "hook_type": "other",
+      "engagement": 0,
+      "eng_per_1k": null,
+      "source": "websearch:2026-07-07"
+    },
+    {
+      "founder": "Monty Ngan",
+      "date": "2024-12-18",
+      "post_url": "https://www.linkedin.com/posts/montyngan_startups-entrepreneurship-recruitment-activity-7275156741644857346-LGdY",
+      "hook_text": "Monty, we want to fly your candidate to the UK.",
+      "themes": [
+        "other"
+      ],
+      "hook_type": "other",
+      "engagement": 0,
+      "eng_per_1k": null,
+      "source": "websearch:2026-07-07"
+    },
+    {
+      "founder": "Monty Ngan",
+      "date": "2025-09-11",
+      "post_url": "https://www.linkedin.com/posts/montyngan_startups-entrepreneurship-leanstartups-activity-7371891527272333312-12Pv",
+      "hook_text": "(startups, entrepreneurship, leanstartups commentary)",
+      "themes": [
+        "other"
+      ],
+      "hook_type": "other",
+      "engagement": 0,
+      "eng_per_1k": null,
+      "source": "websearch:2026-07-07"
+    },
+    {
+      "founder": "Monty Ngan",
+      "date": "2024-08-13",
+      "post_url": "https://www.linkedin.com/posts/montyngan_recruitment-leadership-startups-activity-7229109505928691712-ZrHZ",
+      "hook_text": "(recruitment, leadership, startups commentary)",
+      "themes": [
+        "other"
+      ],
+      "hook_type": "other",
+      "engagement": 0,
+      "eng_per_1k": null,
+      "source": "websearch:2026-07-07"
+    },
+    {
+      "founder": "Monty Ngan",
+      "date": "2024-09-11",
+      "post_url": "https://www.linkedin.com/posts/montyngan_an-important-reminder-for-everyone-success-activity-7239618741624320003-w8uy",
+      "hook_text": "An important reminder for everyone: success... it's for those who act on hidden opportunities",
+      "themes": [
+        "other"
+      ],
+      "hook_type": "other",
+      "engagement": 0,
+      "eng_per_1k": null,
+      "source": "websearch:2026-07-07"
+    },
+    {
+      "founder": "Somewhere company page",
+      "date": "2025-04-17",
+      "post_url": "https://www.linkedin.com/posts/jobs-somewhere_hired-with-somewhere-29-shopify-for-remote-activity-7318630467421777920-KWML",
+      "hook_text": "Hired with Somewhere #29: Shopify for Remote E-commerce (numbered success story series)",
+      "themes": [
+        "hire-success-story"
+      ],
+      "hook_type": "other",
+      "engagement": 0,
+      "eng_per_1k": null,
+      "source": "websearch:2026-07-07"
+    },
+    {
+      "founder": "Somewhere company page",
+      "date": "2025-10-20",
+      "post_url": "https://www.linkedin.com/posts/somewhere_hire-globally-strategically-somewherecom-activity-7386054400118546432-a84O",
+      "hook_text": "Hire globally, strategically",
+      "themes": [
+        "other"
+      ],
+      "hook_type": "other",
+      "engagement": 0,
+      "eng_per_1k": null,
+      "source": "websearch:2026-07-07"
+    },
+    {
+      "founder": "Somewhere company page",
+      "date": "2025-01-28",
+      "post_url": "https://www.linkedin.com/posts/somewhere_hire-a-top-full-stack-developer-using-somewherecom-activity-7290086763237122048--KsF",
+      "hook_text": "Hire a Top Full Stack Developer using Somewhere.com",
+      "themes": [
+        "hire-success-story"
+      ],
+      "hook_type": "other",
+      "engagement": 0,
+      "eng_per_1k": null,
+      "source": "websearch:2026-07-07"
+    },
+    {
+      "founder": "Somewhere company page",
+      "date": "2024-10-07",
+      "post_url": "https://www.linkedin.com/posts/somewhere_hiring-activity-7249015389114765312-vIOq",
+      "hook_text": "hiring (role announcement)",
+      "themes": [
+        "other"
+      ],
+      "hook_type": "other",
+      "engagement": 0,
+      "eng_per_1k": null,
+      "source": "websearch:2026-07-07"
+    },
+    {
+      "founder": "Somewhere company page",
+      "date": "2024-06-18",
+      "post_url": "https://www.linkedin.com/posts/somewhere_hiring-overseas-talent-improved-work-life-activity-7208819693418086401-Lf7T",
+      "hook_text": "Hiring Overseas Talent = Improved Work-life Balance",
+      "themes": [
+        "other"
+      ],
+      "hook_type": "other",
+      "engagement": 0,
+      "eng_per_1k": null,
+      "source": "websearch:2026-07-07"
+    },
+    {
+      "founder": "Near",
+      "date": "2026-06-17",
+      "post_url": "https://www.linkedin.com/posts/hayden-cohen-near_youve-been-thinking-about-this-country-all-activity-7472985173530263552-qRYJ",
+      "hook_text": "You've been thinking about this country all wrong (Mexico as a remote talent hub)",
+      "themes": [
+        "other"
+      ],
+      "hook_type": "other",
+      "engagement": 0,
+      "eng_per_1k": null,
+      "source": "websearch:2026-07-07"
+    },
+    {
+      "founder": "Near",
+      "date": "2025-08-18",
+      "post_url": "https://www.linkedin.com/posts/hayden-cohen-near_i-almost-gave-up-on-latin-america-after-my-activity-7363263885254057984-2nTV",
+      "hook_text": "I almost gave up on Latin America after my... (how I found success with a LatAm hire)",
+      "themes": [
+        "region-advocacy"
+      ],
+      "hook_type": "other",
+      "engagement": 0,
+      "eng_per_1k": null,
+      "source": "websearch:2026-07-07"
+    },
+    {
+      "founder": "Near",
+      "date": "2025-04-16",
+      "post_url": "https://www.linkedin.com/posts/hayden-cohen-near_hiring-in-latam-isnt-about-filling-gaps-activity-7318256855925858304--rz2",
+      "hook_text": "Hiring in LatAm isn't about filling gaps. It's...",
+      "themes": [
+        "region-advocacy"
+      ],
+      "hook_type": "other",
+      "engagement": 0,
+      "eng_per_1k": null,
+      "source": "websearch:2026-07-07"
+    },
+    {
+      "founder": "Near",
+      "date": "2024-10-21",
+      "post_url": "https://www.linkedin.com/posts/hayden-cohen-near_near-is-basically-the-same-as-any-other-staffing-activity-7254099158444204032-LnCI",
+      "hook_text": "Near is basically the same as any other staffing... (myth-busting)",
+      "themes": [
+        "myth-busting"
+      ],
+      "hook_type": "other",
+      "engagement": 0,
+      "eng_per_1k": null,
+      "source": "websearch:2026-07-07"
+    },
+    {
+      "founder": "Near",
+      "date": "2024-11-22",
+      "post_url": "https://www.linkedin.com/posts/hire-with-near_hiring-offshore-seo-talent-latam-vs-india-activity-7265846511886848001-gGuh",
+      "hook_text": "Hiring Offshore SEO Talent: LatAm vs India vs Philippines",
+      "themes": [
+        "region-advocacy"
+      ],
+      "hook_type": "other",
+      "engagement": 0,
+      "eng_per_1k": null,
+      "source": "websearch:2026-07-07"
+    },
+    {
+      "founder": "Samuel Brooksworth",
+      "date": "2026-04-11",
+      "post_url": "https://www.linkedin.com/posts/hired-remoteli_hired-remoteli-linkedin-activity-7448716495339139072-uuZn",
+      "hook_text": "Hired Remoteli (company post; founder posts not indexed)",
+      "themes": [
+        "other"
       ],
       "hook_type": "other",
       "engagement": 0,

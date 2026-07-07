@@ -1,45 +1,215 @@
 {
   "collected": "2026-07-07",
   "method": "web search for indexed post URLs (deep sweep, priority 3 fallback)",
-  "notes": "Only posts from each founder's or company's own profile URL. hook_text is the indexed title snippet. Engagement unavailable unless the search snippet showed a count. Dates derived from activity ID (id >> 22 = ms epoch).",
+  "notes": "Only posts from each founder's or company's own profile URL. hook_text is the indexed title snippet. Engagement unavailable unless the search snippet showed a count. Dates derived from activity ID (id >> 22 = ms epoch). Deep sweep additions include engagement counts where the search snippet exposed them.",
   "founders": {
     "Nick Huber": {
       "handle": "sweatystartup",
       "posts": [
-        {"url": "https://www.linkedin.com/posts/sweatystartup_how-to-navigate-the-messy-middle-activity-7274487202875678720-xp7h", "title": "How to navigate the messy middle"},
-        {"url": "https://www.linkedin.com/posts/sweatystartup_the-importance-of-content-and-do-follow-backlinks-activity-7279568247685857281-UxlY", "title": "The importance of content and do-follow backlinks in SEO"},
-        {"url": "https://www.linkedin.com/posts/sweatystartup_12-yrs-ago-in-a-college-entrepreneurship-activity-7155303113036386305-7_JL", "title": "12 yrs ago in a college entrepreneurship class..."},
-        {"url": "https://www.linkedin.com/posts/sweatystartup_in-business-there-are-two-types-of-delegation-activity-7095795864153051137-y8QZ", "title": "In business, there are two types of delegation."},
-        {"url": "https://www.linkedin.com/posts/sweatystartup_shepherd-headhunter-agency-for-overseas-activity-7178428023292002304-PEpg", "title": "Shepherd - Headhunter Agency for Overseas Talent"}
+        {
+          "url": "https://www.linkedin.com/posts/sweatystartup_how-to-navigate-the-messy-middle-activity-7274487202875678720-xp7h",
+          "title": "How to navigate the messy middle"
+        },
+        {
+          "url": "https://www.linkedin.com/posts/sweatystartup_the-importance-of-content-and-do-follow-backlinks-activity-7279568247685857281-UxlY",
+          "title": "The importance of content and do-follow backlinks in SEO"
+        },
+        {
+          "url": "https://www.linkedin.com/posts/sweatystartup_12-yrs-ago-in-a-college-entrepreneurship-activity-7155303113036386305-7_JL",
+          "title": "12 yrs ago in a college entrepreneurship class..."
+        },
+        {
+          "url": "https://www.linkedin.com/posts/sweatystartup_in-business-there-are-two-types-of-delegation-activity-7095795864153051137-y8QZ",
+          "title": "In business, there are two types of delegation."
+        },
+        {
+          "url": "https://www.linkedin.com/posts/sweatystartup_shepherd-headhunter-agency-for-overseas-activity-7178428023292002304-PEpg",
+          "title": "Shepherd - Headhunter Agency for Overseas Talent"
+        },
+        {
+          "url": "https://www.linkedin.com/posts/sweatystartup_somewhere-formerly-support-shepherd-hire-activity-7281055476992090112-hwkd",
+          "title": "Somewhere (formerly Support Shepherd), hire..."
+        },
+        {
+          "url": "https://www.linkedin.com/posts/sweatystartup_linkedin-is-full-of-bad-business-advice-activity-6953097335631417345-bNRG",
+          "title": "LinkedIn is full of BAD BUSINESS ADVICE. Spewed by people who do a lot of...",
+          "comments": 335
+        },
+        {
+          "url": "https://www.linkedin.com/posts/sweatystartup_entrepreneurship-culture-in-america-is-all-activity-7018591765498662912-GlLW",
+          "title": "Entrepreneurship culture in America is all messed up and it's a...",
+          "comments": 305
+        },
+        {
+          "url": "https://ie.linkedin.com/posts/sweatystartup_10-things-ive-changed-my-mind-on-recently-activity-7025823215629320192-021-",
+          "title": "10 things I've changed my mind on recently",
+          "comments": 83
+        },
+        {
+          "url": "https://www.linkedin.com/posts/sweatystartup_the-current-requirements-of-entrepreneurship-activity-7099845934687129600-S6sr",
+          "title": "The current requirements of entrepreneurship: a $1 billion idea...",
+          "comments": 45
+        },
+        {
+          "url": "https://www.linkedin.com/posts/sweatystartup_the-never-give-up-advice-is-bullshit-activity-7043667772425347073-Oh4e",
+          "title": "The 'never give up' advice is bullshit. Give up quickly.",
+          "comments": 31
+        },
+        {
+          "url": "https://www.linkedin.com/posts/sweatystartup_the-worst-thing-you-can-do-as-a-entrepreneur-activity-7041396044340826112-FKIo",
+          "title": "The worst thing you can do as a entrepreneur is hire a social justice...",
+          "comments": 28
+        },
+        {
+          "url": "https://ee.linkedin.com/posts/sweatystartup_the-biggest-mistake-i-see-folks-make-who-activity-6965127862324518913-vL-A",
+          "title": "The biggest mistake I see folks make who are early in their...",
+          "comments": 28
+        },
+        {
+          "url": "https://me.linkedin.com/posts/sweatystartup_entrepreneurship-is-a-funny-thing-you-work-activity-7016051468935839744-kLcl",
+          "title": "Entrepreneurship is a funny thing. You work at something for years...",
+          "comments": 10
+        }
       ]
     },
     "Go Carpathian": {
       "handle": "go-carpathian",
       "posts": [
-        {"url": "https://www.linkedin.com/posts/nathanfales_interview-questions-activity-7250490901980921856-MTo1", "title": "Interview Questions"},
-        {"url": "https://www.linkedin.com/posts/nathanfales_lean-leverage-activity-7251940319850606592-Wb2B", "title": "Lean Leverage"},
-        {"url": "https://www.linkedin.com/posts/nathanfales_opentowork-activity-7260086288660258816-xHz2", "title": "opentowork (commentary post)"},
-        {"url": "https://www.linkedin.com/posts/go-carpathian_hiring-activity-7222566111186161665-DHuU", "title": "hiring (role announcement)"},
-        {"url": "https://www.linkedin.com/posts/go-carpathian_hiring-activity-7170755348453117952-XQu4", "title": "hiring (role announcement)"},
-        {"url": "https://www.linkedin.com/posts/go-carpathian_hiring-activity-7157029501397291008-e6gT", "title": "#hiring (role announcement)"}
+        {
+          "url": "https://www.linkedin.com/posts/nathanfales_interview-questions-activity-7250490901980921856-MTo1",
+          "title": "Interview Questions"
+        },
+        {
+          "url": "https://www.linkedin.com/posts/nathanfales_lean-leverage-activity-7251940319850606592-Wb2B",
+          "title": "Lean Leverage"
+        },
+        {
+          "url": "https://www.linkedin.com/posts/nathanfales_opentowork-activity-7260086288660258816-xHz2",
+          "title": "opentowork (commentary post)"
+        },
+        {
+          "url": "https://www.linkedin.com/posts/go-carpathian_hiring-activity-7222566111186161665-DHuU",
+          "title": "hiring (role announcement)"
+        },
+        {
+          "url": "https://www.linkedin.com/posts/go-carpathian_hiring-activity-7170755348453117952-XQu4",
+          "title": "hiring (role announcement)"
+        },
+        {
+          "url": "https://www.linkedin.com/posts/go-carpathian_hiring-activity-7157029501397291008-e6gT",
+          "title": "#hiring (role announcement)"
+        },
+        {
+          "url": "https://www.linkedin.com/posts/nathanfales_most-agencies-focus-on-one-thing-closing-activity-7275873115044200448-y4u8",
+          "title": "Most agencies focus on one thing: closing the big deal. But the smartest..."
+        },
+        {
+          "url": "https://www.linkedin.com/posts/nathanfales_if-your-team-sucks-its-your-fault-generally-activity-7077110577814261760--V7X",
+          "title": "If your team sucks it's your fault. Generally it's one of 3..."
+        }
       ]
     },
     "Kadraa (Mike + Haaken)": {
       "handle": "kadraa",
       "posts": [
-        {"url": "https://www.linkedin.com/posts/michael-prince-97280648_jobhunting-marketing-kadraa-activity-7191330527235174403-r_16", "title": "#jobhunting #marketing #kadraa #remotework (Michael Prince)"}
+        {
+          "url": "https://www.linkedin.com/posts/michael-prince-97280648_jobhunting-marketing-kadraa-activity-7191330527235174403-r_16",
+          "title": "#jobhunting #marketing #kadraa #remotework (Michael Prince)"
+        }
       ]
     },
     "Monty Ngan": {
       "handle": "montyngan",
       "posts": [
-        {"url": "https://www.linkedin.com/posts/montyngan_adobes-ceo-steps-down-after-18-years-because-activity-7439296814484451329-HyIA", "title": "Adobe's CEO steps down after 18 years because investors questioned whether Adobe was innovating fast enough in AI", "comments": 13}
+        {
+          "url": "https://www.linkedin.com/posts/montyngan_adobes-ceo-steps-down-after-18-years-because-activity-7439296814484451329-HyIA",
+          "title": "Adobe's CEO steps down after 18 years because investors questioned whether Adobe was innovating fast enough in AI",
+          "comments": 13
+        },
+        {
+          "url": "https://www.linkedin.com/posts/montyngan_startups-entrepreneurship-recruitment-activity-7275156741644857346-LGdY",
+          "title": "Monty, we want to fly your candidate to the UK."
+        },
+        {
+          "url": "https://www.linkedin.com/posts/montyngan_startups-entrepreneurship-leanstartups-activity-7371891527272333312-12Pv",
+          "title": "(startups, entrepreneurship, leanstartups commentary)"
+        },
+        {
+          "url": "https://www.linkedin.com/posts/montyngan_recruitment-leadership-startups-activity-7229109505928691712-ZrHZ",
+          "title": "(recruitment, leadership, startups commentary)"
+        },
+        {
+          "url": "https://www.linkedin.com/posts/montyngan_an-important-reminder-for-everyone-success-activity-7239618741624320003-w8uy",
+          "title": "An important reminder for everyone: success... it's for those who act on hidden opportunities"
+        }
       ]
     },
     "Angel Salinas": {
       "handle": "salinassandino",
       "posts": [
-        {"url": "https://www.linkedin.com/posts/salinassandino_the-1-role-marketing-agencies-hire-from-activity-7427014739009900544-lFAu", "title": "The #1 role marketing agencies hire from LATAM: Account..."}
+        {
+          "url": "https://www.linkedin.com/posts/salinassandino_the-1-role-marketing-agencies-hire-from-activity-7427014739009900544-lFAu",
+          "title": "The #1 role marketing agencies hire from LATAM: Account..."
+        }
+      ]
+    },
+    "Somewhere company page": {
+      "handle": "somewhere / jobs-somewhere",
+      "posts": [
+        {
+          "url": "https://www.linkedin.com/posts/jobs-somewhere_hired-with-somewhere-29-shopify-for-remote-activity-7318630467421777920-KWML",
+          "title": "Hired with Somewhere #29: Shopify for Remote E-commerce (numbered success story series)"
+        },
+        {
+          "url": "https://www.linkedin.com/posts/somewhere_hire-globally-strategically-somewherecom-activity-7386054400118546432-a84O",
+          "title": "Hire globally, strategically"
+        },
+        {
+          "url": "https://www.linkedin.com/posts/somewhere_hire-a-top-full-stack-developer-using-somewherecom-activity-7290086763237122048--KsF",
+          "title": "Hire a Top Full Stack Developer using Somewhere.com"
+        },
+        {
+          "url": "https://www.linkedin.com/posts/somewhere_hiring-activity-7249015389114765312-vIOq",
+          "title": "hiring (role announcement)"
+        },
+        {
+          "url": "https://www.linkedin.com/posts/somewhere_hiring-overseas-talent-improved-work-life-activity-7208819693418086401-Lf7T",
+          "title": "Hiring Overseas Talent = Improved Work-life Balance"
+        }
+      ]
+    },
+    "Near": {
+      "handle": "hayden-cohen-near / hire-with-near",
+      "posts": [
+        {
+          "url": "https://www.linkedin.com/posts/hayden-cohen-near_youve-been-thinking-about-this-country-all-activity-7472985173530263552-qRYJ",
+          "title": "You've been thinking about this country all wrong (Mexico as a remote talent hub)"
+        },
+        {
+          "url": "https://www.linkedin.com/posts/hayden-cohen-near_i-almost-gave-up-on-latin-america-after-my-activity-7363263885254057984-2nTV",
+          "title": "I almost gave up on Latin America after my... (how I found success with a LatAm hire)"
+        },
+        {
+          "url": "https://www.linkedin.com/posts/hayden-cohen-near_hiring-in-latam-isnt-about-filling-gaps-activity-7318256855925858304--rz2",
+          "title": "Hiring in LatAm isn't about filling gaps. It's..."
+        },
+        {
+          "url": "https://www.linkedin.com/posts/hayden-cohen-near_near-is-basically-the-same-as-any-other-staffing-activity-7254099158444204032-LnCI",
+          "title": "Near is basically the same as any other staffing... (myth-busting)"
+        },
+        {
+          "url": "https://www.linkedin.com/posts/hire-with-near_hiring-offshore-seo-talent-latam-vs-india-activity-7265846511886848001-gGuh",
+          "title": "Hiring Offshore SEO Talent: LatAm vs India vs Philippines"
+        }
+      ]
+    },
+    "Samuel Brooksworth": {
+      "handle": "remoteli / hired-remoteli",
+      "posts": [
+        {
+          "url": "https://www.linkedin.com/posts/hired-remoteli_hired-remoteli-linkedin-activity-7448716495339139072-uuZn",
+          "title": "Hired Remoteli (company post; founder posts not indexed)"
+        }
       ]
     }
   }
