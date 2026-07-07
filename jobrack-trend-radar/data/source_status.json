@@ -46,12 +46,12 @@
   },
   "linkedin_websearch": {
     "status": "ok",
-    "detail": "11 new indexed post URLs ingested; engagement unavailable for this method; hook_text is the indexed title snippet only",
-    "at": "2026-07-07T07:40:59.099815+00:00"
+    "detail": "18 new indexed post URLs ingested; engagement unavailable for this method; hook_text is the indexed title snippet only",
+    "at": "2026-07-07T07:45:32.498441+00:00"
   },
   "analysis": {
     "status": "ok",
-    "detail": "72 posts analyzed, themes via keyword-rules, normalization OFF (no follower counts)",
-    "at": "2026-07-07T07:40:59.170001+00:00"
+    "detail": "90 posts analyzed, themes via keyword-rules, normalization OFF (no follower counts)",
+    "at": "2026-07-07T07:45:32.562566+00:00"
   }
 }

@@ -3,7 +3,7 @@
 **Method and honesty note.** LinkedIn cannot be scraped without login and this
 environment has no LinkedIn session or Apify token, so collection used repeated
 web searches for posts Google has indexed on each founder's own profile URL
-(the system's priority 3 fallback). Three sweep rounds collected **72 posts**
+(the system's priority 3 fallback). Four sweep rounds collected **90 posts**
 across Tier 1 and Tier 2, including comment counts wherever the search snippet
 exposed them. A direct fetch of post pages was also attempted and LinkedIn
 returns 403, confirming search index is the ceiling without login. This is a partial trail, not the full feed; Google indexes
@@ -50,17 +50,24 @@ vulnerability stories. Their site leads with "save 73%+ on payroll" (money-math)
 but their LinkedIn does not carry those numbers; the money-math lane is
 unoccupied on their feed. No candidate-voice, no data reports.
 
-## Kadraa (Michael Prince + Haaken Mordt), 5 posts, effectively silent
+## Kadraa (Michael Prince + Haaken Mordt), 9 posts, correction: not silent
 
-All indexed content is 2023-2024 hashtag job ads
+Earlier sweep rounds only surfaced 2023-2024 hashtag job ads
 ([1](https://www.linkedin.com/posts/kadraa_kadraa-digitalmarketing-recruiters-activity-7188793816575885312-ATbT),
 [2](https://www.linkedin.com/posts/michael-prince-97280648_jobhunting-marketing-kadraa-activity-7191330527235174403-r_16),
 [3](https://www.linkedin.com/posts/kadraa_remoteseojobs-remoteseoroles-digitalmarketingjobs-activity-7115257220665081857-xIvN)).
-Their marketing runs through PR placements instead
-([finance-roles expansion](https://news.marketersmedia.com/kadraa-recruitment-expands-services-to-include-remote-finance-professionals-as-uk-hiring-cost-pressures-rise/89187006),
+Round 4 found founder-led content after all: Michael Prince writes
+Huber-style contrarian takes on the exact SA-to-UK lane:
+[The uncomfortable truth about SA talent (that nobody talks about)](https://www.linkedin.com/posts/michael-prince-97280648_the-uncomfortable-truth-about-sa-talent-activity-7311358903445794816-WXGG) (2025-03),
+[From Cape Town to London: the brutal reality](https://www.linkedin.com/posts/michael-prince-97280648_from-cape-town-to-london-the-brutal-reality-activity-7318229173448101889-l56x) (2025-04),
+[Empowering Global Talent article share](https://www.linkedin.com/posts/michael-prince-97280648_empowering-global-talent-an-insiders-perspective-activity-7272945789725732864-4VWk) (2024-12).
+Haaken Mordt posts occasionally
+([Want to know what separates champions...](https://www.linkedin.com/posts/haaken-mordt-7b2a66196_want-to-know-what-separates-champions-activity-7338160502260318209-NGRc), 2025-06).
+Plus PR placements ([finance-roles expansion](https://news.marketersmedia.com/kadraa-recruitment-expands-services-to-include-remote-finance-professionals-as-uk-hiring-cost-pressures-rise/89187006),
 [TechBullion profile](https://techbullion.com/empowering-global-talent-an-insiders-perspective-on-kadraa-recruitments-transformative-approach-for-offshore-recruitment/)).
-Haaken Mordt's profile found: [linkedin.com/in/haaken-mordt-7b2a66196](https://uk.linkedin.com/in/haaken-mordt-7b2a66196).
-**Your most direct UK-agency competitor has no founder-led LinkedIn presence. Open lane.**
+**Revised read: Kadraa's founders publish contrarian SA-talent content at low
+volume with nothing indexed for 2026 yet. The lane is contested but thinly,
+and their angle is candidate-side reality checks, not client-side proof.**
 
 ## Monty Ngan + Isaac Kassab (Pearl Talent), 14 posts
 
