@@ -3,9 +3,10 @@
 **Method and honesty note.** LinkedIn cannot be scraped without login and this
 environment has no LinkedIn session or Apify token, so collection used repeated
 web searches for posts Google has indexed on each founder's own profile URL
-(the system's priority 3 fallback). The deep sweep collected **61 posts**
+(the system's priority 3 fallback). Three sweep rounds collected **72 posts**
 across Tier 1 and Tier 2, including comment counts wherever the search snippet
-exposed them. This is a partial trail, not the full feed; Google indexes
+exposed them. A direct fetch of post pages was also attempted and LinkedIn
+returns 403, confirming search index is the ceiling without login. This is a partial trail, not the full feed; Google indexes
 LinkedIn sparsely, so recent months are under-represented. Dates are derived
 from each post's activity ID timestamp. Full data: `data/linkedin/combined.csv`
 and `data/linkedin/websearch-2026-07-07.json`.
@@ -36,7 +37,7 @@ equivalents"), then plug [Somewhere/Shepherd](https://www.linkedin.com/posts/swe
 [Somewhere promo](https://www.linkedin.com/posts/sweatystartup_somewhere-formerly-support-shepherd-hire-activity-7281055476992090112-hwkd) 2025-01-03).
 His newest indexed content ([real estate](https://www.linkedin.com/posts/sweatystartup_real-estate-is-the-best-business-in-the-world-activity-7437615507559563265-Cg51), 2026-03-11) drifts away from offshore hiring.
 
-## Go Carpathian (Nathan Fales + company page), 16 posts, proximity 5/5
+## Go Carpathian (Nathan Fales + company page), 17 posts, proximity 5/5
 
 Fales personal feed, newest first: [Most agencies focus on one thing: closing the big deal. But the smartest...](https://www.linkedin.com/posts/nathanfales_most-agencies-focus-on-one-thing-closing-activity-7275873115044200448-y4u8) (2024-12-20), [Lean Leverage launch x3](https://www.linkedin.com/posts/nathanfales_lean-leverage-go-carpathian-activity-7271886715118579712-Pz91) (Oct-Dec 2024), [If you have the resources and patience to...](https://www.linkedin.com/posts/nathanfales_if-you-have-the-resources-and-patience-to-activity-7257376309046063104-fjzf) (2024-10-30), [Interview Questions](https://www.linkedin.com/posts/nathanfales_interview-questions-activity-7250490901980921856-MTo1) (2024-10-11), [Our first client left us a scathing review](https://www.linkedin.com/posts/nathanfales_our-first-client-left-us-a-scathing-review-activity-7379240726720802816-_D7k) (2025-10-01), [If your team sucks it's your fault](https://www.linkedin.com/posts/nathanfales_if-your-team-sucks-its-your-fault-generally-activity-7077110577814261760--V7X) (2023-06-21).
 
@@ -49,7 +50,7 @@ vulnerability stories. Their site leads with "save 73%+ on payroll" (money-math)
 but their LinkedIn does not carry those numbers; the money-math lane is
 unoccupied on their feed. No candidate-voice, no data reports.
 
-## Kadraa (Michael Prince + Haaken Mordt), 4 posts, effectively silent
+## Kadraa (Michael Prince + Haaken Mordt), 5 posts, effectively silent
 
 All indexed content is 2023-2024 hashtag job ads
 ([1](https://www.linkedin.com/posts/kadraa_kadraa-digitalmarketing-recruiters-activity-7188793816575885312-ATbT),
@@ -61,7 +62,7 @@ Their marketing runs through PR placements instead
 Haaken Mordt's profile found: [linkedin.com/in/haaken-mordt-7b2a66196](https://uk.linkedin.com/in/haaken-mordt-7b2a66196).
 **Your most direct UK-agency competitor has no founder-led LinkedIn presence. Open lane.**
 
-## Monty Ngan (Pearl Talent), 10 posts
+## Monty Ngan + Isaac Kassab (Pearl Talent), 14 posts
 
 Newest: [Adobe's CEO steps down... AI](https://www.linkedin.com/posts/montyngan_adobes-ceo-steps-down-after-18-years-because-activity-7439296814484451329-HyIA) (2026-03-16, 13 comments). Also: [Monty, we want to fly your candidate to the UK](https://www.linkedin.com/posts/montyngan_startups-entrepreneurship-recruitment-activity-7275156741644857346-LGdY) (2024-12-18, a hire-success-story told through a client text), [Folks always ask me why I started Pearl Talent](https://www.linkedin.com/posts/montyngan_folks-always-ask-me-why-i-started-pearl-talent-activity-7260652315152453632-DvFt) (2024-11-08), [This email changed my life](https://www.linkedin.com/posts/montyngan_this-email-changed-my-life-two-years-ago-activity-7226210608679964672-aEgd) (2024-08-05), [success reminder](https://www.linkedin.com/posts/montyngan_an-important-reminder-for-everyone-success-activity-7239618741624320003-w8uy) (2024-09-11), [lean startups commentary](https://www.linkedin.com/posts/montyngan_startups-entrepreneurship-leanstartups-activity-7371891527272333312-12Pv) (2025-09-11).
 
@@ -69,10 +70,26 @@ Newest: [Adobe's CEO steps down... AI](https://www.linkedin.com/posts/montyngan_
 tech/AI commentary. He is the first of the five to move into ai-and-hiring
 content, matching Pearl's "AI-trained talent, top 0.8%" positioning. Pearl also
 runs SEO listicles ([best remote recruitment agencies 2026](https://www.pearltalent.com/resources/best-remote-recruitment-agencies)).
+Round 3 additions: co-founder **Isaac Kassab** also publishes, including a
+[fake-recruiter scam warning](https://www.linkedin.com/posts/isaac-kassab_startups-entrepreneurship-leanstartups-activity-7361018650058776576-t95J)
+(2025-08-12, trust/compliance content), and the company page runs
+[client-proof screenshots](https://www.linkedin.com/posts/pearltalent_received-a-text-from-pearl-talent-we-activity-7356080092374028289-cGvq) (2025-07-29)
+and [employer-brand posts](https://www.linkedin.com/posts/pearltalent_perks-of-working-at-pearl-talent-activity-7265364267099463680-pq9I) (2024-11-21).
 
-## Angel Salinas (Remote Talent LATAM), 2 posts
+## Angel Salinas (Remote Talent LATAM), 7 posts
 
-[The #1 role marketing agencies hire from LATAM: Account...](https://www.linkedin.com/posts/salinassandino_the-1-role-marketing-agencies-hire-from-activity-7427014739009900544-lFAu) (2026-02-10) and a [hashtag post](https://www.linkedin.com/posts/salinassandino_remotetalent-recruitment-latam-activity-7275555874717282304-abYd) (2024-12-19). Thin feed, but the 2026 post is the exact buyer-intent format worth copying for Eastern Europe. His retention claim (1,000+ placements, 4+ year tenure) lives on his website only.
+Personal: [The #1 role marketing agencies hire from LATAM: Account...](https://www.linkedin.com/posts/salinassandino_the-1-role-marketing-agencies-hire-from-activity-7427014739009900544-lFAu) (2026-02-10) and a [hashtag post](https://www.linkedin.com/posts/salinassandino_remotetalent-recruitment-latam-activity-7275555874717282304-abYd) (2024-12-19).
+Company page (found in round 3, more active than his personal feed):
+[hiring post with 27 comments](https://es.linkedin.com/posts/remote-talent-latam_hiring-remotejobs-latamjobs-activity-7448489256693596160-FyLZ) (2026-04-10, the second-highest 2026 engagement number in this dataset),
+[Meet the Team: Karina Edition](https://www.linkedin.com/posts/remote-talent-latam_meettheteam-teamspotlight-recruiter-activity-7274877786975002624-b0N5) (2024-12-17, a recurring team-spotlight series, the nearest thing to candidate-voice any competitor runs),
+[marketing careers](https://www.linkedin.com/posts/remote-talent-latam_marketingcareers-remoteopportunities-latamtalent-activity-7258238792812113921-numN) (2024-11-01),
+[job ad](https://www.linkedin.com/posts/remote-talent-latam_jobopportunity-nowhiring-joinourteam-activity-7285428549610610689-YBSv) (2025-01-15).
+
+**Theme read.** The 2026 personal post is the exact buyer-intent format worth
+copying for Eastern Europe. The company's team-spotlight series is spotlighting
+their own recruiters, not placed candidates, so the candidate-voice lane is
+still open even here. His retention claim (1,000+ placements, 4+ year tenure)
+lives on his website only.
 
 ## Tier 2 watch (new this sweep)
 
@@ -85,7 +102,8 @@ runs SEO listicles ([best remote recruitment agencies 2026](https://www.pearltal
 - [Franco Pereyra](https://www.linkedin.com/posts/franco-pereyra_ive-been-watching-companies-quickly-go-from-activity-7417939950651785217-oLW0): "2-4 core people in the US office, everyone else in Latin America" (2026-01, 16 comments).
 - [Charlie Ewig](https://www.linkedin.com/posts/charlie-ewig-baaa35174_colombia-is-becoming-one-of-the-top-talent-activity-7450547325871017984-TLZQ): Bogota as LatAm's top talent market (2026-04).
 - [Marcelo Lebre](https://www.linkedin.com/posts/marcelolebre_we-started-remote-in-my-living-room-with-activity-7456043032354705408-lNIl) (Remote.com co-founder): origin story post, 62 comments (2026-05), confirming origin-story format still earns engagement in 2026.
-- Nobody equivalent is posting for Eastern Europe. The loudest new voices are all LatAm.
+- [Alexis Bourson](https://www.linkedin.com/posts/alexisbourson_atlas-by-cortese-helps-companies-hire-remote-activity-7445414298849337344-rBlS) (Atlas by Cortese): founder-led remote sales talent from Portugal, 10 comments (2026-04). The first European-nearshore voice spotted, worth watching as a preview of Eastern Europe competition.
+- Nobody is posting founder-led content for Eastern Europe itself. The loudest new voices are all LatAm, with one Portugal entrant.
 
 ## What themes are working best (updated with engagement evidence)
 
@@ -104,7 +122,9 @@ runs SEO listicles ([best remote recruitment agencies 2026](https://www.pearltal
    nobody does it in the candidate's own voice.
 5. **AI-and-hiring is where the leaders are rotating next** (Ngan's newest
    post, Pearl's AI-trained positioning, Remote Recruit's AI platform launch).
-6. **Confirmed empty across all 61 posts:** candidate-voice stories, original
-   Eastern Europe data, and retention claims made in-feed. With Kadraa and
-   Remoteli silent and every rising voice pointed at LatAm, Eastern Europe
-   founder-led content has no incumbent.
+6. **Confirmed nearly empty across all 72 posts:** candidate-voice stories
+   (closest attempts: Remote Talent LATAM spotlights its own recruiters, and
+   one 2024 Go Carpathian post celebrates the Romanian language rather than a
+   person), original Eastern Europe data, and retention claims made in-feed.
+   With Kadraa and Remoteli silent and every rising voice pointed at LatAm,
+   Eastern Europe founder-led content has no incumbent.

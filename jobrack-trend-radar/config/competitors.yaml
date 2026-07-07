@@ -43,18 +43,19 @@ tier1:  # check every run
   - name: Monty Ngan
     company: Pearl Talent
     linkedin_url: https://www.linkedin.com/in/montyngan
-    company_page: https://www.linkedin.com/company/pearl-talent
+    company_page: https://www.linkedin.com/company/pearltalent
     website: https://pearltalent.com
     regions: [Philippines, LatAm, South Africa]
     icp: funded startups
     proximity: 3
     followers: null
     followers_as_of: null
+    notes: Co-founder Isaac Kassab (linkedin.com/in/isaac-kassab) also posts; found via web search 2026-07-07.
 
   - name: Angel Salinas
     company: Remote Talent LATAM
     linkedin_url: https://www.linkedin.com/in/salinassandino   # found via web search 2026-07-06
-    company_page: null
+    company_page: https://www.linkedin.com/company/remote-talent-latam   # active, found 2026-07-07
     website: https://remotetalentlatam.com
     regions: [LatAm]
     icp: US marketing agencies

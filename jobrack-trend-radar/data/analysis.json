@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-07-07T07:23:58.604641",
-  "post_count": 61,
+  "generated_at": "2026-07-07T07:40:59.168458",
+  "post_count": 72,
   "founders": [
     "Angel Salinas",
     "Go Carpathian",
@@ -16,24 +16,42 @@
   "normalization_available": false,
   "rotation": {
     "Angel Salinas": {
-      "post_count": 2,
+      "post_count": 7,
       "theme_pct": {
-        "region-advocacy": 100.0
+        "region-advocacy": 50.0,
+        "other": 25.0,
+        "ai-and-hiring": 12.5,
+        "candidate-voice": 12.5
       },
       "weekly_sequence": {
+        "2023-W11": [
+          "region-advocacy",
+          "ai-and-hiring"
+        ],
+        "2024-W44": [
+          "other"
+        ],
         "2024-W51": [
+          "candidate-voice",
           "region-advocacy"
         ],
+        "2025-W03": [
+          "other"
+        ],
         "2026-W07": [
+          "region-advocacy"
+        ],
+        "2026-W15": [
           "region-advocacy"
         ]
       }
     },
     "Go Carpathian": {
-      "post_count": 15,
+      "post_count": 16,
       "theme_pct": {
-        "other": 80.0,
-        "delegation-advice": 20.0
+        "other": 75.0,
+        "delegation-advice": 18.8,
+        "region-advocacy": 6.2
       },
       "weekly_sequence": {
         "2023-W25": [
@@ -41,6 +59,9 @@
         ],
         "2024-W04": [
           "other"
+        ],
+        "2024-W08": [
+          "region-advocacy"
         ],
         "2024-W10": [
           "other"
@@ -82,11 +103,15 @@
       }
     },
     "Kadraa (Mike + Haaken)": {
-      "post_count": 4,
+      "post_count": 5,
       "theme_pct": {
-        "other": 100.0
+        "other": 80.0,
+        "milestone": 20.0
       },
       "weekly_sequence": {
+        "2022-W16": [
+          "milestone"
+        ],
         "2023-W40": [
           "other"
         ],
@@ -100,10 +125,10 @@
       }
     },
     "Monty Ngan": {
-      "post_count": 10,
+      "post_count": 14,
       "theme_pct": {
-        "other": 90.0,
-        "ai-and-hiring": 10.0
+        "other": 92.9,
+        "ai-and-hiring": 7.1
       },
       "weekly_sequence": {
         "2023-W21": [
@@ -124,10 +149,22 @@
         "2024-W45": [
           "other"
         ],
+        "2024-W47": [
+          "other"
+        ],
+        "2024-W49": [
+          "other"
+        ],
         "2024-W51": [
           "other"
         ],
         "2025-W22": [
+          "other"
+        ],
+        "2025-W31": [
+          "other"
+        ],
+        "2025-W33": [
           "other"
         ],
         "2025-W37": [
@@ -271,23 +308,30 @@
     "pooled": {
       "money-math": 45,
       "compliance-education": 28,
-      "ai-and-hiring": 13,
+      "ai-and-hiring": 6.5,
       "other": 0,
       "delegation-advice": 0.0,
-      "region-advocacy": 0,
+      "region-advocacy": 0.0,
       "hire-success-story": 0,
-      "myth-busting": 0
+      "myth-busting": 0,
+      "milestone": 0,
+      "candidate-voice": 0
     },
     "per_founder": {
       "Angel Salinas": {
-        "region-advocacy": 0.0
+        "region-advocacy": 0.0,
+        "candidate-voice": 0,
+        "other": 0.0,
+        "ai-and-hiring": 0
       },
       "Go Carpathian": {
         "other": 0.0,
-        "delegation-advice": 0
+        "delegation-advice": 0,
+        "region-advocacy": 0
       },
       "Kadraa (Mike + Haaken)": {
-        "other": 0.0
+        "other": 0.0,
+        "milestone": 0
       },
       "Monty Ngan": {
         "ai-and-hiring": 13,
@@ -316,15 +360,15 @@
   },
   "hooks": {
     "other": {
-      "share_of_all": 55.6,
+      "share_of_all": 60.0,
       "share_of_top_quartile": 66.7
     },
     "bold-claim": {
-      "share_of_all": 22.2,
+      "share_of_all": 20.0,
       "share_of_top_quartile": 0.0
     },
     "number-led": {
-      "share_of_all": 22.2,
+      "share_of_all": 20.0,
       "share_of_top_quartile": 33.3
     }
   },
@@ -334,10 +378,11 @@
       "themes": [
         "region-advocacy"
       ],
-      "competitor_volume_pct": 8.2,
+      "competitor_volume_pct": 11.0,
       "median_engagement": null,
       "competitors_active": [
         "Angel Salinas",
+        "Go Carpathian",
         "Near"
       ]
     },
@@ -346,16 +391,18 @@
       "themes": [
         "candidate-voice"
       ],
-      "competitor_volume_pct": 0.0,
+      "competitor_volume_pct": 1.4,
       "median_engagement": null,
-      "competitors_active": []
+      "competitors_active": [
+        "Angel Salinas"
+      ]
     },
     {
       "differentiator": "agency-specific-ops-content",
       "themes": [
         "delegation-advice"
       ],
-      "competitor_volume_pct": 6.6,
+      "competitor_volume_pct": 5.5,
       "median_engagement": null,
       "competitors_active": [
         "Go Carpathian",
@@ -368,7 +415,7 @@
         "hire-success-story",
         "compliance-education"
       ],
-      "competitor_volume_pct": 6.6,
+      "competitor_volume_pct": 5.5,
       "median_engagement": 28,
       "competitors_active": [
         "Nick Huber",
@@ -1173,6 +1220,150 @@
       "hook_text": "Hired Remoteli (company post; founder posts not indexed)",
       "themes": [
         "other"
+      ],
+      "hook_type": "other",
+      "engagement": 0,
+      "eng_per_1k": null,
+      "source": "websearch:2026-07-07"
+    },
+    {
+      "founder": "Go Carpathian",
+      "date": "2024-02-22",
+      "post_url": "https://www.linkedin.com/posts/go-carpathian_romanian-is-one-of-the-most-interesting-romance-activity-7166276417935097857-ddIk",
+      "hook_text": "Romanian is one of the most interesting Romance languages... (region advocacy)",
+      "themes": [
+        "region-advocacy"
+      ],
+      "hook_type": "other",
+      "engagement": 0,
+      "eng_per_1k": null,
+      "source": "websearch:2026-07-07"
+    },
+    {
+      "founder": "Kadraa (Mike + Haaken)",
+      "date": "2022-04-21",
+      "post_url": "https://www.linkedin.com/posts/kadraa_weve-recently-landed-a-few-wordpress-activity-6922913480685621248-msUv",
+      "hook_text": "We've recently landed a few WordPress... (early milestone post)",
+      "themes": [
+        "milestone"
+      ],
+      "hook_type": "other",
+      "engagement": 0,
+      "eng_per_1k": null,
+      "source": "websearch:2026-07-07"
+    },
+    {
+      "founder": "Monty Ngan",
+      "date": "2025-08-12",
+      "post_url": "https://www.linkedin.com/posts/isaac-kassab_startups-entrepreneurship-leanstartups-activity-7361018650058776576-t95J",
+      "hook_text": "Warning: fake recruiters and job scams impersonating Pearl Talent (Isaac Kassab, co-founder)",
+      "themes": [
+        "other"
+      ],
+      "hook_type": "other",
+      "engagement": 0,
+      "eng_per_1k": null,
+      "source": "websearch:2026-07-07"
+    },
+    {
+      "founder": "Monty Ngan",
+      "date": "2024-12-04",
+      "post_url": "https://www.linkedin.com/posts/pearltalent_globaltalent-remotework-recruitment-activity-7270076917741961216-x7MI",
+      "hook_text": "Global talent / remote work (Pearl company page)",
+      "themes": [
+        "other"
+      ],
+      "hook_type": "other",
+      "engagement": 0,
+      "eng_per_1k": null,
+      "source": "websearch:2026-07-07"
+    },
+    {
+      "founder": "Monty Ngan",
+      "date": "2024-11-21",
+      "post_url": "https://www.linkedin.com/posts/pearltalent_perks-of-working-at-pearl-talent-activity-7265364267099463680-pq9I",
+      "hook_text": "Perks of Working at Pearl Talent (company page)",
+      "themes": [
+        "other"
+      ],
+      "hook_type": "other",
+      "engagement": 0,
+      "eng_per_1k": null,
+      "source": "websearch:2026-07-07"
+    },
+    {
+      "founder": "Monty Ngan",
+      "date": "2025-07-29",
+      "post_url": "https://www.linkedin.com/posts/pearltalent_received-a-text-from-pearl-talent-we-activity-7356080092374028289-cGvq",
+      "hook_text": "Received a text from Pearl Talent... (company page, client-proof)",
+      "themes": [
+        "other"
+      ],
+      "hook_type": "other",
+      "engagement": 0,
+      "eng_per_1k": null,
+      "source": "websearch:2026-07-07"
+    },
+    {
+      "founder": "Angel Salinas",
+      "date": "2026-04-10",
+      "post_url": "https://es.linkedin.com/posts/remote-talent-latam_hiring-remotejobs-latamjobs-activity-7448489256693596160-FyLZ",
+      "hook_text": "Hiring / remote jobs LATAM (company page)",
+      "themes": [
+        "region-advocacy"
+      ],
+      "hook_type": "other",
+      "engagement": 27,
+      "eng_per_1k": null,
+      "source": "websearch:2026-07-07"
+    },
+    {
+      "founder": "Angel Salinas",
+      "date": "2024-12-17",
+      "post_url": "https://www.linkedin.com/posts/remote-talent-latam_meettheteam-teamspotlight-recruiter-activity-7274877786975002624-b0N5",
+      "hook_text": "Meet the Team: Karina Edition! (company page, team-voice series)",
+      "themes": [
+        "candidate-voice"
+      ],
+      "hook_type": "story-opener",
+      "engagement": 0,
+      "eng_per_1k": null,
+      "source": "websearch:2026-07-07"
+    },
+    {
+      "founder": "Angel Salinas",
+      "date": "2024-11-01",
+      "post_url": "https://www.linkedin.com/posts/remote-talent-latam_marketingcareers-remoteopportunities-latamtalent-activity-7258238792812113921-numN",
+      "hook_text": "Marketing careers / remote opportunities (company page)",
+      "themes": [
+        "other"
+      ],
+      "hook_type": "other",
+      "engagement": 0,
+      "eng_per_1k": null,
+      "source": "websearch:2026-07-07"
+    },
+    {
+      "founder": "Angel Salinas",
+      "date": "2025-01-15",
+      "post_url": "https://www.linkedin.com/posts/remote-talent-latam_jobopportunity-nowhiring-joinourteam-activity-7285428549610610689-YBSv",
+      "hook_text": "New Opportunity Alert! (company page job ad)",
+      "themes": [
+        "other"
+      ],
+      "hook_type": "other",
+      "engagement": 0,
+      "eng_per_1k": null,
+      "source": "websearch:2026-07-07"
+    },
+    {
+      "founder": "Angel Salinas",
+      "date": "2023-03-14",
+      "post_url": "https://www.linkedin.com/posts/remote-talent-latam_chatgpt-wfh-remoteworking-activity-7041505721145856000-ZzrW",
+      "hook_text": "ChatGPT / WFH / remote working LATAM (company page)",
+      "themes": [
+        "region-advocacy",
+        "ai-and-hiring"
       ],
       "hook_type": "other",
       "engagement": 0,
