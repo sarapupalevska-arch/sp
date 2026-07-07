@@ -1,0 +1,46 @@
+{
+  "collected": "2026-07-07",
+  "method": "web search for indexed post URLs (deep sweep, priority 3 fallback)",
+  "notes": "Only posts from each founder's or company's own profile URL. hook_text is the indexed title snippet. Engagement unavailable unless the search snippet showed a count. Dates derived from activity ID (id >> 22 = ms epoch).",
+  "founders": {
+    "Nick Huber": {
+      "handle": "sweatystartup",
+      "posts": [
+        {"url": "https://www.linkedin.com/posts/sweatystartup_how-to-navigate-the-messy-middle-activity-7274487202875678720-xp7h", "title": "How to navigate the messy middle"},
+        {"url": "https://www.linkedin.com/posts/sweatystartup_the-importance-of-content-and-do-follow-backlinks-activity-7279568247685857281-UxlY", "title": "The importance of content and do-follow backlinks in SEO"},
+        {"url": "https://www.linkedin.com/posts/sweatystartup_12-yrs-ago-in-a-college-entrepreneurship-activity-7155303113036386305-7_JL", "title": "12 yrs ago in a college entrepreneurship class..."},
+        {"url": "https://www.linkedin.com/posts/sweatystartup_in-business-there-are-two-types-of-delegation-activity-7095795864153051137-y8QZ", "title": "In business, there are two types of delegation."},
+        {"url": "https://www.linkedin.com/posts/sweatystartup_shepherd-headhunter-agency-for-overseas-activity-7178428023292002304-PEpg", "title": "Shepherd - Headhunter Agency for Overseas Talent"}
+      ]
+    },
+    "Go Carpathian": {
+      "handle": "go-carpathian",
+      "posts": [
+        {"url": "https://www.linkedin.com/posts/nathanfales_interview-questions-activity-7250490901980921856-MTo1", "title": "Interview Questions"},
+        {"url": "https://www.linkedin.com/posts/nathanfales_lean-leverage-activity-7251940319850606592-Wb2B", "title": "Lean Leverage"},
+        {"url": "https://www.linkedin.com/posts/nathanfales_opentowork-activity-7260086288660258816-xHz2", "title": "opentowork (commentary post)"},
+        {"url": "https://www.linkedin.com/posts/go-carpathian_hiring-activity-7222566111186161665-DHuU", "title": "hiring (role announcement)"},
+        {"url": "https://www.linkedin.com/posts/go-carpathian_hiring-activity-7170755348453117952-XQu4", "title": "hiring (role announcement)"},
+        {"url": "https://www.linkedin.com/posts/go-carpathian_hiring-activity-7157029501397291008-e6gT", "title": "#hiring (role announcement)"}
+      ]
+    },
+    "Kadraa (Mike + Haaken)": {
+      "handle": "kadraa",
+      "posts": [
+        {"url": "https://www.linkedin.com/posts/michael-prince-97280648_jobhunting-marketing-kadraa-activity-7191330527235174403-r_16", "title": "#jobhunting #marketing #kadraa #remotework (Michael Prince)"}
+      ]
+    },
+    "Monty Ngan": {
+      "handle": "montyngan",
+      "posts": [
+        {"url": "https://www.linkedin.com/posts/montyngan_adobes-ceo-steps-down-after-18-years-because-activity-7439296814484451329-HyIA", "title": "Adobe's CEO steps down after 18 years because investors questioned whether Adobe was innovating fast enough in AI", "comments": 13}
+      ]
+    },
+    "Angel Salinas": {
+      "handle": "salinassandino",
+      "posts": [
+        {"url": "https://www.linkedin.com/posts/salinassandino_the-1-role-marketing-agencies-hire-from-activity-7427014739009900544-lFAu", "title": "The #1 role marketing agencies hire from LATAM: Account..."}
+      ]
+    }
+  }
+}
