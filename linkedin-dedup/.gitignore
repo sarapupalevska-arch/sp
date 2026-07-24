@@ -1,0 +1,4 @@
+# Contact data is PII and this repository is public.
+# The pipeline is versioned; its outputs deliberately are not.
+output/
+*.pkl
