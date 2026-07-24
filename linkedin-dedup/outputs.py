@@ -1,7 +1,15 @@
 #!/usr/bin/env python3
-"""Stage 2: write deliverables + report.md and prove the arithmetic reconciles."""
-import pandas as pd, numpy as np, os, json, itertools, glob, re
+"""Stage 2: write the HeyReach import file and prove the arithmetic reconciles.
+
+By default the only file written is heyreach_import.csv - the list that gets
+uploaded. Run with --audit to also emit the full audit trail (removed.csv,
+needs_review.csv, the title frequency tables, per-company counts, etc.), which
+is what make_report.py needs.
+"""
+import pandas as pd, numpy as np, os, json, itertools, glob, re, sys
 from collections import Counter
+
+AUDIT = '--audit' in sys.argv
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 OUT  = os.path.join(HERE, 'output')
@@ -21,7 +29,8 @@ def w(df, name):
 MASTER_COLS = ORIG + ['source_files', 'cleaned_first_name']
 master = uni[uni.bucket == 'master'].copy()
 master = master[MASTER_COLS]
-w(master, 'master_clean.csv')
+if AUDIT:
+    w(master, 'master_clean.csv')
 
 # ------------------------------------------------- removed
 rm_uni = uni[uni.bucket == 'removed'].copy()
@@ -32,7 +41,8 @@ dups2['removed_stage'] = 'duplicate_row'
 for c in ('source_files',):
     if c not in dups2: dups2[c] = ''
 removed = pd.concat([rm_uni.reindex(columns=rm_cols), dups2.reindex(columns=rm_cols)], ignore_index=True)
-w(removed, 'removed.csv')
+if AUDIT:
+    w(removed, 'removed.csv')
 
 # ------------------------------------------------- needs_review
 nr = uni[uni.bucket == 'needs_review'].copy()
@@ -40,23 +50,27 @@ nr = nr.rename(columns={'removal_detail':'review_note'})
 nr['review_reason'] = 'icp_unverifiable'
 nr_cols = ['source_files','review_reason','review_note','geo_status','geo_detail',
            'title_status','title_detail','headcount_verified'] + ORIG
-w(nr.reindex(columns=nr_cols), 'needs_review.csv')
-
-# near-matches: advisory overlay, NOT part of reconciliation
 near = pd.DataFrame(meta['near'])
-w(near, 'near_matches.csv')
+if AUDIT:
+    w(nr.reindex(columns=nr_cols), 'needs_review.csv')
+    w(near, 'near_matches.csv')   # advisory overlay, NOT part of reconciliation
 
-# ------------------------------------------------- HeyReach batches
-CHUNK = 1000
-nb = max(1, int(np.ceil(len(master)/CHUNK)))
-for i in range(nb):
-    w(master.iloc[i*CHUNK:(i+1)*CHUNK], f'heyreach_batch_{i+1}.csv')
+# ------------------------------------------------- HeyReach import
+# HeyReach takes ~1,000-1,500 per import. Split only if the list exceeds LIMIT.
+LIMIT = 1500
+nb = max(1, int(np.ceil(len(master)/LIMIT)))
+if nb == 1:
+    w(master, 'heyreach_import.csv')
+else:
+    for i in range(nb):
+        w(master.iloc[i*LIMIT:(i+1)*LIMIT], f'heyreach_import_{i+1}.csv')
 
 # ------------------------------------------------- audit tables
 tt = uni.groupby(['title_status','Job Title']).size().reset_index(name='count')
-for st, fn in [('pass','titles_accepted.csv'),('fail','titles_rejected.csv'),('review','titles_needs_review.csv')]:
-    t = tt[tt.title_status==st][['Job Title','count']].sort_values(['count','Job Title'], ascending=[False,True])
-    w(t, fn)
+if AUDIT:
+    for st, fn in [('pass','titles_accepted.csv'),('fail','titles_rejected.csv'),('review','titles_needs_review.csv')]:
+        t = tt[tt.title_status==st][['Job Title','count']].sort_values(['count','Job Title'], ascending=[False,True])
+        w(t, fn)
 
 cc = (uni.groupby('Company').size().reset_index(name='contacts_all_unique')
         .merge(uni[uni.bucket=='master'].groupby('Company').size().reset_index(name='contacts_on_master'),
@@ -64,11 +78,11 @@ cc = (uni.groupby('Company').size().reset_index(name='contacts_all_unique')
 cc['contacts_on_master'] = cc['contacts_on_master'].astype(int)
 cc = cc.sort_values(['contacts_all_unique','contacts_on_master','Company'], ascending=[False,False,True])
 cc['flag_over_3'] = np.where((cc.contacts_all_unique > 3) | (cc.contacts_on_master > 3), 'YES', '')
-w(cc, 'company_counts.csv')
-
 fn_sample = uni[uni.first_name_status.isin(['cleaned','unusable'])][
     ['source_files','First Name','cleaned_first_name','first_name_status','first_name_note','Full Name','Company']]
-w(fn_sample, 'first_name_before_after.csv')
+if AUDIT:
+    w(cc, 'company_counts.csv')
+    w(fn_sample, 'first_name_before_after.csv')
 
 # ------------------------------------------------- overlap stats
 raw = []
