@@ -9,7 +9,9 @@ m = pd.read_csv(f'{OUT}/master_clean.csv', encoding='utf-8-sig', keep_default_na
 fr = meta['file_rows']; TOTAL_IN = meta['total_in']
 ru = uni[uni.bucket=='removed']; nr = uni[uni.bucket=='needs_review']
 
-FILE_LABEL = {'First':'…EastUSFirst1500_4000.csv','Second':'…EastUSSecond1500_4000.csv','Third':'…EastUSThird1500_4000.csv'}
+FILE_LABEL = {'First':'…EastUSFirst1500_4000.csv','Second':'…EastUSSecond1500_4000.csv',
+              'Third':'…EastUSThird1500_4000.csv','Forth':'…EastUSForth2000_1.csv'}
+ORDER = ['First','Second','Third','Forth']
 
 def tbl(rows, head):
     o = ['| ' + ' | '.join(head) + ' |', '|' + '|'.join(['---']*len(head)) + '|']
@@ -20,32 +22,33 @@ L = []
 A = L.append
 A('# LinkedIn Sales Navigator — dedupe, hygiene & ICP filter')
 A('')
-A(f'Inputs: 3 CSV exports · **{TOTAL_IN:,} rows in** · **{len(m):,} contacts out** · '
+A(f'Inputs: {len(fr)} CSV exports · **{TOTAL_IN:,} rows in** · **{len(m):,} contacts out** · '
   f'{s["nb"]} HeyReach batch file(s)')
 A('')
 A('---')
 A('')
-A('## ⚠️ Read this first: the three exports are not three slices')
+A('## ⚠️ Read this first: these are not four slices of one list')
 A('')
-A('They were described as three slices of one 4,000+ contact list. They are not.')
+A('They were described as slices of one 4,000+ contact list. They are not — all four exports cover the '
+  'same window of that list.')
 A('')
-A('- **`Second` and `Third` are the same 2,400 people.** Identical profile-URL sets, identical row '
-  'order. Across all 43,200 cells the two files differ in **exactly one**: the `Headline` for '
-  '`linkedin.com/in/jessekirshbaum` (short version vs. long version). Different file size and MD5, same list.')
-A('- **`First` is a 1,592-row subset of that same list**, not a distinct slice. 1,590 of its 1,592 rows '
-  'already appear in the other two. Only **2 people exist in `First` and nowhere else**: '
-  'Jaclyn Baker (Josephine & Co) and Alexcea Matthews (GotPhoto.com).')
+A('- **`Second` and `Third` are the same 2,400 people.** Identical profile-URL sets, identical row order. '
+  'Across all 43,200 cells they differ in **exactly one**: the `Headline` for '
+  '`linkedin.com/in/jessekirshbaum` (short version vs. long version).')
+A('- **`Forth` is that same list again**, re-pulled. It shares **2,398 of its 2,400** rows with '
+  '`Second`/`Third`. It contributes **2 people nobody else had**, and is missing 2 that the others had.')
+A('- **`First` is a 1,592-row subset** of the same window. 1,588 of its rows appear in all four files.')
 A('')
-A(f'**The union of all three files is {len(uni):,} unique people.** If the Sales Nav list really held '
-  '4,000+, then roughly **1,600 contacts are missing entirely** — they are in no export. The pagination '
-  'on the export looks like it re-pulled the same window instead of advancing. Everything below is '
-  f'correct for the {len(uni):,} people you actually have, but this is worth re-exporting.')
+A(f'**Union of all four files: {len(uni):,} unique people** — from {TOTAL_IN:,} rows. Adding the fourth '
+  f'export moved the unique count by **+2** (2,402 → {len(uni):,}) and the final clean list by **+1**.')
 A('')
-A('---')
+A('If the Sales Nav list really holds 4,000+, then **~1,600 contacts are in none of the four exports**. '
+  'Four attempts have now returned the same window, so this is not going to resolve by exporting again '
+  'the same way — the pagination or sort order in the export step needs changing.')
 A('')
 A('## 1. Row count per source file')
 A('')
-A(tbl([[FILE_LABEL[k], f'{fr[k]:,}', f'{fr[k]:,}', '0'] for k in ['First','Second','Third']],
+A(tbl([[FILE_LABEL[k], f'{fr[k]:,}', f'{fr[k]:,}', '0'] for k in ORDER],
       ['Source file','Data rows','Unique profile URLs','Within-file dupes']))
 A('')
 A(f'**Total rows before dedupe: {TOTAL_IN:,}**')
@@ -94,8 +97,8 @@ A(tbl([['`title_out_of_icp` (criterion B)', f'{s["icp"].get("title_out_of_icp",0
        ['`headcount` (criterion A)', '0', '**Not checkable — no headcount column exists in any export**']],
       ['Criterion','Removed','Note']))
 A('')
-A('The 6 geographic removals: San Francisco Bay Area, Dallas-Fort Worth Metroplex, Greater Phoenix Area, '
-  'Jeddah (Saudi Arabia), Mexico City, Guatemala City.')
+_gf = uni[uni.geo_status=='fail']['Location'].tolist()
+A(f'The {len(_gf)} geographic removals: ' + ', '.join(f'`{x}`' for x in sorted(_gf)) + '.')
 A('')
 A('## 5. Final counts')
 A('')
@@ -116,9 +119,9 @@ A(tbl([['Title ambiguous only', f'{int(((nr.title_status=="review")&(nr.geo_stat
        ['Both ambiguous', f'{int(((nr.title_status=="review")&(nr.geo_status=="review")).sum()):,}']],
       ['Reason','Contacts']))
 A('')
-A('The location-ambiguous rows are exactly the cases you named: 81 × bare `United States` (no state), '
-  '6 × `Kansas City Metropolitan Area` (straddles MO/KS), 1 × `Lancaster Metropolitan Area` (PA/OH/CA), '
-  '1 × `Greater Columbus Area` (OH/GA/IN/MS), 1 × blank. None were resolved by guessing.')
+_gr = uni[uni.geo_status=='review']['Location'].replace('', '(blank)').value_counts()
+A('The location-ambiguous rows are exactly the cases you named: '
+  + ', '.join(f'{v} × `{k}`' for k, v in _gr.items()) + '. None were resolved by guessing.')
 A('')
 A('## 6. Criterion B — title matching')
 A('')
@@ -126,12 +129,14 @@ A('Normalization: lowercased, punctuation stripped, `CEO`→`chief executive off
   'vice president`, `Cofounder`/`Co Founder`/`Co-Founder` unified, likewise `Co-Owner`. Multi-title '
   'strings split on `&` `,` `|` `/` `+` `and` **and parentheses**, then each part tested independently.')
 A('')
-A(tbl([['Accepted', f'{int((uni.title_status=="pass").sum()):,}', '327', '`titles_accepted.csv`'],
-       ['Sent to review', f'{int((uni.title_status=="review").sum()):,}', '363', '`titles_needs_review.csv`'],
-       ['Rejected', f'{int((uni.title_status=="fail").sum()):,}', '606', '`titles_rejected.csv`']],
+_nt = lambda st: f'{uni[uni.title_status==st]["Job Title"].nunique():,}'
+A(tbl([['Accepted', f'{int((uni.title_status=="pass").sum()):,}', _nt('pass'), '`titles_accepted.csv`'],
+       ['Sent to review', f'{int((uni.title_status=="review").sum()):,}', _nt('review'), '`titles_needs_review.csv`'],
+       ['Rejected', f'{int((uni.title_status=="fail").sum()):,}', _nt('fail'), '`titles_rejected.csv`']],
       ['Bucket','Contacts','Distinct raw titles','Frequency table']))
 A('')
-A('Per your rule, `Director` was accepted **only** standalone (36 contacts) or top-level-qualified '
+_dsa = int((uni[uni.bucket!='removed']['Job Title'].str.strip().str.lower()=='director').sum())
+A(f'Per your rule, `Director` was accepted **only** standalone ({_dsa} contacts) or top-level-qualified '
   '(`Managing Director`, `Executive Director`, `Agency Director`, `Director & Founder`). Every other '
   'Director variant — `Director of Marketing`, `Art Director`, `Creative Director`, `Associate Director`, '
   '`Director of First Impressions` — went to **needs_review**, never to removed. Same for `President`: '
@@ -161,24 +166,28 @@ A(tbl([[_TC(k), f'{v:,}'] for k,v in uni[uni.geo_status=='pass'].geo_state.value
 A('')
 A('## 8. Per-company counts')
 A('')
-A('Full table in `company_counts.csv` (all 2,332 distinct companies, counted both across all unique '
+cc = pd.read_csv(f'{OUT}/company_counts.csv', encoding='utf-8-sig', keep_default_na=False)
+over3 = cc[cc.flag_over_3=='YES']
+n2plus = int((cc.contacts_on_master>=2).sum())
+maxm = int(cc.contacts_on_master.max())
+A(f'Full table in `company_counts.csv` ({len(cc):,} distinct companies, counted both across all unique '
   'contacts and across `master_clean` only).')
 A('')
-A('**Companies with more than 3 contacts: 2.**')
+A(f'**Companies with more than 3 contacts: {len(over3)}.**')
 A('')
-A(tbl([['Straight North','4','2'],['TPG','4','2']],
+A(tbl([[r_['Company'], r_['contacts_all_unique'], r_['contacts_on_master']] for _, r_ in over3.iterrows()],
       ['Company','Contacts (all unique)','Contacts (on master_clean)']))
 A('')
-A('Company concentration is a non-issue on this list — after ICP filtering no company has more than 2 '
-  'contacts, and only 14 companies have 2 or more.')
+A(f'Company concentration is a non-issue — after ICP filtering no company has more than {maxm} contacts, '
+  f'and only {n2plus} companies have 2 or more.')
 A('')
+fn = pd.read_csv(f'{OUT}/first_name_before_after.csv', encoding='utf-8-sig', keep_default_na=False)
 A('## 9. First-name cleaning (before → after)')
 A('')
-A('24 of 2,402 first names were non-clean. Fixable ones were **cleaned, not deleted** — the original is '
+A(f'{len(fn)} of {len(uni):,} first names were non-clean. Fixable ones were **cleaned, not deleted** — the original is '
   'untouched in `First Name`, the usable version is in `cleaned_first_name`. Full list in '
   '`first_name_before_after.csv`.')
 A('')
-fn = pd.read_csv(f'{OUT}/first_name_before_after.csv', encoding='utf-8-sig', keep_default_na=False)
 A(tbl([[f'`{r["First Name"]}`', f'`{r["cleaned_first_name"]}`', r['first_name_status'], r['first_name_note']]
        for _, r in fn.iterrows()],
       ['Before','After','Status','What happened']))
@@ -219,11 +228,12 @@ A(f'**{len(m):,} + {len(nr):,} + {len(ru)+len(dups):,} = {TOTAL_IN:,}. Verified:
 A('')
 A('## 12. Things that looked off that you did not ask about')
 A('')
-A('1. **The duplicate export (§ top).** `Second` and `Third` are the same list; ~1,600 contacts are '
-  'missing from the original 4,000+. This is the single most important finding here.')
-A('2. **Criterion A was never checkable.** There is no company-headcount column in any of the three '
-  'files — not empty, absent. Every row carries `headcount_verified = no_data_in_export` in '
-  '`needs_review.csv`. I did **not** route all 2,402 rows to needs_review on that basis, because you '
+A('1. **The duplicate export (§ top).** All four files cover the same window; the fourth added only 2 '
+  'people. ~1,600 contacts are still missing from the original 4,000+. This is the single most '
+  'important finding here, and a fifth export run the same way will not fix it.')
+A(f'2. **Criterion A was never checkable.** There is no company-headcount column in any of the '
+  f'{len(fr)} files — not empty, absent. Every row carries `headcount_verified = no_data_in_export` in '
+  '`needs_review.csv`. I did **not** route all rows to needs_review on that basis, because you '
   'confirmed the headcount filter was applied in Sales Nav and is out of scope here. Flagging it '
   'because it means **nothing in this pipeline has verified company size**.')
 A('3. **Three different headcount numbers appeared in this task**: `11to50` in the filenames, `50-200` '
@@ -233,7 +243,8 @@ A(f'4. **{int(m["Profile URL"].str.contains("/in/AC",case=False).sum())} of {len
   '`ACoAA…`/`ACwAA…` member-ID URLs** instead of vanity URLs. HeyReach generally resolves these, but '
   'they are worth spot-checking on import — and as the Rubens Montes de Oca case shows, a person can '
   'appear under both formats without URL dedupe catching it.')
-A('5. **Student organisations are on the clean list.** ~18 master rows are university clubs and student '
+_stu = int(m['Company'].str.contains(r'(?:universit|college|student|chapter|campus|fraternit|sororit)', case=False, regex=True).sum())
+A(f'5. **Student organisations are on the clean list.** ~{_stu} master rows are university clubs and student '
   'bodies — `Undergraduate Student Government - Baruch College`, `American Marketing Association - '
   'University of Florida Chapter`, `TAMID Group at The University of Wisconsin`, `Pi Sigma Epsilon, '
   'University of Michigan`, `Spoon University`. They pass because a student club genuinely has a '
@@ -242,14 +253,17 @@ A('6. **Other non-agency contamination** on master: `Ministry of Tourism of the 
   '`Vantage Health Systems`, `Your Direct Connection Insurance Advisors`, real-estate coaching, a law '
   'organisation. Small volume (~18 rows total) but present. Separately, in the raw list Peter Shankman '
   'appears as `Futurist in Residence` at a personal-injury law firm — row 3 of every file.')
-A('7. **`Company` sometimes contains the job title.** 6 rows in the raw data have `Company` exactly '
-  'equal to `Job Title` (e.g. Paul Parnell, `Writer/Director` in both). A scraper artifact; 1 survives '
-  'onto master.')
-A('8. **`Enriched Email` and `Custom Address` are 100% empty** in all three files, as are `Tags` and all '
+_cjt = int((uni['Company'].str.strip()==uni['Job Title'].str.strip()).sum())
+A(f'7. **`Company` sometimes contains the job title.** {_cjt} unique contacts have `Company` exactly '
+  'equal to `Job Title` (e.g. Paul Parnell, `Writer/Director` in both). A scraper artifact; '
+  f'{int((m["Company"].str.strip()==m["Job Title"].str.strip()).sum())} survives onto master.')
+A(f'8. **`Enriched Email` and `Custom Address` are 100% empty** in all {len(fr)} files, as are `Tags` and all '
   'six `Auto-tag` columns. There is no email in this data at all — it is LinkedIn-only. I kept the '
   'columns so the import shape matches what HeyReach exported.')
-A('9. **Batch 2 is tiny** (28 contacts). You may prefer to split 514/514 rather than 1,000/28.')
-A('10. **Standalone `Director` (36 contacts) is on master by your rule**, but in 11-50 person agencies '
+_tail = len(m) - 1000*(s['nb']-1)
+A(f'9. **The last batch is tiny** ({_tail} contacts). You may prefer to split '
+  f'{len(m)//2}/{len(m)-len(m)//2} rather than 1,000/{_tail}.')
+A(f'10. **Standalone `Director` ({_dsa} contacts) is on master by your rule**, but in 11-50 person agencies '
   '"Director" is frequently a mid-level IC, not a decision-maker. Worth eyeballing those 36.')
 A('')
 

@@ -2,7 +2,7 @@
 """
 LinkedIn Sales Navigator export: dedupe + hygiene + ICP filter.
 
-Consumes the three HeyReach-style Sales Nav exports, produces one deduplicated,
+Consumes the HeyReach-style Sales Nav exports, produces one deduplicated,
 ICP-filtered master list plus full audit trail.
 
 Every input row lands in exactly one output file. See reconcile() at the bottom.
@@ -17,7 +17,7 @@ os.makedirs(OUT, exist_ok=True)
 # ---------------------------------------------------------------- STEP 2: LOAD + NORMALIZE
 def short_name(path):
     b = os.path.basename(path)
-    for k in ('First', 'Second', 'Third'):
+    for k in ('First', 'Second', 'Third', 'Forth'):
         if k in b:
             return k
     return b
@@ -110,7 +110,7 @@ within, cross = 0, 0
 for key, grp in work.groupby('cluster', sort=False):
     grp = grp.sort_values(['n_filled', 'row_uid'], ascending=[False, True])
     win = grp.iloc[0].copy()
-    srcs = sorted(set(grp['source_file']), key=lambda s: ['First','Second','Third'].index(s))
+    srcs = sorted(set(grp['source_file']), key=lambda s: ['First','Second','Third','Forth'].index(s))
     win['source_files'] = '|'.join(srcs)
     win['n_source_files'] = len(srcs)
     win['dup_count'] = len(grp)

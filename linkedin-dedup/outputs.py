@@ -9,7 +9,7 @@ uni  = pd.read_pickle(os.path.join(OUT, '_uni.pkl'))
 dups = pd.read_pickle(os.path.join(OUT, '_dups.pkl'))
 meta = json.load(open(os.path.join(OUT, '_meta.json')))
 ORIG = meta['orig_cols']; file_rows = meta['file_rows']; TOTAL_IN = meta['total_in']
-ORDER = ['First','Second','Third']
+ORDER = ['First','Second','Third','Forth']
 
 def w(df, name):
     p = os.path.join(OUT, name)
