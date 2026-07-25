@@ -267,6 +267,19 @@ def norm_title_part(p):
     return p
 
 SPLIT_RE = re.compile(r'\s*(?:[&,|/\+()]|\band\b)\s*')
+
+# "Business Owner" / "Company Owner" are Owners. So is "Owner of <company>",
+# "Managing Owner", "Franchise Owner" etc. -- the head noun is ownership and the
+# rest is just the company name or a second hat. Qualifiers are whitelisted so
+# that non-ownership senses of the word ("Product Owner" is a scrum role,
+# "Owner Relations Agent" services owners) do not slip through.
+OWNER_QUALIFIER = r'(?:small\s+|farm\s+|media\s+|equity\s+|managing\s+|majority\s+|sole\s+|' \
+                  r'business\s+|buisness\s+|company\s+|franchise\s+|franchisee\s+|agency\s+)*'
+OWNER_RE   = re.compile(r'^' + OWNER_QUALIFIER + r'(?:co\s+)?owner\b')
+NOT_OWNER  = re.compile(r'\b(product\s+owner|owner\s+relations|delivery\s+driver|owner\s+services)\b')
+
+def is_owner_title(part):
+    return bool(OWNER_RE.match(part)) and not NOT_OWNER.search(part)
 def title_status(raw):
     """-> (status, detail). status in {pass, review, fail}"""
     t = collapse(raw)
@@ -282,6 +295,9 @@ def title_status(raw):
             if p == 'director':
                 return 'pass', 'standalone director'
             return 'pass', f'matched "{p}"'
+    for p in parts:
+        if is_owner_title(p):
+            return 'pass', f'owner variant "{p}"'
     for p in parts:
         if 'board' in p or 'trustee' in p:
             continue                       # board seats are not the CEO/Founder persona

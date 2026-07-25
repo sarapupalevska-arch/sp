@@ -145,8 +145,13 @@ A(f'Per your rule, `Director` was accepted **only** standalone ({_dsa} contacts)
 A('')
 A('Judgement calls I made inside your rules, flag them if you disagree:')
 A('')
-A('- `Business Owner` (43) and `Company Owner` (19) are **not** literally `Owner`, so they went to '
-  'review rather than being auto-accepted.')
+_ow = int(((uni.title_status=='pass') & uni.title_detail.str.startswith('owner variant')).sum())
+A(f'- **Owner variants are accepted** ({_ow} contacts): `Business Owner`, `Company Owner`, '
+  '`Managing Owner`, `Franchise Owner`, `Equity owner`, `Owner-Operator`, and `Owner of <company>` '
+  'forms — the head noun is ownership and the remainder is just the company name or a second hat. '
+  'The typo `Buisness Owner` is included. Non-ownership senses of the word are **not** accepted and '
+  'stay in review: `Product Owner` (a scrum role), `Owner Relations Agent`, '
+  '`Owner Operator Delivery Driver`, `Communications Owner Services`.')
 A('- `Founding Member` (11) went to review as senior-adjacent, not rejected.')
 A('- Board seats (`Board Member`, `Member of the Board of Directors`, `Member Board of Trustees`) were '
   '**rejected**, not reviewed — a board seat is not the CEO/Founder persona.')
