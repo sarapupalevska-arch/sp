@@ -1,83 +1,20 @@
 # Преостанати производи без потврден INCI
 
-Состојба: 16 август 2026. Вкупно преостанати: **420** производи.
+Состојба: 16 август 2026. Вкупно преостанати: **414** производи.
 
-Причина за прекин: мрежната egress политика на оваа сесија ги блокира сите извори на состав
-(incidecoder.com, incibeauty, skinsafeproducts, notino, официјалните сајтови на брендовите,
-како и studiotri.mk и e-elixir.mk). Достапно е само веб-пребарување, чии резултати не можат да
-се потврдат на изворната страница, па не се внесени за да не се загади базата.
+Причина: мрежната egress политика на оваа сесија ги блокира сите извори на состав
+(incidecoder.com, incibeauty.com, skinsafeproducts.com, notino, cosdna, официјалните сајтови
+на брендовите, како и studiotri.mk и e-elixir.mk). Проверено повеќепати — блокадата важи и за
+wikipedia.org, значи не е специфична за овие домени.
 
-## studiotri:schwarzkopf-professional — 69
+Достапно е само веб-пребарување. Од 15 пробни производи, само 8 вратија листа што изгледа
+целосна; останатите беа отсечени или вратија две спротивставени формулации. Во еден случај
+два различни производи (Scalp Clinix Anti-Hair Loss и Soothing) вратија идентична листа —
+знак дека резултатот може да е составен, а не прочитан од пакување. Затоа се внесени само
+оние што поминаа, и сите се означени како непотврдени.
 
-- ред 20 · BONACURE CP COLOR FREEZE SHAMPOO 250 ML · Шампони (137)
-- ред 21 · BONACURE CP MOISTURE KICK SHAMPOO 250 МL · Шампони (137)
-- ред 22 · BONACURE CP REPAIR RESCUE SHAMPOO 250 ML · Шампони (137)
-- ред 23 · BONACURE CP TIME RESTORE SHAMPOO Q10+ 250 ML · Шампони (137)
-- ред 24 · BONACURE CP VOLUME BOOST SHAMPOO 250 ML · Шампони (137)
-- ред 25 · BONACURE SCALP ROOT ACTIVATING SHAMPOO 250ML · Шампони (137)
-- ред 56 · FIBRE CLINIX DE-FRIZZ SHAMPOO 300 ML · Шампони (137)
-- ред 58 · FIBRE CLINIX HYDRATE SHAMPOO 300 ML · Шампони (137)
-- ред 59 · FIBRE CLINIX VIBRANCY SHAMPOO 300 ML · Шампони (137)
-- ред 99 · OSIS + REFRESH DUST DRY SHAMPOO 300 ML · Шампони (137)
-- ред 137 · SCALP CLINIX ANTI-HAIR LOSS SHAMPOO 300 ML · Шампони (137)
-- ред 139 · SCALP CLINIX SOOTHING SHAMPOO 300 ML · Шампони (137)
-- ред 158 · BONACURE CP COLOR FREEZE CONDITIONER 200 ML · Conditioners (67)
-- ред 172 · FIBRE CLINIX FORTIFY CONDITIONER 250 ML · Conditioners (67)
-- ред 173 · FIBRE CLINIX HYDRATE CONDITIONER 250 ML · Conditioners (67)
-- ред 227 · BONACURE CP COLOR FREEZE TREATMENT MASK 200 ML · Маски и rinse-off treatments (58)
-- ред 228 · BONACURE CP MOISTURE KICK TRETMENT MASK 200 ML · Маски и rinse-off treatments (58)
-- ред 229 · BONACURE CP REPAIR RESCUE TREATMENT MASK 200 ML · Маски и rinse-off treatments (58)
-- ред 230 · BONACURE CP TIME RESTORE TRETMENT MASK Q10+ 200 ML · Маски и rinse-off treatments (58)
-- ред 240 · CHROMA ID BONDING COLOR MASK 8-19 LAVENDER 250 ML · Маски и rinse-off treatments (58)
-- ред 241 · CHROMA ID BONDING COLOR MASK 9,5-1 ICE 250 ML · Маски и rinse-off treatments (58)
-- ред 253 · FIBRE CLINIX DE-FRIZZ TREATMENT MASK 250 ML · Маски и rinse-off treatments (58)
-- ред 254 · FIBRE CLINIX FORTIFY TRETMENT MASK 250 ML · Маски и rinse-off treatments (58)
-- ред 255 · FIBRE CLINIX HYDRATE TREATMENT MASK 250 ML · Маски и rinse-off treatments (58)
-- ред 256 · FIBRE CLINIX VIBRANCY TREATMENT MASK 250 ML · Маски и rinse-off treatments (58)
-- ред 299 · OIL ULTIME ARGAN FINISHING OIL (FOR MEDIUM TO COARSE HAIR )100 ML · Масла за должина и краеви (18)
-- ред 300 · OIL ULTIME BARBARY FIG FINISHING OIL ( FOR VERY DRY AND BRITTLE HAIR ) 100 ML · Масла за должина и краеви (18)
-- ред 339 · BONACURE CP COLOR FREEZE SPRAY CONDITIONER 200 ML · Leave-in / спреј / крема (25)
-- ред 340 · BONACURE CP MOISTURE KICK SPRAY CONDITIONER 200 ML · Leave-in / спреј / крема (25)
-- ред 341 · BONACURE CP REPAIR RESCUE SPRAY CONDITIONER 200 ML · Leave-in / спреј / крема (25)
-- ред 347 · FIBRE CLINIX HYDRATE SPRAY CONDITIONER 200 ML · Leave-in / спреј / крема (25)
-- ред 368 · OSIS+ FLATLINER HEAT PROTECTION SPRAY 200 ML · Термо-заштита / blow-dry (9)
-- ред 380 · SCALP CLINIX PRE-SHAMPOO SCRUB 200 ML · Bond repair / pre-shampoo (3)
-- ред 384 · BONACURE CP CLEAN BALANCE DEEP CLEANSING SHAMPOO 250 ML · Clarifying / првут / длабинско чистење (11)
-- ред 392 · SCALP CLINIX FLAKE CONTROL SHAMPOO 300 ML · Clarifying / првут / длабинско чистење (11)
-- ред 399 · BONACURE CP COLOR FREEZE SHINE SAVIOR SERUM 150 ML · Серуми / ампули за должина (26)
-- ред 436 · IGORA EXPERT MOUSSE 5-0 LIGHT BROWN 100 ML · Пена / mousse (19)
-- ред 437 · IGORA EXPERT MOUSSE 9,5-12 MOONSTONE 100 ML · Пена / mousse (19)
-- ред 438 · IGORA EXPERT MOUSSE 9,5-17 PEACH 100 ML · Пена / mousse (19)
-- ред 439 · IGORA EXPERT MOUSSE 9,5-4 BEIGE 100 ML · Пена / mousse (19)
-- ред 440 · OSIS+ GRIP EXTREME HOLD MOUSSE 200 ML · Пена / mousse (19)
-- ред 442 · SESSION LABEL THE MOUSSE 200 ML · Пена / mousse (19)
-- ред 489 · OSiS + MESS UP PASTE 100 ML · Восок / paste / clay / pomade (16)
-- ред 490 · OSIS+ FLEXWAX STRONG CREAM WAX 85 ML · Восок / paste / clay / pomade (16)
-- ред 493 · SESSION LABEL THE PASTE 65 ML · Восок / paste / clay / pomade (16)
-- ред 597 · BONACURE CP CLEAN BALANCE DEEP CLEANSING ANTI-POLLUTION WATER 150 ML · Други производи за нега (149)
-- ред 598 · BONACURE CP MOISTURE KICK CURL BOUNCE CREAM 150 ML · Други производи за нега (149)
-- ред 599 · BONACURE CP MOISTURE KICK HYDRATION BALM 150 ML · Други производи за нега (149)
-- ред 600 · BONACURE CP REPAIR RESCUE SEALED ENDS 100 ML · Други производи за нега (149)
-- ред 635 · FIBRE CLINIX DE-FRIZZ SMOOTHING SPRAY 200ML · Други производи за нега (149)
-- ред 636 · FIBRE CLINIX FORTIFY BOOSTER 30 ML · Други производи за нега (149)
-- ред 637 · FIBRE CLINIX FORTIFY MULTI-REPAIR SPRAY 200 ML · Други производи за нега (149)
-- ред 681 · OIL ULTIME ROSE FINISHING OIL (FOR STRESSED HAIR AND SCALP ) 100 ML · Други производи за нега (149)
-- ред 684 · OSiS + THRILL FIBRE GUM 100 ML · Други производи за нега (149)
-- ред 685 · OSIS +HAIRBODY 200 ML · Други производи за нега (149)
-- ред 686 · OSIS+ DRY T SOFT DUST 10 GR · Други производи за нега (149)
-- ред 687 · OSIS+ DUST IT 10 GR. · Други производи за нега (149)
-- ред 688 · OSIS+ Freeze,300 ML · Други производи за нега (149)
-- ред 689 · OSiS+ MIGHTY MATTE 85 ML · Други производи за нега (149)
-- ред 690 · OSIS+ UPLOAD VOLUME CREAM 200 ML · Други производи за нега (149)
-- ред 691 · OSIS+ VOLUME UP VOLUME BOOSTER SPRAY 300 ML · Други производи за нега (149)
-- ред 713 · SCALP CLINIX SOOTHING TREATMENT 200 ML · Други производи за нега (149)
-- ред 715 · SESSION LABEL FLEXIBLE 300 ML · Други производи за нега (149)
-- ред 718 · SESSION LABEL THE MUD 65 ML · Други производи за нега (149)
-- ред 719 · SESSION LABEL THE SALT 200 ML · Други производи за нега (149)
-- ред 720 · SESSION LABEL THE STRONG 300 ML · Други производи за нега (149)
-- ред 721 · SESSION LABEL THE STRONG 500 ML · Други производи за нега (149)
-- ред 722 · SESSION LABEL THE TEXTURIZER 300 ML · Други производи за нега (149)
-- ред 723 · SESSION LABEL THE THICKENER 200 ML · Други производи за нега (149)
+Внесовите со ознака _(непотврдено — составено од веб-пребарување)_ треба да се преконтролираат
+кога ќе има пристап до incidecoder.
 
 ## studiotri:loreal-professional — 68
 
@@ -149,6 +86,72 @@
 - ред 669 · L’Оreal Professionnel Keratin Alpha Sleek професионален измазнувачки третман за сите типови коса 200ml · Други производи за нега (149)
 - ред 670 · L’Оreal Professionnel Keratin Alpha Sleek професионална маска за долготрајна мазност и контрола на волуменот и frizz-от 250ml · Други производи за нега (149)
 - ред 671 · L’Оreal Professionnel Scalp Advanced Professional Treatment Третман за нега на чувствителен скалп · Други производи за нега (149)
+
+## studiotri:schwarzkopf-professional — 63
+
+- ред 20 · BONACURE CP COLOR FREEZE SHAMPOO 250 ML · Шампони (137)
+- ред 21 · BONACURE CP MOISTURE KICK SHAMPOO 250 МL · Шампони (137)
+- ред 23 · BONACURE CP TIME RESTORE SHAMPOO Q10+ 250 ML · Шампони (137)
+- ред 25 · BONACURE SCALP ROOT ACTIVATING SHAMPOO 250ML · Шампони (137)
+- ред 56 · FIBRE CLINIX DE-FRIZZ SHAMPOO 300 ML · Шампони (137)
+- ред 137 · SCALP CLINIX ANTI-HAIR LOSS SHAMPOO 300 ML · Шампони (137)
+- ред 158 · BONACURE CP COLOR FREEZE CONDITIONER 200 ML · Conditioners (67)
+- ред 172 · FIBRE CLINIX FORTIFY CONDITIONER 250 ML · Conditioners (67)
+- ред 173 · FIBRE CLINIX HYDRATE CONDITIONER 250 ML · Conditioners (67)
+- ред 227 · BONACURE CP COLOR FREEZE TREATMENT MASK 200 ML · Маски и rinse-off treatments (58)
+- ред 228 · BONACURE CP MOISTURE KICK TRETMENT MASK 200 ML · Маски и rinse-off treatments (58)
+- ред 229 · BONACURE CP REPAIR RESCUE TREATMENT MASK 200 ML · Маски и rinse-off treatments (58)
+- ред 230 · BONACURE CP TIME RESTORE TRETMENT MASK Q10+ 200 ML · Маски и rinse-off treatments (58)
+- ред 240 · CHROMA ID BONDING COLOR MASK 8-19 LAVENDER 250 ML · Маски и rinse-off treatments (58)
+- ред 241 · CHROMA ID BONDING COLOR MASK 9,5-1 ICE 250 ML · Маски и rinse-off treatments (58)
+- ред 253 · FIBRE CLINIX DE-FRIZZ TREATMENT MASK 250 ML · Маски и rinse-off treatments (58)
+- ред 254 · FIBRE CLINIX FORTIFY TRETMENT MASK 250 ML · Маски и rinse-off treatments (58)
+- ред 255 · FIBRE CLINIX HYDRATE TREATMENT MASK 250 ML · Маски и rinse-off treatments (58)
+- ред 256 · FIBRE CLINIX VIBRANCY TREATMENT MASK 250 ML · Маски и rinse-off treatments (58)
+- ред 299 · OIL ULTIME ARGAN FINISHING OIL (FOR MEDIUM TO COARSE HAIR )100 ML · Масла за должина и краеви (18)
+- ред 300 · OIL ULTIME BARBARY FIG FINISHING OIL ( FOR VERY DRY AND BRITTLE HAIR ) 100 ML · Масла за должина и краеви (18)
+- ред 339 · BONACURE CP COLOR FREEZE SPRAY CONDITIONER 200 ML · Leave-in / спреј / крема (25)
+- ред 340 · BONACURE CP MOISTURE KICK SPRAY CONDITIONER 200 ML · Leave-in / спреј / крема (25)
+- ред 341 · BONACURE CP REPAIR RESCUE SPRAY CONDITIONER 200 ML · Leave-in / спреј / крема (25)
+- ред 347 · FIBRE CLINIX HYDRATE SPRAY CONDITIONER 200 ML · Leave-in / спреј / крема (25)
+- ред 368 · OSIS+ FLATLINER HEAT PROTECTION SPRAY 200 ML · Термо-заштита / blow-dry (9)
+- ред 380 · SCALP CLINIX PRE-SHAMPOO SCRUB 200 ML · Bond repair / pre-shampoo (3)
+- ред 384 · BONACURE CP CLEAN BALANCE DEEP CLEANSING SHAMPOO 250 ML · Clarifying / првут / длабинско чистење (11)
+- ред 392 · SCALP CLINIX FLAKE CONTROL SHAMPOO 300 ML · Clarifying / првут / длабинско чистење (11)
+- ред 399 · BONACURE CP COLOR FREEZE SHINE SAVIOR SERUM 150 ML · Серуми / ампули за должина (26)
+- ред 436 · IGORA EXPERT MOUSSE 5-0 LIGHT BROWN 100 ML · Пена / mousse (19)
+- ред 437 · IGORA EXPERT MOUSSE 9,5-12 MOONSTONE 100 ML · Пена / mousse (19)
+- ред 438 · IGORA EXPERT MOUSSE 9,5-17 PEACH 100 ML · Пена / mousse (19)
+- ред 439 · IGORA EXPERT MOUSSE 9,5-4 BEIGE 100 ML · Пена / mousse (19)
+- ред 440 · OSIS+ GRIP EXTREME HOLD MOUSSE 200 ML · Пена / mousse (19)
+- ред 442 · SESSION LABEL THE MOUSSE 200 ML · Пена / mousse (19)
+- ред 489 · OSiS + MESS UP PASTE 100 ML · Восок / paste / clay / pomade (16)
+- ред 490 · OSIS+ FLEXWAX STRONG CREAM WAX 85 ML · Восок / paste / clay / pomade (16)
+- ред 493 · SESSION LABEL THE PASTE 65 ML · Восок / paste / clay / pomade (16)
+- ред 597 · BONACURE CP CLEAN BALANCE DEEP CLEANSING ANTI-POLLUTION WATER 150 ML · Други производи за нега (149)
+- ред 598 · BONACURE CP MOISTURE KICK CURL BOUNCE CREAM 150 ML · Други производи за нега (149)
+- ред 599 · BONACURE CP MOISTURE KICK HYDRATION BALM 150 ML · Други производи за нега (149)
+- ред 600 · BONACURE CP REPAIR RESCUE SEALED ENDS 100 ML · Други производи за нега (149)
+- ред 635 · FIBRE CLINIX DE-FRIZZ SMOOTHING SPRAY 200ML · Други производи за нега (149)
+- ред 636 · FIBRE CLINIX FORTIFY BOOSTER 30 ML · Други производи за нега (149)
+- ред 637 · FIBRE CLINIX FORTIFY MULTI-REPAIR SPRAY 200 ML · Други производи за нега (149)
+- ред 681 · OIL ULTIME ROSE FINISHING OIL (FOR STRESSED HAIR AND SCALP ) 100 ML · Други производи за нега (149)
+- ред 684 · OSiS + THRILL FIBRE GUM 100 ML · Други производи за нега (149)
+- ред 685 · OSIS +HAIRBODY 200 ML · Други производи за нега (149)
+- ред 686 · OSIS+ DRY T SOFT DUST 10 GR · Други производи за нега (149)
+- ред 687 · OSIS+ DUST IT 10 GR. · Други производи за нега (149)
+- ред 688 · OSIS+ Freeze,300 ML · Други производи за нега (149)
+- ред 689 · OSiS+ MIGHTY MATTE 85 ML · Други производи за нега (149)
+- ред 690 · OSIS+ UPLOAD VOLUME CREAM 200 ML · Други производи за нега (149)
+- ред 691 · OSIS+ VOLUME UP VOLUME BOOSTER SPRAY 300 ML · Други производи за нега (149)
+- ред 713 · SCALP CLINIX SOOTHING TREATMENT 200 ML · Други производи за нега (149)
+- ред 715 · SESSION LABEL FLEXIBLE 300 ML · Други производи за нега (149)
+- ред 718 · SESSION LABEL THE MUD 65 ML · Други производи за нега (149)
+- ред 719 · SESSION LABEL THE SALT 200 ML · Други производи за нега (149)
+- ред 720 · SESSION LABEL THE STRONG 300 ML · Други производи за нега (149)
+- ред 721 · SESSION LABEL THE STRONG 500 ML · Други производи за нега (149)
+- ред 722 · SESSION LABEL THE TEXTURIZER 300 ML · Други производи за нега (149)
+- ред 723 · SESSION LABEL THE THICKENER 200 ML · Други производи за нега (149)
 
 ## studiotri:keune — 61
 
