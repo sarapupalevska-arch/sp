@@ -6,9 +6,9 @@ Living list of fashion, footwear, and resale sites, with a trust rating on each.
 Sara adds to this regularly — when she mentions new brands or sites, append them here.
 
 **Canonical copy (edit this one):**
-https://docs.google.com/spreadsheets/d/1gDXFK-As2rkyGf_0k9QdjCMdML11WYHPJ44bbvvmG9o/edit
+https://docs.google.com/spreadsheets/d/1KVt_wisd9lRnSMuD_T1SvbUBxZQ8qxiJKh3yWfBNdI0/edit
 
-- Drive file ID: `1gDXFK-As2rkyGf_0k9QdjCMdML11WYHPJ44bbvvmG9o`
+- Drive file ID: `1KVt_wisd9lRnSMuD_T1SvbUBxZQ8qxiJKh3yWfBNdI0`
 - Title: "Fashion & Shopping Sites — Aug 2026"
 - Owner: sarapupalevska@gmail.com, in My Drive
 
@@ -18,7 +18,7 @@ https://docs.google.com/spreadsheets/d/1gDXFK-As2rkyGf_0k9QdjCMdML11WYHPJ44bbvvm
 
 **Columns:** Name · Category · Subcategory · Website · Trust · Notes · Items viewed
 
-**Categories in use:** Bags & Purses · Clothing · Footwear · Resale · Aggregator · Marketplace · Utility
+**Categories in use:** Bags & Purses · Clothing · Footwear · Accessories · Beauty · Resale · Aggregator · Marketplace · Utility
 
 **Trust values:** `OK` · `Caution` · `Avoid`
 Ratings are a judgement call on authenticity risk, data/privacy practices, and seller
