@@ -6,9 +6,9 @@ Living list of fashion, footwear, and resale sites, with a trust rating on each.
 Sara adds to this regularly — when she mentions new brands or sites, append them here.
 
 **Canonical copy (edit this one):**
-https://docs.google.com/spreadsheets/d/1RN1gx2gb2eJE2jLvxUy0vvJ2RagZ3NnlUuhHw10odyk/edit
+https://docs.google.com/spreadsheets/d/PENDING/edit
 
-- Drive file ID: `1RN1gx2gb2eJE2jLvxUy0vvJ2RagZ3NnlUuhHw10odyk`
+- Drive file ID: `PENDING`
 - Title: "Fashion & Shopping Sites — Aug 2026"
 - Owner: sarapupalevska@gmail.com, in My Drive
 
@@ -25,7 +25,7 @@ Marketplace · Home · Supplements · Food · Travel · Utility
 **Scope:** every commerce site Sara visits, not only fashion. Jobs, social, streaming and
 news sites are deliberately excluded.
 
-**Coverage so far:** browser history 14-22 Aug 2026, 154 sites.
+**Coverage so far:** browser history 14-25 Aug 2026, 207 sites.
 
 **Rebuild the workbook** after editing the CSV: `python3 scripts/build-shopping-sheet.py`
 
@@ -46,3 +46,8 @@ changed. Old versions are left in Drive rather than trashed — ask before delet
 **Purchases confirmed in history** — worth not double-buying:
 - NYRVA, 21 Aug, order #13468 — HIRAYA Shoulder Bag + Mini in Blue (~17,700 MKD)
 - Coslovemetics, 14 Aug — Korean haircare/skincare, paid via Halkbank 3-D Secure
+- ZARA MK, 23 Aug — reached payments.zara.com and an order-details page. Sara asked that
+  Zara and Massimo Dutti not be added as rows, so this is recorded here only.
+
+**Excluded on request:** Zara (already a row from an earlier pass — leave it as is) and
+Massimo Dutti (never added).

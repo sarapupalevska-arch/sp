@@ -1,5 +1,6 @@
 Name,Category,Subcategory,Website,Trust,Notes,Items viewed
 Andrea Marron,Bags & Purses,Sculptural handbags,https://andreamarron.com,OK,,Shop All — sculptural handbags
+ASKENT,Bags & Purses,Leather goods (Russia),https://askent.ru,Caution,.ru storefront; payment/shipping risk from EU,Сумка КОРСЕТ; КОРСЕТ МИДИ; delivery & payment terms
 ASTOUD,Bags & Purses,Independent,https://astoud.com,OK,,SBNE Garnet Noued Medium Bag
 AUDETTE,Bags & Purses,Independent leather,https://audette-shop.com,OK,Baguette in 7 finishes,"Baguette — Cognac Napalack, Marron Glacé, Light Taupe Alias, Pistache Grained, Cactus, Citron Napalack, Suede Camel Marron"
 Betife,Bags & Purses,"Raffia clutches, Russia",https://betife.ru,Caution,.ru storefront; payment/shipping risk from EU,Клатч из рафии серебряный (silver raffia clutch)
@@ -33,6 +34,7 @@ Parallel X,Bags & Purses,Independent leather,https://parallelxstore.com,OK,Bambi
 Prada,Bags & Purses,Luxury house,https://prada.com,OK,,Eyewear; Pradasphere; Prada Gentle Monster
 Sahara Wade,Bags & Purses,Independent,https://saharawade.com,OK,Signed in 21 Aug,DROP 02 — Petite & Large Collections; DROP 1; Identity
 SC103,Bags & Purses,Independent,https://sc103.us,OK,Revisited across three days,
+The Attico,Bags & Purses,Designer,https://theattico.com,OK,,Bags pages 1-3; women's sale
 Verafied New York,Bags & Purses,Contemporary handbags,https://verafiedny.com,OK,Your most-visited brand; ~40 page views,"Butter Ostrich Café Mini; Café Mini in Zebra/Cheetah/Python/Ivory/Gold Suede; Hobo in Gold Black, Gold Chocolate, Gold Suede, Silver Black (+minis); Twister Hobo; Medium Espresso Suede Club; Éclair clutches; Black Croc Wallet; Ring Bag; Lock Set — reached checkout"
 Wandler,Bags & Purses,Luxury leather goods,https://wandler.com,OK,,
 Warp,Bags & Purses,Independent leather,https://warp-online.com,OK,Tobla East-West bag; pre-orders,Tobla Bag Black; Tobla Crimson Red; Sartorial Essentials; pre-orders
@@ -42,61 +44,93 @@ ANIMAE,Clothing,Independent,https://animae.la,OK,Early access pass,The NOVA coll
 Anthropologie,Clothing,Ready-to-wear,https://anthropologie.com,OK,"Shoes, Maeve, kaftans",Maeve Horsebit Mule & Contrast Lace-Up Ballet Flats; ALOHAS Sway Flats; Hutch Feathered Kaftan; Sac de Soul Nina Mini; Frances Valentine Feather Pouf; Farm Rio Suede Flower; long jackets & coats
 ASOS,Clothing,Fast fashion,https://asos.com,OK,You have orders and saved items here,"ARRANGE — 30+ pieces (maxi skirts, blazers, co-ords, dresses); Liquorice lace-up flats (burgundy mesh, sand suedette); Steve Madden Calico tabi flats; adidas Originals x ASOS track top & skort set; Salomon XT-6; Asics Gel-DS 14 & Nunobiki; Dragon Diffusion Santa Croce; JW PEI Zora & Yara"
 Bear Shop,Clothing,Local (MK/AL) streetwear,https://bearshop19.com,OK,"T-shirts, accessories",A Paper Kid T-shirt; femra/meshkuj tees; aksesore
+Bershka,Clothing,Fast fashion (Inditex),https://bershka.com,OK,Reached basket and registration 24 Aug,Ribbed strap top; contrast-strap top; short-sleeve crew tee; patterned cargo bermudas; patterned wide-leg trousers; check technical cap
 bound,Clothing,Contemporary menswear,https://wearebound.co.uk,OK,Menswear,Best sellers; cargo trousers; jeans; sale
 By Gee,Clothing,Contemporary womenswear,https://bygee.co,OK,,Shop All
+Can We Kit,Clothing,Brand site — storefront offline,https://canwekit.com,Caution,"Its Shopify store returned ""Store unavailable"" on 21 Aug; only Services and Keep In Touch pages load",Services; Keep In Touch
+Can We Kit (store),Clothing,Dead Shopify subdomain,https://4eb68c-6b.myshopify.com,Avoid,"""Store unavailable"" — raw Shopify subdomain with no custom domain; do not enter payment details if it comes back up",Store unavailable
+CHARCOAL,Clothing,Australian contemporary,https://charcoalclothing.com.au,OK,,Callum Jacket (Chocolate); Margot Jumper (Sage); Nyra Midi Dress (Lemon Whip); outerwear; accessories
 CICI COCO,Clothing,Ukrainian brand,https://cici-coco.com.ua,OK,,Summer Cruise '26; winter sale up to 50%
 Cider,Clothing,Ultra-fast fashion,https://shopcider.com,Caution,Shein-style model; sizing and quality vary a lot,Satin Boat Neck Bell Sleeve Asymmetrical Blouse; shoes & bags; summer clearance
+Coosy,Clothing,Spanish contemporary,https://coosy.es,OK,,CHLOECRUDO Jacket; new in; sales
 COS,Clothing,Ready-to-wear,https://cos.com,OK,"Finally shopped it 22 Aug, after two location-select dead ends","Panelled Leather Long Coat (Black); Tailored Cotton Long Coat (Burgundy); women's jackets, handbags, shoes"
 Cult Mia,Clothing,Multi-brand designer,https://cultmia.com,OK,Independent designers marketplace,Lecia Laser Cut Ombre Organza Dress; Double A Brianna Leather Jacket in Olive; shoes; wedding guest
+Dailora Studios,Clothing,Independent,https://dailorastudios.com,OK,,Products
 DAS LA VIE,Clothing,Independent,https://daslavie.com,OK,,Trending pieces
+Desigual,Clothing,Spanish,https://desigual.com,OK,Reached via a ShopMy affiliate redirect,Thick Egonlab Sweater
+DISIAC,Clothing,Handmade accessories & apparel,https://disiacny.com,OK,,Tops; bottoms
+DISSH,Clothing,Australian contemporary,https://dissh.com,OK,,Paloma Red Cotton Midi Dress; best sellers; trending sets
 Elliatt,Clothing,Occasion wear,https://elliatt.com,OK,,Lucetta Off Shoulder Gown (Red)
+Ewusie,Clothing,Independent,https://ewusie.com,OK,,
 Fancì Club,Clothing,Party & going-out,https://fanciclub.com,OK,,"Crow Midi Dress; Valentina Lace-up Dress; Fleshlight Button Jacket; Catch Prey Ankle Strap Heels; outerwear, eyewear, gloves"
+Fashion Group,Clothing,MANGO stockist (MK),https://fashiongroup.com.mk,OK,How you shop MANGO locally,Bags; totes; jackets; coats; MANGO City Mall
 Free People,Clothing,Ready-to-wear,https://freepeople.com,OK,,Mellow Shearling Slides; Dr. Martens Fusion Fringe Hi Boots
 Gina Corrieri,Clothing,Independent,https://ginacorrieri.com,OK,,Products
+Glassworks London,Clothing,UK contemporary,https://glassworkslondon.com,OK,,Bright red vegan leather pleated skirt
 Hellessy,Clothing,Designer ready-to-wear,https://hellessy.com,OK,Archive sale,Ricky Jacket; jackets; tops; archive sale
 Henne,Clothing,Australian elevated basics,https://henne.com.au,OK,,Briar Jacket (Black Leather); knitwear; coats & puffers; accessories
+JOAEN,Clothing,Australian leather,https://joaen.com.au,OK,,Leather Sara Jacket
+Joe's Jeans,Clothing,Denim & outerwear,https://joesjeans.com,OK,,The Elizabeth Trench; Elizabeth Vegan Suede Trench (Dark Chocolate); The Vegan Leather Long Coat (Matte Black)
 Kiko Kostadinov,Clothing,Designer,https://kikokostadinov.com,OK,,Lella Hybrid — Hickory/Syrup/Cream+Mocha; sale
+Kim Shui Studio,Clothing,Designer,https://kimshui.net,OK,,Lace Qi Pao Deep V Neck Dress
+Kith,Clothing,Streetwear,https://kith.com,OK,EU site: eu.kith.com,Women's & men's headwear
 L'AGENCE,Clothing,Contemporary,https://lagence.com,OK,Adelina faux fur clutch,Adelina Faux Fur Clutch in Black; new collection
+Majestaet,Clothing,Athens-based,https://majestaet.com,OK,Archive collections up to -70%,"SS26 blazers & jackets; shirts & tops; archive skirts, tops, jackets"
 menk,Clothing,Independent,https://menk.store,OK,,RODMAN BOY; BIG FACE
 Missguided,Clothing,Fast fashion,https://missguided.com,Caution,Long browses 16 + 21 Aug; signed in with Google; fast-fashion quality and returns are inconsistent,KIZN satin wrap mini dresses (10+); KIZN Oversized Belted Trench; AiiRZ Double Breasted Faux Fur Collar Overcoat; AiiRZ wide leg denim; MISSGUIDED turn-up straight jeans; shoes; co-ords
 Mockeviciute,Clothing,Independent,https://mockeviciute.com,OK,,View All
 Molly Goddard,Clothing,Designer,https://mollygoddard.com,OK,"Runway archive browsing, not shopping",Runway collections SS20-SS24; Resort 2025; Frieze x DSM
+Munthe,Clothing,Danish contemporary,https://en.munthe.com,OK,,Jackets & blazers; denim; bags
 Naked Wardrobe,Clothing,Contemporary,https://nakedwardrobe.com,OK,Created an account 15 Aug,Suiting Zebra Jacquard Blazer; Feather Plush Mini Skirt; Vegan Leather Trench; Faux Feather Long Coat; Twill Trench; Knit Braid Maxi Skirt; Quilted Vegan Leather Wide Leg Pants; co-ords; $50 Friday
 Nanushka,Clothing,Ready-to-wear,https://nanushka.com,OK,"Sale, outerwear, Asics collab",Amantha structured blazer (grey); Neneca dress (off white); Asics Gel-Kinetic collab; sale outerwear & accessories
+New Look,Clothing,UK high street,https://newlook.com,OK,,Dark Burgundy Faux Leather Collared Jacket
 NYRVA,Clothing,Independent / made-to-order,https://nyrva.us,OK,PURCHASED 21 Aug — order #13468 confirmed,"HIRAYA Shoulder Bag & HIRAYA Mini Shoulder Bag (Blue) — ORDER PLACED (~17,700 MKD); Rawhide Carryall Blue; Rawhide Trucker; belts, hats"
 OFFKUT Studio,Clothing,Independent,https://offkutstudio.com,OK,,Shop all
+Only The Blind,Clothing,UK contemporary,https://onlytheblind.com,OK,,Womens outerwear & jackets; sale
+Oro Brand,Clothing,Brazilian occasion wear,https://orobrand.com.br,OK,"Priced in BRL — you converted R$5,299 to euro",Vestido Eloá; Conjunto Aline Plumas; new in; dresses
 Other Normal,Clothing,"Independent, Australia",https://othernormal.com.au,OK,,Homepage only
 PAIDEN,Clothing,One-of-one pieces,https://paiden.co,OK,,Sample Edit — one-of-one pieces
 Peppermayo,Clothing,Australian contemporary,https://peppermayo.eu,OK,,Chaty Top (Zebra); Thessaly Mini Dress (White)
 Perfect Corset NY,Clothing,Corsetry & occasion,https://perfectcorsetny.com,OK,,Aura shirt; Zammy Shinny Dress; wardrobe essentials
 PrettyLittleThing,Clothing,Fast fashion,https://prettylittlething.us,Caution,Fast fashion; quality varies,Dark Chocolate Linen Look Sarong; Premium Textured Tassel Maxi Skirt; Fringe Drape Maxi Skirt; Mesh Fringe Skirt Maxi Dress
+PrettyLittleThing EU,Clothing,Fast fashion,https://prettylittlething.eu,Caution,Separate storefront from the US site; you made an account here,Ballet flats; dresses; women's clothing
 Reformation,Clothing,Contemporary,https://thereformation.com,OK,,Elena Shoulder Bag
 REVOLVE,Clothing,Designer multi-brand,https://revolve.com,OK,US + AU sites,"VERAFIED Shoulder Bag (Zebra); MARGESHERWOOD Grandma Used (French Beige, Washed Brown, Large); Lovers and Friends Romee Jacket; Helsa Extra Long Coat & Oversized Trench; LAMARQUE Alexandra; EAVES Formosa Leather; MARRKNULL Waxed Trench; The Andamane Ottavia; SANS FAFF Amberly Blazer Dress; L'Academie Elae Suede; LIONESS Serrano Bomber; RAYE Fuego Boot"
 REVOLVE Australia,Clothing,Designer multi-brand,https://revolveclothing.com.au,OK,"Coat deep-dive, 17 Aug",Helsa Italian Wool Extra Long (Chocolate); LAMARQUE Alexandra & Josephine; AEXAE Leather Padded Midi (Deep Red); Kim Shui Kristy (Oxblood); SNDYS Victoria Trench; Nakedvice Isla; SELMACILEK; AFRM Carrington; Camila Coelho Haliee (Oxblood); Milkwhite Trench
 Rue Sophie,Clothing,Quiet luxury,https://ruesophie.com,OK,,Transitional essentials
 Schloss,Clothing,Independent,https://schlossclothing.com,OK,Berger and Fries bag,Berger And Fries Bag
+Selezza London,Clothing,Couture / occasion,https://selezza.co.uk,OK,,Balloon Organza Maxi Skirt (Pink); Corset Midi Skirt (Pink); Leana Maxi Skirt; Low-Cut Bodysuit; Reglin Visor Hat; headpieces
 Show Me Your Mumu,Clothing,Swim & RTW,https://showmeyourmumu.com,OK,,One-piece swimsuits; Jasmine Fringe Maxi Dress (Chartreuse)
 Sinsay,Clothing,Fast fashion (LPP),https://sinsay.com,OK,"You used it for home goods, not clothing","Laundry baskets — beige, black, brown, bamboo with lid"
 Studio83,Clothing,Greek boutique,https://studio83.gr,OK,Heaviest new brand of 22 Aug,"Diana Trench Coat; Norma Jacket Brown; Zaya Jacket Brown; Midi Skirt Brown; Feather Lemon Curry Skirt; Feather Petrol Top; Serena Long Sequin Dress; knitwear, shoes, accessories"
+Style Addict,Clothing,Australian contemporary,https://styleaddict.com.au,OK,,Reeve Faux Leather Jacket (Black); Zoe Faux Leather Moto (Brown); bags & wallets
+Sézane,Clothing,French contemporary,https://sezane.com,OK,,Will Jacket (Black lamb leather); Edgard Coat (Light Camel organic cotton); Low Marthe Ballet Flats (Smooth Cream); Maelys Slingbacks (Terracotta)
 The Dolls House Fashion,Clothing,Independent occasion wear,https://thedollshousefashion.com,OK,Bespoke orders available,Tarni Dress (Ivory); Sara Dress (Black Lace); Gia Top & Mini Skirt (Chamonix); Mika Dress; Starr Jacket; sample sale
+VENROY,Clothing,Australian contemporary,https://venroy.com,OK,,Twisted Bodice Silk Mini Dress (Dark Chocolate)
 VRG GRL,Clothing,Australian contemporary,https://vrggrl.com,OK,Long session 21 Aug,"Devyn Midi Skirt — Sheer Wildstock, Anglaise Cream, Fringe White, Powder Blue; Monikh Lace Shorts; Verity Shorts; Madison Top; Hailey Knit Cardigan; Solene Maxi Skirt; Vale Sheer Shirt"
+Witchery,Clothing,Australian contemporary,https://witchery.com.au,OK,Checked the shipping policy — worth confirming they post to MK,New season; shoes; editorial blog
 ZARA,Clothing,Fast fashion,https://zara.com,OK,AU site,ZW Collection Leather Effect Trench Coat (Black)
 ZENDE,Clothing,Not yet launched,https://zende.co.uk,OK,Coming-soon placeholder only,Coming Soon page
 A.W.A.K.E. MODE,Footwear,Luxury womenswear & footwear,https://awake-mode.com,OK,,"Gabriel High Boot (Multicolour); heels, sandals, boots, bags, outerwear"
 D.Franklin,Footwear,Sneakers,https://gr.dfranklincreation.com,OK,Imola suede,"Imola — Brown Suede, Suede Sand, Snake Brown, Cow print"
 DACCORI,Footwear,London footwear,https://daccori.com,OK,,Shoes; archive; stockists
+Maison Margiela,Footwear,Luxury house,https://maisonmargiela.com,OK,,Ballerina Tabi Broken Mirror Argento
 Naked Wolfe,Footwear,Statement footwear,https://nakedwolfe.com,OK,,Adriana Black Leather; women's & men's new arrivals
+Nilufarr,Footwear,Turkish leather ballerinas,https://nilufarr.com,OK,"REACHED CHECKOUT 24 Aug; priced in Turkish lira (₺2,999)",Bale Silver; Lule Silver; Velmira Altın; Velmira Kırmızı — genuine leather ballerinas
 NO/FAITH STUDIOS,Footwear,Designer sneakers,https://nofaithstudios.com,OK,,All footwear
 nou,Footwear,Independent,https://shopnou.com,OK,,THE KITTY kitten heel sandals; OOA: tobe x nou
 paes,Footwear,Independent,https://p-aes.com,OK,,Leather String Flat / Punching Silver
 PANE,Footwear,Minimalist leather sneakers,https://paneshoes.com,OK,,"Aria — Arabesque, Plié; Zephyr Training — Sterling, Rowan, Manu Bay, Raw Sample; Crest Kick — Copper Orbit, Blue Pulse"
 Sadi Studios,Footwear,Size-inclusive / gender-equal heels,https://sadi.love,OK,,CHAI BLACK; unisex high heels
+SCHUTZ,Footwear,Contemporary,https://schutz-shoes.com,OK,Browsed all 4 pages of flats and 4 of boots,Sae Flat (Flame Scarlet); Sae Cap Toe; Arissa Ballet Flat Sandal; Yumi Brown Ballet Flat; Lola Brown Leather Flat; Beatrix Black Stiletto Suede Boot; Siena High Wedge Knee Boot
 Steve Madden,Footwear,Mainstream,https://stevemadden.com,OK,Delphini pumps,"DELPHINI pointed-toe pump — Black/Hickory, Black/White"
 StockX,Footwear,Sneaker resale,https://stockx.com,Caution,Legit but resale-priced; verify before buying,ASICS Gel-Kinetic Fluent Nanushka Black
 Studio Kumë,Footwear,Independent,https://studiokume.com,OK,The TABI Mule,The TABI Mule
+Tony Bianco,Footwear,Australian footwear,https://tonybianco.com.au,OK,US site: tonybianco.com,Robyn Silver Nappa/Black Grosgrain; Savant Espresso Suede & Denim; Donte Sky Nappa/Vino; Dima Turquoise Suede; Flora Black & Vino Smooth; Elara Black Croco; Sarah Espresso Suede
 Zappos,Footwear,Retailer,https://zappos.com,OK,,Schutz Siena Buckle Leather Pump
 Gentle Monster,Accessories,Eyewear,https://gentlemonster.com,OK,,Prada Gentle Monster 2 A02
 BeautyShop.mk,Beauty,Cosmetics (MK),https://beautyshop.mk,OK,,Makeup
+centre:mk,Beauty,Cosmetics retail (MK),https://centremk.com,OK,,Shop
 Coslovemetics,Beauty,Korean skincare & haircare (MK),https://coslovemetics.mk,OK,COMPLETED PURCHASE 14 Aug via Halkbank 3-D Secure,COSRX PEPTIDE-132 Hair Bonding; CP-1 Premium Treatment; Elizavecca CER-100 & Milky Piggy; MOEV Annurcatin; Shiseido Fino; Round Lab Dokdo; Dr.Althea 147/345; BIODANCE; Geek&Gorgeous; ALTRUIST SPF50; COSRX Aloe Sun Cream
 Elixir,Beauty,Perfume & cosmetics (MK),https://e-elixir.mk,OK,Downloaded the August catalogue,"L'Oréal Aminexil Advanced serum; Redken Cerafill Aminexil; shampoos, masks, ampoules, scalp care"
 Hair Cosmetic MK,Beauty,Haircare (MK),https://hairproshop.mk,OK,,
@@ -104,8 +138,10 @@ Hair.mk,Beauty,Haircare (MK),https://hair.mk,OK,,Olivia Garden iDetangle Fine Ha
 Hairshop.mk,Beauty,Haircare (MK),https://hairshop.mk,OK,Cart started,Kérastase Genesis Anti Hair Fall Serum; Serie Expert Aminexil 10x6ml; Olivia Garden; Uniq One
 Kosa.mk,Beauty,Haircare (MK),https://kosa.mk,OK,,
 Lush MK,Beauty,Bath & body,https://lush.com.mk,OK,,Posh Choc gift; massage bars; shower gels; deodorants; foot care
+MK-Color,Beauty,Olivia Garden distributor (BA),https://mkcolor.ba,OK,"Regional distributor, reached via an Olivia Garden search",Olivia Garden archive
 Social Hair Salon,Beauty,Salon shop (MK),https://socialhair.mk,OK,,Olivia Garden
 Studio Tri,Beauty,Professional haircare (MK),https://studiotri.mk,OK,Cart started; your deepest beauty session,Redken Acidic Bonding & Amino Mint; Kérastase Genesis; Matrix High Amplify & Instacure; Indola Keratin Filler; Equave conditioner; Bonacure Volume Boost; Revlon Uniq One; Olivia Garden iDetangle
+Break Archive,Resale,Vintage designer,https://breakarchive.com,Caution,Revisited repeatedly 22-24 Aug; no authentication process shown on site,90s Chanel Black Lambskin Mini Top Handle 24k GHW; Vintage Gucci Monogram Jackie Shoulder; NEW DROP pages 1-6
 Chirp,Resale,Sourcing platform,https://chirp.me,Caution,Sourcer marketplace; vet the individual seller,Secondhand Sourcer profile
 Dolce Vita Hub,Resale,Archive / vintage,https://dolcevitahub.com,Caution,Archive Issey Miyake; quality varies,SS2003 Issey Miyake Black Blazer Plissed Jacket
 JLUX SG,Resale,Unauthenticated luxury,https://jlux-sg.myshopify.com,Avoid,Raw Shopify subdomain selling designer bags,Women's Bags; Archive
@@ -115,15 +151,31 @@ Vestiaire Collective,Resale,Luxury resale,https://vestiairecollective.com,Cautio
 Vintasje,Resale,Vintage designer,https://vintasje.com,Caution,No visible authentication; you reached checkout,Dior Oblique Hand Bag — REACHED CHECKOUT
 Vintylux,Resale,Unauthenticated luxury,https://vintylux.com,Caution,Chanel/YSL with no visible authentication; you browsed all 13 bag pages,CHANEL 2026 Interlocking CC Ballet Flats; CHANEL Black Caviar & CC Patent Loafers; YSL Opyum Swarovski Sandals; CHANEL Chocolate Bar Clutch; LOUIS VUITTON Pochette; PRADA Saffiano wallet & card holder
 Whatnot,Resale,Live auction,https://whatnot.com,Caution,Counterfeit risk in fashion categories,$25 credit invite from wildgingervintage
+Bio Sites,Aggregator,Link-in-bio,https://bio.site,OK,,
+endource,Aggregator,Fashion search,https://endource.com,OK,,Alexander McQueen metal-toecap ballet flats
 LikeShop,Aggregator,Link-in-bio shop,https://likeshop.me,OK,,@toryburch
 LTK,Aggregator,Creator affiliate platform,https://shopltk.com,OK,,"Creators: trace.this.style, Nickihan, whatstoday, Marina_Didovich"
+Lyst,Aggregator,Fashion search,https://lyst.com,OK,Redirects out to FARFETCH and others,McQueen ballet flats
 ShopMy,Aggregator,Creator affiliate platform,https://shopmy.us,OK,Your main discovery tool; you also looked at their careers page,"Curators: Becky Chernov, Secondhand Sourcer, Tinsley Crisp (Cool Bag Brands Pt.2), Ivey Young, rilovento, Valeria Lanza"
+Stylight,Aggregator,Fashion search,https://stylight.de,OK,,Alexander McQueen ballerinas via YOOX
+"""homesail"" McQueen store",Marketplace,Counterfeit storefront,https://homesail.curnyuk.baby,Avoid,"SCAM — throwaway .baby subdomain selling ""Alexander McQueen"" flats at $105 (retail ~$650). Do not enter card details. Reached via a Google image result.",alexander mcqueen ballet cap toe flat — $105.00
 Amazon,Marketplace,General goods,https://amazon.com,Caution,Third-party sellers; counterfeit risk in fashion,Verdusa Fuzzy Y2k Furry Plush Evening Bag (black); Schwarzkopf got2b All Star 10-in-1 (UK site)
+Amazon UK,Marketplace,General goods,https://amazon.co.uk,Caution,Separate storefront from amazon.com — different sellers and returns,Schwarzkopf got2b All Star 10 in 1 Styling Treatment 100ml
 APOC STORE,Marketplace,Curated fashion & art,https://apoc-store.com,OK,"Deep browse 22 Aug — bags, shoes, coats, eyewear",Silver & Black/Silver Slim Shoulder Bags; Latex Bow Bag Red; SSL Stud Bag; Samuela Small; Le Baiser Large; PIN Belt-Bag; Magma Mules; Cecilia Black; Asymmetry Slashed Fur Ankle Boots; HARRI Jacket; Glitched Sleeve Long Coat
+Bloomingdale's,Marketplace,Department store,https://bloomingdales.com,Caution,"Blocked you — ""Access Denied""",Could not load
 eBay,Marketplace,General goods,https://ebay.com,Caution,Third-party sellers; verify before buying,Error page only — via Secondhand Sourcer link
+Editorialist,Marketplace,Luxury aggregator,https://editorialist.com,Caution,Aggregator — verify the fulfilling retailer before paying,"Alexander McQueen Bow-Detail Ballerinas (Red -53%, Black -25%)"
 Etsy,Marketplace,Handmade & vintage,https://etsy.com,Caution,"Quality varies by seller; counterfeit risk on ""designer""",Via rilovento's All Etsy Finds (ShopMy)
+FARFETCH,Marketplace,Luxury multi-brand,https://farfetch.com,OK,,Alexander McQueen metal-toecap leather ballerinas (Black)
+KICKSCREW,Marketplace,Sneaker & shoe resale,https://kickscrew.com,Caution,Grey-market resale; verify before buying,Alexander McQueen Ballerina 'Red'
+Mytheresa,Marketplace,Luxury multi-brand,https://mytheresa.com,OK,,
 Nordstrom,Marketplace,Department store,https://nordstrom.com,OK,Stocks Naked Wardrobe / behno,behno Elizabeth Leather Baguette Clutch; United Nude Mobius Hi Sandal; Naked Wardrobe Foxtail Faux Fur Cropped Jacket
+Saks Fifth Avenue,Marketplace,Luxury department store,https://saksfifthavenue.com,OK,,
+Selfridges,Marketplace,Luxury department store,https://selfridges.com,OK,,The Frankie Shop Daphne Cropped Biker Jacket (Brown); Sandro Oversized Fringed Suede Jacket (Beige)
+Shopbop,Marketplace,Designer multi-brand,https://shopbop.com,OK,,OSOI Large Brocle Tote
 Temu,Marketplace,General goods,https://temu.com,Avoid,Data-collection concerns; low quality consistency,"Order detail, tracking, saved addresses; laundry baskets (15+ listings)"
+THE ICONIC,Marketplace,Australian multi-brand,https://theiconic.com.au,OK,,AERE Ines Funnel Neck Bomber
+YOOX,Marketplace,Off-season luxury,https://yoox.com,OK,,Alexander McQueen red ballet flats
 Bebehome.mk,Home,Baby & maternity (MK),https://bebehome.mk,OK,,Pregnancy pillows; viBBoo Meedy Hearts
 Comodita Home,Home,Pillows (MK),https://comoditahome.com,OK,,Nursing & pregnancy pillow
 EshopMK,Home,Homeware (MK),https://eshopmk.mk,OK,,Laundry baskets
@@ -151,5 +203,6 @@ Bellina,Food,Health food (MK),https://bellina.mk,OK,,"Organic protein peanut & c
 Wolt,Food,Delivery (MK),https://wolt.com,OK,"Your most-used site overall — groceries, restaurants, flowers, pharmacy","Multiple completed orders 18-22 Aug; Reptil Market, La Noi, Dimca, Fat Kitchen, Moe pile, Balviten gluten-free, Galenium pharmacy, 10+ florists"
 Agoda,Travel,Accommodation,https://agoda.com,OK,"Same property, cross-checking price","Te Konaku, Komani Lake — 16 Sept, 3 adults"
 Booking.com,Travel,Accommodation,https://booking.com,OK,"Koman / Komani Lake, Albania — Sept trip",Te Konaku; Te Panorama; Borealis Guest House; Olympion Sunset Halkidiki
+DBAO Group,Utility,Unclear / holding company,https://dbao-group.com,Caution,"Landed here from a McQueen shoe search; no storefront, unclear what it sells",Home page only
 helsa (custom products),Utility,Not the Helsa clothing brand,https://helsa.com,OK,You landed here by mistake — the Helsa you wanted is stocked on REVOLVE,Fashion Shaping custom products
 SimplyCodes,Utility,Coupon aggregator,https://simplycodes.com,Caution,Affiliate-link injection; mostly dead codes,VERAFIED promo codes
