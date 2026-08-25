@@ -6,9 +6,9 @@ Living list of fashion, footwear, and resale sites, with a trust rating on each.
 Sara adds to this regularly — when she mentions new brands or sites, append them here.
 
 **Canonical copy (edit this one):**
-https://docs.google.com/spreadsheets/d/PENDING/edit
+https://docs.google.com/spreadsheets/d/1qZLBEPYHUokS3UBqYs5Y6ttbFsKN3LIk9WVToMt7BA8/edit
 
-- Drive file ID: `PENDING`
+- Drive file ID: `1qZLBEPYHUokS3UBqYs5Y6ttbFsKN3LIk9WVToMt7BA8`
 - Title: "Fashion & Shopping Sites — Aug 2026"
 - Owner: sarapupalevska@gmail.com, in My Drive
 
