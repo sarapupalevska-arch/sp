@@ -1,0 +1,17 @@
+import sys; sys.path.insert(0,'scripts')
+from astro_core import *
+import swisseph as swe, importlib.metadata as md
+print("pyswisseph version:", md.version("pyswisseph"))
+print("swe.version:", swe.version)
+jdA,offA,uA = local_to_jd(1994,7,5,14,45)
+jdB,offB,uB = local_to_jd(1995,1,27,7,15)
+print("A offset:",offA,"UTC:",uA,"JD:",jdA)
+print("B offset:",offB,"UTC:",uB,"JD:",jdB)
+A = chart(jdA, 41.0297, 21.3347)
+B = chart(jdB, 41.7364, 22.1917)
+print("A ASC:", fmt(A['ASC']['lon']), A['ASC']['lon'])
+print("A Sun:", fmt(A['Sun']['lon']))
+print("B Sun:", fmt(B['Sun']['lon']))
+print("B Mercury:", fmt(B['Mercury']['lon']))
+print("B ASC:", fmt(B['ASC']['lon']))
+print("B Mars:", fmt(B['Mars']['lon']), "speed", B['Mars']['speed'])
