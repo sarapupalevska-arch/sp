@@ -71,10 +71,7 @@ function isHost(config, token) {
 // from a listing on every read means two requests a moment apart can disagree
 // about which screenshots exist. Recompute only when the host changes something.
 async function syncSlides(store, state) {
-  const slides = buildSlides(state.order, await knownShots(store, state));
-  state.slides = slides;
-  await writeState(store, state);
-  return slides;
+  return applySlides(store, state, await knownShots(store, state));
 }
 
 function slidesOf(state) {
@@ -84,6 +81,21 @@ function slidesOf(state) {
 // A game state written before the running order was stored has no slides at
 // all, which is not the same as having none. Build them once and keep them,
 // so an upgrade in the middle of a live game cannot empty the show.
+// Rebuild the running order and write it, without moving the slide that is on
+// screen. A host adding a forgotten screenshot mid game must not renumber the
+// rounds under everybody.
+async function applySlides(store, state, shots) {
+  const currentOwner = subjectOf(slidesOf(state), state);
+  state.slides = buildSlides(state.order, shots);
+  if (state.phase !== 'lobby' && currentOwner) {
+    const at = state.slides.findIndex((slide) => slide.owner === currentOwner);
+    if (at >= 0) state.roundIndex = at;
+  }
+  if (state.roundIndex >= state.slides.length) state.roundIndex = Math.max(0, state.slides.length - 1);
+  await writeState(store, state);
+  return state.slides;
+}
+
 async function ensureSlides(store, state) {
   if (Array.isArray(state.slides)) return state.slides;
   state.slides = buildSlides(state.order, await knownShots(store, state));
@@ -197,7 +209,20 @@ export async function handle(req, store) {
     // The whole vote lives in the key, so two people voting at the same instant
     // cannot overwrite each other.
     await store.set(voteKey(subject, name, guess), '1');
-    return json(200, { ok: true, locked: true });
+
+    // Everyone who is in the room, minus the person on screen. The listing may
+    // not carry this vote yet, so it is counted by hand.
+    const room = PLAYERS.filter((n) => state.joined[n] && n !== subject);
+    const votes = parseVoteKeys(await store.list('vote:' + subject + ':'), subject);
+    votes[name] = votes[name] || guess;
+    const allIn = room.length > 0 && room.every((n) => votes[n]);
+    if (allIn) {
+      // Scoring is still settled here, on the server, from the stored votes.
+      state.revealed[subject] = { votes, at: Date.now() };
+      state.phase = 'revealed';
+      await writeState(store, state);
+    }
+    return json(200, { ok: true, locked: true, revealed: allIn });
   }
 
   // ---- images ----
@@ -315,8 +340,7 @@ export async function handle(req, store) {
     await store.set('shot:' + id, JSON.stringify({ id, owner, position, mime: mime || 'image/jpeg' }));
     // The listing will not carry the new key for a second or two, so it is
     // added by hand rather than waiting for it to turn up.
-    state.slides = buildSlides(state.order, known.concat([{ id, owner, position }]));
-    await writeState(store, state);
+    await applySlides(store, state, known.concat([{ id, owner, position }]));
     return json(200, { id, owner, position });
   }
 
@@ -329,8 +353,7 @@ export async function handle(req, store) {
       await store.delete('shot:' + id);
       await store.delete('img:' + id);
       const state = await readState(store);
-      state.slides = buildSlides(state.order, await knownShots(store, state, { drop: id }));
-      await writeState(store, state);
+      await applySlides(store, state, await knownShots(store, state, { drop: id }));
       return json(200, { ok: true });
     }
     if (method === 'POST') {
@@ -342,8 +365,7 @@ export async function handle(req, store) {
       if (body && Number.isFinite(body.position)) shot.position = body.position;
       await store.set('shot:' + id, JSON.stringify(shot));
       const state = await readState(store);
-      state.slides = buildSlides(state.order, await knownShots(store, state, { add: shot }));
-      await writeState(store, state);
+      await applySlides(store, state, await knownShots(store, state, { add: shot }));
       return json(200, { ok: true, shot });
     }
   }
@@ -400,7 +422,7 @@ export async function handle(req, store) {
       if (slides.length === 0) return json(409, { error: 'Nobody has any screenshots yet' });
       state.slides = slides;
       state.roundIndex = 0;
-      state.phase = 'viewing';
+      state.phase = 'voting';
     } else if (action === 'open-voting') {
       if (!subject) return json(409, { error: 'No slide is live' });
       state.phase = 'voting';
@@ -420,12 +442,12 @@ export async function handle(req, store) {
       state.phase = 'revealed';
     } else if (action === 'next') {
       if (state.roundIndex + 1 >= slides.length) state.phase = 'finished';
-      else { state.roundIndex += 1; state.phase = 'viewing'; }
+      else { state.roundIndex += 1; state.phase = 'voting'; }
     } else if (action === 'previous') {
-      if (state.roundIndex > 0) { state.roundIndex -= 1; state.phase = 'viewing'; }
+      if (state.roundIndex > 0) { state.roundIndex -= 1; state.phase = 'voting'; }
     } else if (action === 'reset-round') {
       await clearVotes(subject);
-      state.phase = 'viewing';
+      state.phase = 'voting';
     } else if (action === 'end-game') {
       state.phase = 'finished';
     } else if (action === 'lobby') {

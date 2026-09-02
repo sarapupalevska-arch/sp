@@ -139,7 +139,7 @@ test('a whole show runs in real browsers', async () => {
   await pages.Carla.waitForSelector('.caught-note');
   assert.equal(await pages.Ivan.locator('.caught-note').count(), 0);
 
-  await host.click('#nextMove'); // open voting
+  // Voting is open the moment the slide appears, no second press.
   await pages.Ivan.waitForSelector('#votebar');
   assert.equal(await pages.Carla.locator('#votebar').count(), 0, 'the subject gets no vote bar');
 
@@ -163,8 +163,7 @@ test('a whole show runs in real browsers', async () => {
   assert.ok(await host.locator('#answerBox.blurred').count());
   await host.click('#blurToggle');
 
-  await host.click('#nextMove'); // close voting
-  await host.click('#nextMove'); // reveal
+  await host.click('[data-action="reveal"]');
 
   for (const name of names) {
     await pages[name].waitForSelector('.reveal-name');
@@ -183,9 +182,8 @@ test('a whole show runs in real browsers', async () => {
   assert.equal(await scoreOf(pages.Ivan, 'Kasia'), 0);
 
   // ---- reset the round and play it again, every eligible player gets their pad back ----
+  // Resetting a round puts the same slide back up with voting open again.
   await host.click('[data-action="reset-round"]');
-  await host.waitForFunction(() => document.getElementById('hPhase').textContent === 'viewing');
-  await host.click('[data-action="open-voting"]');
   await host.waitForFunction(() => document.getElementById('hPhase').textContent === 'voting');
   for (const name of ['Ivan', 'Sara', 'Kasia', 'Chels', 'Ana', 'Andjela', 'Noel']) {
     try {
@@ -218,7 +216,6 @@ test('a whole show runs in real browsers', async () => {
   await host.click('#nextMove');
   await pages.Ivan.waitForFunction(() => document.getElementById('roundKicker').textContent === 'ROUND 2 OF 2');
   await pages.Noel.waitForSelector('.caught-note');
-  await host.click('#nextMove');
   await castVote('Ivan', 'Noel');
   await castVote('Carla', 'Ana');
   await host.click('[data-action="reveal"]');

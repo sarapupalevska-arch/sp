@@ -146,32 +146,39 @@ input, select, textarea {
 .bump { color: #3bd4a7; font-weight: 700; font-size: 0.8rem; margin-left: 7px; }
 
 .round-kicker { color: #35b4ec; letter-spacing: 0.3em; font-size: 0.82rem; }
-.ask { font-size: clamp(1.8rem, 4.6vw, 3.1rem); margin: 10px 0 24px; }
+.ask { font-size: clamp(1.5rem, 3.6vw, 2.4rem); margin: 6px 0 14px; }
 
 /* ---------- evidence gallery ---------- */
-/* One below the other, in the order the host set, at their natural shape.
-   Kept in normal block flow on purpose: a flex parent would let an image's
-   intrinsic height override the sizing here. */
-.gallery { display: block; max-width: 640px; margin: 0 auto; }
-.shot {
-  margin: 0 0 16px; display: block; width: 100%;
-  border-radius: 12px; overflow: hidden; border: 1px solid #1b2740; background: #0b1220;
-  padding: 0; position: relative; cursor: zoom-in;
+/* One slide holds the whole set. Upright screenshots sit next to each other,
+   wide ones take a line of their own and stack. Heights are capped against the
+   viewport so a round fits on one screen.
+   Kept out of any aspect-ratio rule on purpose: an image's intrinsic height
+   would override it inside a flex parent. */
+.gallery {
+  display: flex; flex-wrap: wrap; gap: 12px;
+  align-items: flex-start; justify-content: center;
 }
-.shot.missing { min-height: 90px; background: #0b1220 url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'/%3E") center no-repeat; }
+.shot {
+  margin: 0; padding: 0; position: relative; cursor: zoom-in;
+  border-radius: 12px; overflow: hidden; border: 1px solid #1b2740; background: #0b1220;
+  flex: 0 1 auto; max-width: 100%;
+}
+.shot img { display: block; max-height: 56vh; width: auto; max-width: 100%; }
+.shot.landscape { flex: 1 1 100%; display: flex; justify-content: center; }
+.shot.landscape img { max-height: 46vh; }
+.shot.tall img { max-height: 56vh; object-fit: cover; object-position: top; }
+.shot .more {
+  position: absolute; left: 0; right: 0; bottom: 0; padding: 8px;
+  font-size: 0.78rem; color: #eaf0f7;
+  background: linear-gradient(180deg, rgba(7,10,18,0), rgba(7,10,18,0.92));
+}
+.shot.missing { min-height: 90px; }
 .shot.missing::after {
   content: "This screenshot did not load. Click to try again.";
   display: block; padding: 30px 16px; color: #8fa0b5; font-size: 0.85rem; text-align: center;
 }
 .shot.missing img { display: none; }
 .evidence-count { color: #9fb0c5; font-size: 0.85rem; margin: 0 0 12px; text-align: center; }
-.shot img { display: block; width: 100%; height: auto; }
-.shot.tall img { max-height: 760px; object-fit: cover; object-position: top; }
-.shot .more {
-  position: absolute; left: 0; right: 0; bottom: 0; padding: 8px;
-  font-size: 0.78rem; color: #eaf0f7;
-  background: linear-gradient(180deg, rgba(7,10,18,0), rgba(7,10,18,0.92));
-}
 
 /* ---------- lightbox ---------- */
 #lightbox {
@@ -186,10 +193,10 @@ input, select, textarea {
 #lightbox .strip img.on { border-color: #35b4ec; }
 
 /* ---------- voting ---------- */
-.vote-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-top: 8px; }
+.vote-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin-top: 6px; }
 @media (max-width: 720px) { .vote-grid { grid-template-columns: repeat(2, 1fr); } }
 .vote-card {
-  padding: 20px 10px; font-size: 1.15rem; border-radius: 14px;
+  padding: 14px 10px; font-size: 1.1rem; border-radius: 12px;
   background: linear-gradient(180deg, #131d2e, #0e1624);
   transition: transform 140ms ease, border-color 140ms ease;
 }
@@ -198,7 +205,7 @@ input, select, textarea {
 .vote-card.locked { border-color: #3bd4a7; background: rgba(59,212,167,0.16); }
 
 /* vote progress, a count and a bar, never a list of names */
-.progress-wrap { margin: 26px 0 14px; }
+.progress-wrap { margin: 18px 0 12px; }
 .progress-note { margin: 0 0 8px; color: #9fb0c5; font-size: 0.9rem; }
 .progress-rail { height: 6px; border-radius: 999px; background: #16203180; border: 1px solid #1b2740; overflow: hidden; }
 .progress-fill { height: 100%; background: linear-gradient(90deg, #0e8dc7, #35b4ec); transition: width 400ms ease; }
@@ -245,6 +252,18 @@ input, select, textarea {
   .board-row { transition: none; }
   * { scroll-behavior: auto !important; }
 }
+
+/* ---------- podium ---------- */
+.podium { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; max-width: 940px; margin: 0 auto 28px; }
+@media (max-width: 720px) { .podium { grid-template-columns: 1fr; } }
+.podium-step { border: 1px solid #24334a; border-radius: 16px; padding: 22px 16px; text-align: center; background: #0c1421; }
+.podium-step.gold { border-color: #ffc24b; background: rgba(255,194,75,0.09); }
+.podium-step.silver { border-color: #9fb0c5; background: rgba(159,176,197,0.07); }
+.podium-step.bronze { border-color: #c98b4b; background: rgba(201,139,75,0.07); }
+.podium-place { letter-spacing: 0.26em; font-size: 0.75rem; color: #9fb0c5; text-transform: uppercase; }
+.podium-names { font-size: clamp(1.6rem, 4vw, 2.6rem); margin: 8px 0 4px; }
+.podium-step.gold .podium-names { color: #ffc24b; }
+.podium-score { color: #8fa0b5; font-size: 0.9rem; }
 
 /* ---------- host ---------- */
 .host-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; align-items: start; }
@@ -353,6 +372,7 @@ input, select, textarea {
       <h1 class="display" id="finishNames"></h1>
       <p class="muted" id="finishScore"></p>
     </div>
+    <div class="podium" id="podium"></div>
     <div class="host-grid">
       <div class="card"><h3 class="display">Final ranking</h3><div class="board-list" id="finalBoard"></div></div>
       <div class="card"><h3 class="display">The paperwork</h3><div id="finalStats"></div></div>
@@ -591,6 +611,8 @@ input, select, textarea {
         }, tries * 900);
       });
       img.addEventListener("load", function () {
+        // Wide screenshots take a line of their own, upright ones sit side by side.
+        node.classList.toggle("landscape", img.naturalWidth > img.naturalHeight);
         // Only genuinely enormous scrolling screenshots get cropped, from the top.
         if (img.naturalHeight > img.naturalWidth * 4) {
           node.classList.add("tall");
@@ -698,6 +720,7 @@ input, select, textarea {
       el("finishNames").textContent = champs.join(" and ");
       var top = view.leaderboard.length ? view.leaderboard[0].score : 0;
       el("finishScore").textContent = top + (top === 1 ? " correct accusation" : " correct accusations");
+      el("podium").innerHTML = podiumHtml(view.leaderboard);
       renderBoard(el("finalBoard"), view.leaderboard, me);
       el("finalStats").innerHTML = statsHtml(view.stats);
       return;
@@ -708,10 +731,26 @@ input, select, textarea {
     el("roundKicker").textContent = "ROUND " + view.round + " OF " + view.totalRounds;
     renderGallery(view.shotIds);
     el("evidenceCount").textContent = view.shotCount > 1
-      ? plural(view.shotCount, "piece") + " of evidence. Keep scrolling, they are stacked."
-      : plural(view.shotCount, "piece") + " of evidence.";
+      ? plural(view.shotCount, "piece") + " of evidence. Click any of them to see it full size."
+      : plural(view.shotCount, "piece") + " of evidence. Click it to see it full size.";
     drawVoteArea();
     drawReveal();
+  }
+
+  // First, second and third. A tie shares a place and the next place skips,
+  // so two people on the same score are both shown as second.
+  function podiumHtml(rows) {
+    var labels = { 1: "First", 2: "Second", 3: "Third" };
+    var medals = { 1: "gold", 2: "silver", 3: "bronze" };
+    var out = "";
+    [1, 2, 3].forEach(function (place) {
+      var here = rows.filter(function (r) { return r.rank === place; });
+      if (here.length === 0) return;
+      out += '<div class="podium-step ' + medals[place] + '"><div class="podium-place">' + labels[place] + "</div>" +
+        '<div class="podium-names display">' + here.map(function (r) { return esc(r.name); }).join(", ") + "</div>" +
+        '<div class="podium-score">' + here[0].score + (here[0].score === 1 ? " point" : " points") + "</div></div>";
+    });
+    return out;
   }
 
   function statsHtml(stats) {
@@ -890,10 +929,14 @@ input, select, textarea {
 
   function nextMoveFor(s) {
     if (s.totalRounds === 0) return { label: "Upload some screenshots first", why: "No slides exist yet. A person gets a slide as soon as they have one screenshot.", action: null };
-    if (s.phase === "lobby") return { label: "Start the game", why: s.totalRounds + " slides are ready.", action: "start" };
-    if (s.phase === "viewing") return { label: "Open voting", why: "Give them a moment to read the evidence first.", action: "open-voting" };
-    if (s.phase === "voting" && s.voteCount >= s.eligible.length) return { label: "Reveal", why: "Every vote is in.", action: "reveal" };
-    if (s.phase === "voting") return { label: "Close voting", why: s.voteCount + " of " + s.eligible.length + " votes are in.", action: "close-voting" };
+    if (s.phase === "lobby") return { label: "Start the game", why: s.totalRounds + " slides are ready. Voting opens straight away.", action: "start" };
+    if (s.phase === "viewing") return { label: "Open voting", why: "Let them vote on this one.", action: "open-voting" };
+    if (s.phase === "voting") return {
+      label: "Reveal now",
+      why: s.voteCount + " of " + s.eligible.length + " votes are in. The name appears by itself once everybody has voted, "
+        + "so only press this if you are not waiting for someone.",
+      action: "reveal"
+    };
     if (s.phase === "closed") return { label: "Reveal", why: "Say something dramatic first.", action: "reveal" };
     if (s.phase === "revealed" && s.round >= s.totalRounds) return { label: "Show the winner", why: "That was the last slide.", action: "next" };
     if (s.phase === "revealed") return { label: "Next slide", why: "Round " + s.round + " of " + s.totalRounds + " is done.", action: "next" };

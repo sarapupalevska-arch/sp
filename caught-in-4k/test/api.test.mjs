@@ -89,7 +89,13 @@ test('a whole game plays through with scoring settled on the server', async () =
   const dup = await join('Ivan');
   assert.equal(dup.status, 409);
 
+  // Nothing can be voted on before the game starts.
+  const early = await asJson(call('POST', '/api/vote', { name: 'Ivan', token: players.Ivan, guess: 'Carla' }, { 'content-type': 'application/json' }));
+  assert.equal(early.status, 409);
+
+  // Starting the game puts the first slide up with voting already open.
   assert.equal((await act('start')).status, 200);
+  assert.equal((await hostState()).body.phase, 'voting');
 
   // Nothing in a player payload gives away that this is Carla's slide.
   let pv = await playerState('Ivan', players.Ivan);
@@ -101,12 +107,6 @@ test('a whole game plays through with scoring settled on the server', async () =
 
   const carla = await playerState('Carla', players.Carla);
   assert.equal(carla.body.youAreSubject, true);
-
-  // Voting is not open yet.
-  let early = await asJson(call('POST', '/api/vote', { name: 'Ivan', token: players.Ivan, guess: 'Carla' }, { 'content-type': 'application/json' }));
-  assert.equal(early.status, 409);
-
-  await act('open-voting');
 
   const vote = (name, guess) => asJson(call('POST', '/api/vote', { name, token: players[name], guess }, { 'content-type': 'application/json' }));
   assert.equal((await vote('Ivan', 'Carla')).status, 200);
@@ -219,4 +219,44 @@ test('deleting the game data resets the show but keeps the evidence', async () =
   assert.deepEqual(after.body.claims, []);
   await asJson(call('POST', '/api/host/wipe', { what: 'all' }));
   assert.equal((await hostState()).body.shots.length, 0);
+});
+
+test('the name appears by itself once everybody in the room has voted', async () => {
+  await fresh();
+  await login('all in');
+  await upload('Carla');
+  const names = ['Kasia', 'Carla', 'Ivan', 'Chels', 'Ana', 'Andjela', 'Noel', 'Sara'];
+  const tokens = {};
+  for (const name of names) tokens[name] = (await join(name)).body.token;
+  // Starting a game opens voting straight away.
+  await act('start');
+  assert.equal((await hostState()).body.phase, 'voting');
+
+  const vote = (name) => asJson(call('POST', '/api/vote', { name, token: tokens[name], guess: 'Carla' }, { 'content-type': 'application/json' }));
+  const voters = names.filter((n) => n !== 'Carla');
+  for (const name of voters.slice(0, voters.length - 1)) {
+    const res = await vote(name);
+    assert.equal(res.status, 200);
+    assert.equal(res.body.revealed, false, 'nothing is revealed while somebody has not voted');
+  }
+  const last = await vote(voters[voters.length - 1]);
+  assert.equal(last.body.revealed, true, 'the last vote reveals the name');
+
+  const view = await playerState('Ivan', tokens.Ivan);
+  assert.equal(view.body.phase, 'revealed');
+  assert.equal(view.body.reveal.owner, 'Carla');
+  assert.equal(view.body.reveal.caught, 7);
+});
+
+test('a missing player does not stop the host revealing by hand', async () => {
+  await fresh();
+  await login('absent');
+  await upload('Noel');
+  const tokens = {};
+  for (const name of ['Ivan', 'Sara', 'Noel']) tokens[name] = (await join(name)).body.token;
+  await act('start');
+  const vote = (name) => asJson(call('POST', '/api/vote', { name, token: tokens[name], guess: 'Noel' }, { 'content-type': 'application/json' }));
+  assert.equal((await vote('Ivan')).body.revealed, false);
+  const last = await vote('Sara');
+  assert.equal(last.body.revealed, true, 'only the people actually in the room have to vote');
 });

@@ -139,3 +139,20 @@ test('a vote that lands just before the reveal still counts', async () => {
   const scores = Object.fromEntries(view.leaderboard.map((r) => [r.name, r.score]));
   assert.equal(scores.Sara, 1, 'Sara must not lose her point to a lagging listing');
 });
+
+test('adding a screenshot mid game does not move the slide on screen', async () => {
+  const { store, token } = await setup();
+  await upload(store, token, 'Carla');
+  await upload(store, token, 'Noel');
+  await call(store, 'POST', '/api/host/order', { order: ['Kasia', 'Carla', 'Noel'] }, token);
+  await call(store, 'POST', '/api/host/action', { action: 'start' }, token);
+  assert.equal(JSON.parse((await call(store, 'GET', '/api/host/state', null, token)).body).subject, 'Carla');
+
+  // Kasia's screenshot turns up late. Her slide sorts before Carla's, so the
+  // round numbering shifts, but the slide on screen must stay Carla's.
+  await upload(store, token, 'Kasia');
+  const after = JSON.parse((await call(store, 'GET', '/api/host/state', null, token)).body);
+  assert.equal(after.subject, 'Carla', 'the live slide must not change under everyone');
+  assert.equal(after.totalRounds, 3);
+  assert.equal(after.round, 2);
+});
