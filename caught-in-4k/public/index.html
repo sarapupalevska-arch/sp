@@ -88,23 +88,38 @@ input, select, textarea {
 }
 
 /* ---------- identity ---------- */
-.title-hero { text-align: center; padding: 30px 0 26px; }
-.title-hero .kicker { color: #ff4d8d; letter-spacing: 0.35em; font-size: 0.8rem; }
-.title-hero h1 { font-size: clamp(2.6rem, 9vw, 6rem); margin: 8px 0; }
-.name-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 14px; }
+.title-hero { text-align: center; padding: 34px 0 30px; max-width: 900px; margin: 0 auto; }
+.title-hero .kicker { color: #ff4d8d; letter-spacing: 0.32em; font-size: 0.78rem; }
+.title-hero h1 { font-size: clamp(2.4rem, 7.5vw, 5rem); margin: 12px 0; }
+.title-hero p { margin: 0; }
+.name-grid, .checklist, .vote-grid { max-width: 940px; margin: 0 auto; }
+.name-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
 .name-card {
-  padding: 26px 12px; font-size: 1.5rem; border-radius: 16px;
-  background: #101827; border: 1px solid #24334a;
+  padding: 24px 10px; font-size: 1.45rem; border-radius: 16px;
+  background: linear-gradient(180deg, #131d2e, #0e1624);
+  border: 1px solid #253449;
+  transition: transform 140ms ease, border-color 140ms ease, box-shadow 140ms ease;
 }
-.name-card.taken { opacity: 0.4; }
+.name-card:hover:not(:disabled) { transform: translateY(-3px); border-color: #35b4ec; box-shadow: 0 10px 24px rgba(0,0,0,0.45); }
+.name-card.taken { opacity: 0.32; }
 .name-card.picked { border-color: #3bd4a7; box-shadow: 0 0 0 2px rgba(59,212,167,0.35); }
 
-.pick-line { text-align: center; font-size: clamp(1.6rem, 4vw, 2.6rem); color: #35b4ec; margin-bottom: 18px; }
-.pick-hint { text-align: center; font-size: 0.85rem; margin-top: 16px; }
+.pick-line { text-align: center; font-size: clamp(1.4rem, 3.4vw, 2.2rem); color: #35b4ec; margin: 0 0 22px; }
+.pick-hint { text-align: center; font-size: 0.85rem; color: #9fb0c5; margin-top: 22px; }
+@media (max-width: 720px) {
+  .name-grid { grid-template-columns: repeat(2, 1fr); }
+  .name-card { padding: 20px 8px; font-size: 1.2rem; }
+}
 
 /* ---------- lobby ---------- */
-.checklist { display: grid; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap: 10px; }
-.check { display: flex; align-items: center; gap: 10px; padding: 10px 12px; border: 1px solid #1b2740; border-radius: 10px; }
+.checklist { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
+@media (max-width: 720px) { .checklist { grid-template-columns: repeat(2, 1fr); } }
+.check {
+  display: flex; align-items: center; gap: 10px; padding: 14px 16px;
+  border: 1px solid #1b2740; border-radius: 12px; background: #0c1421;
+  transition: border-color 200ms ease, background 200ms ease;
+}
+.check.here { border-color: #1f6f5c; background: rgba(59,212,167,0.07); }
 .dot { width: 10px; height: 10px; border-radius: 50%; background: #2a3a55; }
 .check.here .dot { background: #3bd4a7; box-shadow: 0 0 10px #3bd4a7; }
 
@@ -113,33 +128,39 @@ input, select, textarea {
 @media (max-width: 900px) { .stage { grid-template-columns: 1fr; } }
 .board { position: sticky; top: 74px; }
 @media (max-width: 900px) { .board { position: static; order: -1; } }
-.board h3 { font-size: 1.1rem; color: #8fa0b5; letter-spacing: 0.2em; }
-.board-list { display: flex; flex-direction: column; gap: 6px; }
+.board h3 { font-size: 0.95rem; color: #8fa0b5; letter-spacing: 0.22em; margin-bottom: 14px; }
+.board-list { display: flex; flex-direction: column; gap: 7px; }
 .board-row {
-  display: grid; grid-template-columns: 34px 1fr auto; align-items: center; gap: 10px;
-  padding: 9px 12px; border-radius: 10px; background: #0d1522; border: 1px solid #17203a;
+  display: grid; grid-template-columns: 28px 1fr auto; align-items: center; gap: 12px;
+  padding: 11px 14px; border-radius: 12px; background: #0d1522; border: 1px solid #17203a;
   transition: transform 320ms ease, background 320ms ease, border-color 320ms ease;
 }
 .board-row.me { border-color: #0e8dc7; background: #10202f; }
-.board-row.gain { border-color: #3bd4a7; background: rgba(59,212,167,0.12); }
-.board-rank { color: #8fa0b5; font-weight: 700; }
-.board-score { font-family: Anton, Impact, sans-serif; font-size: 1.35rem; }
-.bump { color: #3bd4a7; font-weight: 700; font-size: 0.85rem; margin-left: 6px; }
+.board-row.gain { border-color: #3bd4a7; background: rgba(59,212,167,0.14); }
+.board-rank {
+  color: #7c8ca3; font-weight: 700; font-size: 0.8rem; text-align: center;
+  background: #131d2c; border-radius: 6px; padding: 2px 0;
+}
+.board-row.lead .board-rank { color: #ffc24b; background: rgba(255,194,75,0.14); }
+.board-score { font-family: Anton, Impact, sans-serif; font-size: 1.4rem; font-variant-numeric: tabular-nums; }
+.bump { color: #3bd4a7; font-weight: 700; font-size: 0.8rem; margin-left: 7px; }
 
-.round-kicker { color: #35b4ec; letter-spacing: 0.3em; font-size: 0.85rem; }
-.ask { font-size: clamp(1.9rem, 5vw, 3.4rem); margin: 6px 0 18px; }
+.round-kicker { color: #35b4ec; letter-spacing: 0.3em; font-size: 0.82rem; }
+.ask { font-size: clamp(1.8rem, 4.6vw, 3.1rem); margin: 10px 0 24px; }
 
-/* ---------- evidence gallery, masonry so tall screenshots stay whole ---------- */
-.gallery { column-count: 3; column-gap: 12px; }
-@media (max-width: 1100px) { .gallery { column-count: 2; } }
-@media (max-width: 620px) { .gallery { column-count: 1; } }
+/* ---------- evidence gallery ---------- */
+/* One below the other, in the order the host set, at their natural shape.
+   Kept in normal block flow on purpose: a flex parent would let an image's
+   intrinsic height override the sizing here. */
+.gallery { display: block; max-width: 640px; margin: 0 auto; }
 .shot {
-  break-inside: avoid; margin: 0 0 12px; display: block; width: 100%;
+  margin: 0 0 16px; display: block; width: 100%;
   border-radius: 12px; overflow: hidden; border: 1px solid #1b2740; background: #0b1220;
   padding: 0; position: relative; cursor: zoom-in;
 }
+.evidence-count { color: #9fb0c5; font-size: 0.85rem; margin: 0 0 12px; text-align: center; }
 .shot img { display: block; width: 100%; height: auto; }
-.shot.tall img { max-height: 900px; object-fit: cover; object-position: top; }
+.shot.tall img { max-height: 760px; object-fit: cover; object-position: top; }
 .shot .more {
   position: absolute; left: 0; right: 0; bottom: 0; padding: 8px;
   font-size: 0.78rem; color: #eaf0f7;
@@ -159,24 +180,55 @@ input, select, textarea {
 #lightbox .strip img.on { border-color: #35b4ec; }
 
 /* ---------- voting ---------- */
-.vote-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 12px; margin-top: 18px; }
-.vote-card { padding: 20px 10px; font-size: 1.2rem; border-radius: 14px; }
-.vote-card.on { border-color: #ffc24b; background: rgba(255,194,75,0.14); }
+.vote-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-top: 8px; }
+@media (max-width: 720px) { .vote-grid { grid-template-columns: repeat(2, 1fr); } }
+.vote-card {
+  padding: 20px 10px; font-size: 1.15rem; border-radius: 14px;
+  background: linear-gradient(180deg, #131d2e, #0e1624);
+  transition: transform 140ms ease, border-color 140ms ease;
+}
+.vote-card:hover:not(:disabled) { transform: translateY(-2px); }
+.vote-card.on { border-color: #ffc24b; background: rgba(255,194,75,0.16); box-shadow: 0 0 0 2px rgba(255,194,75,0.25); }
 .vote-card.locked { border-color: #3bd4a7; background: rgba(59,212,167,0.16); }
+
+/* vote progress, a count and a bar, never a list of names */
+.progress-wrap { margin: 26px 0 14px; }
+.progress-note { margin: 0 0 8px; color: #9fb0c5; font-size: 0.9rem; }
+.progress-rail { height: 6px; border-radius: 999px; background: #16203180; border: 1px solid #1b2740; overflow: hidden; }
+.progress-fill { height: 100%; background: linear-gradient(90deg, #0e8dc7, #35b4ec); transition: width 400ms ease; }
+.progress-fill.full { background: linear-gradient(90deg, #2aa583, #3bd4a7); }
+.waiting-note {
+  margin-top: 26px; border: 1px solid #24334a; border-radius: 14px;
+  padding: 18px 20px; background: #0b1220;
+}
+.locked-in {
+  margin-top: 18px; border: 1px solid #2c6d5b; border-radius: 14px; padding: 18px 20px;
+  background: rgba(59,212,167,0.09);
+}
 #votebar {
   position: fixed; left: 0; right: 0; bottom: 0; z-index: 50;
-  background: rgba(7,10,18,0.95); border-top: 1px solid #24334a;
-  padding: 12px 16px; display: flex; gap: 14px; align-items: center; justify-content: center;
-  backdrop-filter: blur(8px);
+  background: rgba(7,10,18,0.96); border-top: 1px solid #24334a;
+  padding: 14px 16px calc(14px + env(safe-area-inset-bottom, 0px));
+  display: flex; gap: 16px; align-items: center; justify-content: center;
+  backdrop-filter: blur(8px); box-shadow: 0 -12px 30px rgba(0,0,0,0.5);
 }
-#votebar button { font-size: 1.1rem; padding: 13px 30px; }
+#votebar button { font-size: 1.05rem; padding: 13px 32px; }
+#votebar .muted { font-size: 0.95rem; }
 .caught-note {
-  border: 1px solid #ff4d8d; background: rgba(255,77,141,0.1);
-  border-radius: 14px; padding: 20px; margin-top: 18px;
+  border: 1px solid #ff4d8d; background: rgba(255,77,141,0.09);
+  border-radius: 16px; padding: 24px 26px; margin-top: 26px;
 }
+.caught-note h3 { margin-bottom: 10px; }
+.caught-note p { margin: 0 0 8px; }
 
 /* ---------- reveal ---------- */
-.reveal-box { margin-top: 20px; border: 1px solid #ff4d8d; border-radius: 16px; padding: 24px; background: rgba(255,77,141,0.07); }
+.reveal-box { margin-top: 28px; border: 1px solid #ff4d8d; border-radius: 18px; padding: 30px 30px 26px; background: rgba(255,77,141,0.07); }
+.reveal-count { margin: 14px 0 18px; font-size: 1.05rem; }
+.verdicts { display: grid; grid-template-columns: 1fr 1fr; gap: 10px 22px; list-style: none; padding: 0; margin: 0; }
+@media (max-width: 720px) { .verdicts { grid-template-columns: 1fr; } }
+.verdicts li { padding: 8px 12px; border-radius: 10px; background: rgba(7,10,18,0.45); border: 1px solid #1b2740; }
+.verdicts li.right { border-color: #2c6d5b; }
+.tag { font-size: 0.72rem; letter-spacing: 0.12em; text-transform: uppercase; margin-right: 8px; }
 .reveal-box .four-k { color: #ff4d8d; font-size: clamp(1.6rem, 5vw, 2.6rem); margin-bottom: 10px; }
 .reveal-box .it-was { letter-spacing: 0.3em; }
 .reveal-name { font-size: clamp(3rem, 13vw, 8rem); color: #ffc24b; animation: slam 520ms cubic-bezier(.2,1.4,.3,1) both; }
@@ -189,23 +241,27 @@ input, select, textarea {
 }
 
 /* ---------- host ---------- */
-.host-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+.host-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; align-items: start; }
 @media (max-width: 1000px) { .host-grid { grid-template-columns: 1fr; } }
-.next-move { border: 1px solid #35b4ec; border-radius: 16px; padding: 20px; background: rgba(14,141,199,0.1); text-align: center; }
+.next-move { border: 1px solid #35b4ec; border-radius: 16px; padding: 22px; background: rgba(14,141,199,0.1); text-align: center; }
 .next-move button { font-size: 1.5rem; padding: 20px 28px; width: 100%; }
 .granular { margin-top: 16px; opacity: 0.62; }
 .granular button { font-size: 0.85rem; padding: 7px 11px; }
-.answer-box { border: 1px solid #24334a; border-radius: 12px; padding: 14px; }
+.answer-box { border: 1px solid #24334a; border-radius: 12px; padding: 16px; background: #0b1220; }
 .answer-box.blurred .secret { filter: blur(14px); user-select: none; }
 .queue-row { display: grid; grid-template-columns: 64px 1fr 140px 40px; gap: 10px; align-items: center; padding: 8px; border: 1px solid #1b2740; border-radius: 10px; margin-bottom: 8px; }
 .queue-row.unnamed { border-color: #ffc24b; background: rgba(255,194,75,0.08); }
 .queue-row img { width: 64px; height: 64px; object-fit: cover; border-radius: 6px; }
-.owner-group { border: 1px solid #1b2740; border-radius: 12px; padding: 12px; margin-bottom: 10px; }
+.owner-group { border: 1px solid #1b2740; border-radius: 12px; padding: 14px; margin-bottom: 12px; background: #0b1220; }
+.owner-group h4 { margin: 0; font-size: 1rem; }
+.skipped-line { color: #7c8ca3; font-size: 0.82rem; margin: 0 0 12px; line-height: 1.8; }
+.skipped-line strong { color: #9fb0c5; font-weight: 400; }
 .thumbs { display: flex; gap: 8px; flex-wrap: wrap; }
 .thumb { position: relative; }
 .thumb img { width: 76px; height: 76px; object-fit: cover; border-radius: 8px; border: 1px solid #24334a; }
 .thumb .tools { display: flex; gap: 4px; margin-top: 4px; }
-.thumb .tools button { padding: 2px 7px; font-size: 0.75rem; }
+.thumb .tools button { padding: 2px 8px; font-size: 0.72rem; }
+.thumb select { margin-top: 4px; }
 #dropzone { border: 2px dashed #24334a; border-radius: 14px; padding: 26px; text-align: center; }
 #dropzone.hot { border-color: #35b4ec; background: rgba(14,141,199,0.08); }
 .order-list li {
@@ -276,6 +332,7 @@ input, select, textarea {
       <main>
         <div class="round-kicker display" id="roundKicker">ROUND 1</div>
         <h2 class="ask display">Who searched that?</h2>
+        <p class="evidence-count" id="evidenceCount"></p>
         <div class="gallery" id="gallery"></div>
         <div id="voteArea"></div>
         <div id="revealArea"></div>
@@ -451,7 +508,8 @@ input, select, textarea {
   function renderBoard(target, rows, highlight) {
     var html = rows.map(function (row) {
       var gained = lastScores[row.name] !== undefined && row.score > lastScores[row.name];
-      return '<div class="board-row' + (row.name === highlight ? " me" : "") + (gained ? " gain" : "") + '">' +
+      return '<div class="board-row' + (row.name === highlight ? " me" : "") + (gained ? " gain" : "") +
+        (row.rank === 1 ? " lead" : "") + '">' +
         '<span class="board-rank">' + row.rank + "</span>" +
         "<span>" + esc(row.name) + "</span>" +
         '<span class="board-score">' + row.score + (gained ? '<span class="bump">+1</span>' : "") + "</span></div>";
@@ -621,6 +679,9 @@ input, select, textarea {
     renderBoard(el("boardList"), view.leaderboard, me);
     el("roundKicker").textContent = "ROUND " + view.round + " OF " + view.totalRounds;
     renderGallery(view.shotIds);
+    el("evidenceCount").textContent = view.shotCount > 1
+      ? plural(view.shotCount, "piece") + " of evidence. Keep scrolling, they are stacked."
+      : plural(view.shotCount, "piece") + " of evidence.";
     drawVoteArea();
     drawReveal();
   }
@@ -636,6 +697,15 @@ input, select, textarea {
     return lines.map(function (l) {
       return '<p style="margin:0 0 8px;"><span class="muted">' + l[0] + ":</span> <strong>" + esc(l[1]) + "</strong></p>";
     }).join("");
+  }
+
+  function progressHtml() {
+    var done = view.voteCount;
+    var total = view.eligibleCount;
+    var pct = total > 0 ? Math.round((done / total) * 100) : 0;
+    return '<div class="progress-wrap"><p class="progress-note">' + done + " of " + total + ' votes are in.</p>' +
+      '<div class="progress-rail"><div class="progress-fill' + (total > 0 && done >= total ? " full" : "") +
+      '" style="width:' + pct + '%;"></div></div></div>';
   }
 
   var lockTimer = null;
@@ -663,20 +733,22 @@ input, select, textarea {
       area.innerHTML = '<div class="caught-note"><h3 class="display" style="color:#ff4d8d;font-size:2rem;">You have been caught</h3>' +
         "<p>This slide is yours. Sit there and look innocent while everyone accuses each other. " +
         "No, you do not get a point for knowing your own search history.</p>" +
-        '<p class="muted">' + view.voteCount + " of " + view.eligibleCount + " votes are in.</p></div>";
+        "</div>" + progressHtml();
       return;
     }
 
     if (view.phase === "viewing") {
-      area.innerHTML = '<p class="muted" style="margin-top:18px;">Look closely. Voting opens when the host says so.</p>';
+      area.innerHTML = '<div class="waiting-note"><strong>Look closely.</strong>' +
+        '<p class="muted" style="margin:6px 0 0;">The eight voting buttons appear right here the moment the host opens voting. ' +
+        'Nothing for you to press yet.</p></div>';
       return;
     }
 
     if (view.phase === "voting" || view.phase === "closed") {
       var locked = lockedNow();
-      var html = '<p class="muted" style="margin-top:20px;">' + view.voteCount + " of " + view.eligibleCount + " votes are in.</p>";
+      var html = progressHtml();
       if (locked) {
-        html += '<div class="card" style="border-color:#3bd4a7;margin-top:10px;"><strong>Your accusation has been recorded.</strong>' +
+        html += '<div class="locked-in"><strong>Your accusation has been recorded.</strong>' +
           '<p class="muted" style="margin:6px 0 0;">' + (view.yourGuess ? "You went with " + esc(view.yourGuess) + ". No take backs." : "No take backs.") + "</p></div>";
       } else if (view.phase === "closed") {
         html += '<p class="muted">Voting is closed. You did not get one in.</p>';
@@ -729,16 +801,16 @@ input, select, textarea {
     if (!view.reveal) { area.innerHTML = ""; return; }
     var r = view.reveal;
     var wrong = r.wrong.map(function (w) {
-      return '<li><span class="cross">wrong</span> ' + esc(w.voter) + " said " + esc(w.guess) + "</li>";
+      return '<li><span class="cross tag">wrong</span>' + esc(w.voter) + " said " + esc(w.guess) + "</li>";
     }).join("");
     var right = r.correct.map(function (n) {
-      return '<li><span class="tick">plus one</span> ' + esc(n) + "</li>";
+      return '<li class="right"><span class="tick tag">plus one</span>' + esc(n) + "</li>";
     }).join("");
     area.innerHTML = '<div class="reveal-box"><div class="four-k display">Caught in 4K</div>' +
       '<div class="muted display it-was" style="font-size:1.1rem;">It was...</div>' +
       '<div class="reveal-name display">' + esc(r.owner) + "</div>" +
-      '<p style="margin-top:10px;"><strong>' + r.caught + " of " + r.eligible + " caught " + esc(r.owner) + ".</strong></p>" +
-      '<ul style="list-style:none;padding:0;">' + right + wrong + "</ul></div>";
+      '<p class="reveal-count"><strong>' + r.caught + " of " + r.eligible + " caught " + esc(r.owner) + ".</strong></p>" +
+      '<ul class="verdicts">' + right + wrong + "</ul></div>";
     if (revealShownFor !== r.owner + ":" + view.round) {
       revealShownFor = r.owner + ":" + view.round;
       area.scrollIntoView({ behavior: "smooth", block: "center" });
@@ -847,9 +919,9 @@ input, select, textarea {
     s.shots.forEach(function (shot) {
       (byOwner[shot.owner] = byOwner[shot.owner] || []).push(shot);
     });
-    var html = NAMES.map(function (name) {
-      var list = (byOwner[name] || []).sort(function (a, b) { return a.position - b.position; });
-      if (list.length === 0) return '<div class="owner-group"><strong>' + esc(name) + '</strong> <span class="muted">no screenshots, this person is skipped</span></div>';
+    var empty = NAMES.filter(function (name) { return !byOwner[name] || byOwner[name].length === 0; });
+    var html = NAMES.filter(function (name) { return byOwner[name] && byOwner[name].length > 0; }).map(function (name) {
+      var list = byOwner[name].sort(function (a, b) { return a.position - b.position; });
       var index = s.slides.map(function (sl) { return sl.owner; }).indexOf(name);
       return '<div class="owner-group"><div class="row" style="justify-content:space-between;"><strong>' + esc(name) +
         '</strong> <span class="muted">' + plural(list.length, "screenshot") + "</span>" +
@@ -865,6 +937,11 @@ input, select, textarea {
             "</select></div>";
         }).join("") + "</div></div>";
     }).join("");
+    if (empty.length) {
+      html += '<p class="skipped-line">Nothing yet, so these are skipped: <strong>' +
+        empty.map(esc).join(", ") + "</strong></p>";
+    }
+    if (!html) html = '<p class="skipped-line">Nothing in the locker yet. Drop the first screenshots in above.</p>';
     var box = el("lockerGroups");
     if (box.dataset.sig === s.sig) return;
     box.dataset.sig = s.sig;
