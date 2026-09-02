@@ -163,10 +163,12 @@ input, select, textarea {
   border-radius: 12px; overflow: hidden; border: 1px solid #1b2740; background: #0b1220;
   flex: 0 1 auto; max-width: 100%;
 }
-.shot img { display: block; max-height: 56vh; width: auto; max-width: 100%; }
+.shot img { display: block; max-height: 40vh; width: auto; max-width: 100%; }
+/* With nothing wide in the set, the upright ones can have the extra room. */
+.gallery.only-upright .shot img { max-height: 54vh; }
 .shot.landscape { flex: 1 1 100%; display: flex; justify-content: center; }
-.shot.landscape img { max-height: 46vh; }
-.shot.tall img { max-height: 56vh; object-fit: cover; object-position: top; }
+.shot.landscape img { max-height: 26vh; }
+.shot.tall img { object-fit: cover; object-position: top; }
 .shot .more {
   position: absolute; left: 0; right: 0; bottom: 0; padding: 8px;
   font-size: 0.78rem; color: #eaf0f7;
@@ -613,6 +615,7 @@ input, select, textarea {
       img.addEventListener("load", function () {
         // Wide screenshots take a line of their own, upright ones sit side by side.
         node.classList.toggle("landscape", img.naturalWidth > img.naturalHeight);
+        g.classList.toggle("only-upright", g.querySelectorAll(".shot.landscape").length === 0);
         // Only genuinely enormous scrolling screenshots get cropped, from the top.
         if (img.naturalHeight > img.naturalWidth * 4) {
           node.classList.add("tall");
