@@ -158,6 +158,12 @@ input, select, textarea {
   border-radius: 12px; overflow: hidden; border: 1px solid #1b2740; background: #0b1220;
   padding: 0; position: relative; cursor: zoom-in;
 }
+.shot.missing { min-height: 90px; background: #0b1220 url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'/%3E") center no-repeat; }
+.shot.missing::after {
+  content: "This screenshot did not load. Click to try again.";
+  display: block; padding: 30px 16px; color: #8fa0b5; font-size: 0.85rem; text-align: center;
+}
+.shot.missing img { display: none; }
 .evidence-count { color: #9fb0c5; font-size: 0.85rem; margin: 0 0 12px; text-align: center; }
 .shot img { display: block; width: 100%; height: auto; }
 .shot.tall img { max-height: 760px; object-fit: cover; object-position: top; }
@@ -560,8 +566,30 @@ input, select, textarea {
         '" alt="Screenshot ' + (i + 1) + '" loading="lazy"></button>';
     }).join("");
     Array.prototype.forEach.call(g.querySelectorAll(".shot"), function (node) {
-      node.addEventListener("click", function () { openLightbox(ids, Number(node.dataset.i)); });
       var img = node.querySelector("img");
+      // An image can be refused for a moment right after it is uploaded, and a
+      // browser never asks twice on its own. Keep asking, quietly.
+      var tries = 0;
+      node.addEventListener("click", function () {
+        if (node.classList.contains("missing")) {
+          node.classList.remove("missing");
+          tries = 0;
+          img.src = "/api/image/" + ids[Number(node.dataset.i)] + "?retry=" + Date.now();
+          return;
+        }
+        openLightbox(ids, Number(node.dataset.i));
+      });
+      img.addEventListener("error", function () {
+        tries += 1;
+        if (tries > 4) {
+          node.classList.add("missing");
+          node.setAttribute("title", "This one did not load. Click to try again.");
+          return;
+        }
+        setTimeout(function () {
+          img.src = "/api/image/" + ids[Number(node.dataset.i)] + "?try=" + tries;
+        }, tries * 900);
+      });
       img.addEventListener("load", function () {
         // Only genuinely enormous scrolling screenshots get cropped, from the top.
         if (img.naturalHeight > img.naturalWidth * 4) {

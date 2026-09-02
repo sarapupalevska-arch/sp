@@ -288,3 +288,46 @@ test('the page explains itself when the function is missing', async () => {
   assert.match(await page.textContent('#broken'), /not answering/);
   await context.close();
 });
+
+test('a screenshot that fails once comes back on its own', async () => {
+  const host = await hostPage();
+  await host.evaluate(async () => {
+    const token = sessionStorage.getItem('c4k_host');
+    const png = 'iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP8z8BQDwAEhQGAhKmMIQAAAABJRU5ErkJggg==';
+    await fetch('/api/host/wipe', {
+      method: 'POST',
+      headers: { 'content-type': 'application/json', 'x-host-token': token },
+      body: JSON.stringify({ what: 'all' })
+    });
+    await fetch('/api/host/upload', {
+      method: 'POST',
+      headers: { 'content-type': 'application/json', 'x-host-token': token },
+      body: JSON.stringify({ owner: 'Chels', data: png, mime: 'image/png' })
+    });
+  });
+
+  const context = await browser.newContext();
+  const page = await context.newPage();
+  // Refuse the first request for the image bytes, the way a lagging listing
+  // used to, then let everything through.
+  let refused = 0;
+  await page.route('**/api/image/**', (route) => {
+    if (refused === 0) { refused += 1; return route.fulfill({ status: 404, body: 'no' }); }
+    return route.continue();
+  });
+  await page.goto(server.url + '/');
+  await page.waitForSelector('#identity:not(.hidden)');
+  await page.click('.name-card[data-name="Ana"]');
+  await host.click('[data-action="start"]');
+
+  await page.waitForSelector('#gallery .shot');
+  await page.waitForFunction(() => {
+    const img = document.querySelector('#gallery .shot img');
+    return img && img.complete && img.naturalWidth > 0;
+  }, null, { timeout: 20000 });
+  assert.equal(refused, 1, 'the first request should have been refused');
+  assert.equal(await page.locator('#gallery .shot.missing').count(), 0);
+
+  await context.close();
+  await host.context().close();
+});

@@ -66,8 +66,41 @@ function isHost(config, token) {
   return Boolean(config && token && token === config.hash);
 }
 
-async function slidesNow(store, state) {
-  return buildSlides(state.order, await readShots(store));
+// Slides live in the state blob. Individual blob reads are strongly consistent
+// on Netlify but key listings lag behind writes, so rebuilding the running order
+// from a listing on every read means two requests a moment apart can disagree
+// about which screenshots exist. Recompute only when the host changes something.
+async function syncSlides(store, state) {
+  const slides = buildSlides(state.order, await knownShots(store, state));
+  state.slides = slides;
+  await writeState(store, state);
+  return slides;
+}
+
+function slidesOf(state) {
+  return Array.isArray(state.slides) ? state.slides : [];
+}
+
+// What the stored running order remembers, as plain screenshot records.
+function shotsFromState(state) {
+  const out = [];
+  for (const slide of slidesOf(state)) {
+    slide.shotIds.forEach((id, i) => out.push({ id, owner: slide.owner, position: i }));
+  }
+  return out;
+}
+
+// The listing can only ever add to what is already known. Contents come from
+// individual reads, which are strongly consistent, so a listed screenshot wins
+// on owner and position, but a screenshot the listing has not caught up with
+// is never dropped.
+async function knownShots(store, state, changes) {
+  const merged = new Map();
+  for (const shot of shotsFromState(state)) merged.set(shot.id, shot);
+  for (const shot of await readShots(store)) merged.set(shot.id, shot);
+  if (changes && changes.add) merged.set(changes.add.id, changes.add);
+  if (changes && changes.drop) merged.delete(changes.drop);
+  return [...merged.values()];
 }
 
 function subjectOf(slides, state) {
@@ -75,7 +108,7 @@ function subjectOf(slides, state) {
   return slide ? slide.owner : null;
 }
 
-async function allowedShotIds(store, state, slides) {
+function allowedShotIds(state, slides) {
   // A player may fetch an image only from the slide that is live right now or
   // from a slide that has already been revealed.
   const allowed = new Set();
@@ -123,7 +156,7 @@ export async function handle(req, store) {
   // ---- the player facing state ----
   if (route === '/state' && method === 'GET') {
     const state = await readState(store);
-    const slides = await slidesNow(store, state);
+    const slides = slidesOf(state);
     const subject = subjectOf(slides, state);
     const votes = await readVotes(store, subject, state);
     const scores = await currentScores(store, state);
@@ -145,7 +178,7 @@ export async function handle(req, store) {
     if (!claim || JSON.parse(claim).token !== voterToken) return json(401, { error: 'Not your name' });
     const state = await readState(store);
     if (state.phase !== 'voting') return json(409, { error: 'Voting is not open' });
-    const slides = await slidesNow(store, state);
+    const slides = slidesOf(state);
     const subject = subjectOf(slides, state);
     if (!subject) return json(409, { error: 'No slide is live' });
     if (name === subject) return json(403, { error: 'You have been caught. You do not get to vote.' });
@@ -163,8 +196,7 @@ export async function handle(req, store) {
     const state = await readState(store);
     const config = await hostConfig(store);
     if (!isHost(config, token)) {
-      const slides = await slidesNow(store, state);
-      const allowed = await allowedShotIds(store, state, slides);
+      const allowed = allowedShotIds(state, slidesOf(state));
       if (!allowed.has(id)) return json(404, { error: 'Not found' });
     }
     const meta = await store.get('shot:' + id);
@@ -213,7 +245,17 @@ export async function handle(req, store) {
   if (route === '/host/state' && method === 'GET') {
     const state = await readState(store);
     const shots = await readShots(store);
-    const slides = buildSlides(state.order, shots);
+    let slides = slidesOf(state);
+    // Before a game starts, heal the stored running order against the locker,
+    // so a listing that was lagging during an upload cannot leave a slide out.
+    if (state.phase === 'lobby') {
+      const fresh = buildSlides(state.order, await knownShots(store, state));
+      if (JSON.stringify(fresh) !== JSON.stringify(slides)) {
+        state.slides = fresh;
+        await writeState(store, state);
+        slides = fresh;
+      }
+    }
     const subject = subjectOf(slides, state);
     const votes = await readVotes(store, subject, state);
     const scores = scoresFrom(state.revealed);
@@ -250,13 +292,21 @@ export async function handle(req, store) {
     if (typeof data !== 'string' || data.length === 0) return json(400, { error: 'No image data' });
     const bytes = Buffer.from(data, 'base64');
     if (bytes.length > MAX_IMAGE_BYTES) return json(413, { error: 'That image is too large' });
-    const shots = await readShots(store);
-    const position = shots.filter((s) => s.owner === owner).length;
+    const state = await readState(store);
+    // Counted from everything known, not just the listing. Counting a lagging
+    // listing gives two screenshots uploaded moments apart the same position,
+    // and then they show up in the wrong order.
+    const known = await knownShots(store, state);
+    const position = known.filter((s2) => s2.owner === owner).length;
     const id = newId();
     // No original filename is ever stored. A file called carla-searches.png
     // would give the whole game away.
     await store.set('img:' + id, bytes.toString('base64'));
     await store.set('shot:' + id, JSON.stringify({ id, owner, position, mime: mime || 'image/jpeg' }));
+    // The listing will not carry the new key for a second or two, so it is
+    // added by hand rather than waiting for it to turn up.
+    state.slides = buildSlides(state.order, known.concat([{ id, owner, position }]));
+    await writeState(store, state);
     return json(200, { id, owner, position });
   }
 
@@ -268,6 +318,9 @@ export async function handle(req, store) {
     if (method === 'DELETE') {
       await store.delete('shot:' + id);
       await store.delete('img:' + id);
+      const state = await readState(store);
+      state.slides = buildSlides(state.order, await knownShots(store, state, { drop: id }));
+      await writeState(store, state);
       return json(200, { ok: true });
     }
     if (method === 'POST') {
@@ -278,6 +331,9 @@ export async function handle(req, store) {
       }
       if (body && Number.isFinite(body.position)) shot.position = body.position;
       await store.set('shot:' + id, JSON.stringify(shot));
+      const state = await readState(store);
+      state.slides = buildSlides(state.order, await knownShots(store, state, { add: shot }));
+      await writeState(store, state);
       return json(200, { ok: true, shot });
     }
   }
@@ -291,6 +347,7 @@ export async function handle(req, store) {
       shot.position = i;
       await store.set('shot:' + ids[i], JSON.stringify(shot));
     }
+    await syncSlides(store, await readState(store));
     return json(200, { ok: true });
   }
 
@@ -300,7 +357,7 @@ export async function handle(req, store) {
     for (const name of PLAYERS) if (!clean.includes(name)) clean.push(name);
     const state = await readState(store);
     state.order = clean;
-    await writeState(store, state);
+    await syncSlides(store, state);
     return json(200, { ok: true, order: clean });
   }
 
@@ -317,7 +374,9 @@ export async function handle(req, store) {
   if (route === '/host/action' && method === 'POST') {
     const action = body && body.action;
     const state = await readState(store);
-    const slides = await slidesNow(store, state);
+    let slides = slidesOf(state);
+    // Starting a game settles the running order from whatever is in the locker.
+    if (action === 'start') slides = buildSlides(state.order, await knownShots(store, state));
     const subject = subjectOf(slides, state);
 
     const clearVotes = async (owner) => {
@@ -329,6 +388,7 @@ export async function handle(req, store) {
 
     if (action === 'start') {
       if (slides.length === 0) return json(409, { error: 'Nobody has any screenshots yet' });
+      state.slides = slides;
       state.roundIndex = 0;
       state.phase = 'viewing';
     } else if (action === 'open-voting') {

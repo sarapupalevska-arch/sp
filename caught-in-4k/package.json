@@ -6,7 +6,7 @@
   "description": "Who Searched That? Caught in 4K. A live game show for eight people and their search history.",
   "scripts": {
     "start": "node dev-server.mjs",
-    "test": "node --test test/unit.test.mjs test/api.test.mjs",
+    "test": "node --test test/unit.test.mjs test/api.test.mjs test/consistency.test.mjs",
     "test:e2e": "node --test test/e2e/game.e2e.mjs"
   },
   "dependencies": {
