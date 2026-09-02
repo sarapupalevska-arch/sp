@@ -163,11 +163,11 @@ input, select, textarea {
   border-radius: 12px; overflow: hidden; border: 1px solid #1b2740; background: #0b1220;
   flex: 0 1 auto; max-width: 100%;
 }
-.shot img { display: block; max-height: 40vh; width: auto; max-width: 100%; }
+.shot img { display: block; max-height: 36vh; width: auto; max-width: 100%; }
 /* With nothing wide in the set, the upright ones can have the extra room. */
-.gallery.only-upright .shot img { max-height: 54vh; }
+.gallery.only-upright .shot img { max-height: 50vh; }
 .shot.landscape { flex: 1 1 100%; display: flex; justify-content: center; }
-.shot.landscape img { max-height: 26vh; }
+.shot.landscape img { max-height: 22vh; }
 .shot.tall img { object-fit: cover; object-position: top; }
 .shot .more {
   position: absolute; left: 0; right: 0; bottom: 0; padding: 8px;
@@ -760,10 +760,10 @@ input, select, textarea {
     if (!stats) return '<p class="muted">Not enough evidence for the paperwork.</p>';
     var lines = [];
     if (stats.bestDetective) lines.push(["Most accurate detective", stats.bestDetective.name + ", " + stats.bestDetective.hits + " of " + stats.bestDetective.of]);
-    if (stats.mostSuspicious) lines.push(["Most suspicious", stats.mostSuspicious.name + ", wrongly accused " + stats.mostSuspicious.count + " times"]);
+    if (stats.mostSuspicious) lines.push(["Most suspicious", stats.mostSuspicious.name + ", wrongly accused " + plural(stats.mostSuspicious.count, "time")]);
     if (stats.openBook) lines.push(["Open book", stats.openBook.name]);
     if (stats.hardestToRead) lines.push(["Hardest to read", stats.hardestToRead.name]);
-    if (stats.redHerring) lines.push(["Red herring", stats.redHerring.pair + ", " + stats.redHerring.count + " times"]);
+    if (stats.redHerring) lines.push(["Red herring", stats.redHerring.pair + ", " + plural(stats.redHerring.count, "time")]);
     return lines.map(function (l) {
       return '<p style="margin:0 0 8px;"><span class="muted">' + l[0] + ":</span> <strong>" + esc(l[1]) + "</strong></p>";
     }).join("");
