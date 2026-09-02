@@ -328,3 +328,73 @@ test('a screenshot that fails once comes back on its own', async () => {
   await context.close();
   await host.context().close();
 });
+
+test('the host can black out part of a screenshot from the locker', async () => {
+  const host = await hostPage();
+  host.on('dialog', (d) => d.accept());
+  // A screenshot with room to draw on, made in the page and uploaded the same
+  // way the locker does it.
+  const id = await host.evaluate(async () => {
+    const token = sessionStorage.getItem('c4k_host');
+    await fetch('/api/host/wipe', {
+      method: 'POST',
+      headers: { 'content-type': 'application/json', 'x-host-token': token },
+      body: JSON.stringify({ what: 'all' })
+    });
+    const canvas = document.createElement('canvas');
+    canvas.width = 420;
+    canvas.height = 320;
+    const ctx = canvas.getContext('2d');
+    ctx.fillStyle = '#ffffff';
+    ctx.fillRect(0, 0, 420, 320);
+    ctx.fillStyle = '#222222';
+    ctx.font = '20px sans-serif';
+    ctx.fillText('work romania', 24, 60);
+    const res = await fetch('/api/host/upload', {
+      method: 'POST',
+      headers: { 'content-type': 'application/json', 'x-host-token': token },
+      body: JSON.stringify({ owner: 'Ivan', data: canvas.toDataURL('image/png').split(',')[1], mime: 'image/png' })
+    });
+    return (await res.json()).id;
+  });
+  await host.evaluate(() => { document.getElementById('lockerGroups').dataset.sig = ''; });
+  // Wait for this screenshot's own button, not one left over from an earlier test.
+  await host.waitForSelector('[data-hide="' + id + '"]', { timeout: 20000 });
+  const before = await host.evaluate(async (shotId) => {
+    const res = await fetch('/api/image/' + shotId + '?host=' + sessionStorage.getItem('c4k_host'));
+    return (await res.text()).length;
+  }, id);
+
+  await host.click('[data-hide="' + id + '"]');
+  await host.waitForSelector('#redactor:not(.hidden)');
+
+  // Drag a box across the middle of the screenshot.
+  const canvas = await host.$('#redactCanvas');
+  const area = await canvas.boundingBox();
+  await host.mouse.move(area.x + area.width * 0.2, area.y + area.height * 0.4);
+  await host.mouse.down();
+  await host.mouse.move(area.x + area.width * 0.8, area.y + area.height * 0.6, { steps: 8 });
+  await host.mouse.up();
+  await host.click('#redactSave');
+  await host.waitForFunction(
+    () => document.getElementById('redactor').classList.contains('hidden'),
+    null, { timeout: 20000 }
+  );
+
+  const after = await host.evaluate(async (shotId) => {
+    const res = await fetch('/api/image/' + shotId + '?host=' + sessionStorage.getItem('c4k_host'));
+    return (await res.text()).length;
+  }, id);
+  assert.notEqual(before, after, 'the stored screenshot must have changed');
+
+  // It keeps its place, so the slide is untouched.
+  const slides = await host.evaluate(async () => {
+    const res = await fetch('/api/host/state', { headers: { 'x-host-token': sessionStorage.getItem('c4k_host') } });
+    return (await res.json()).slides;
+  });
+  assert.equal(slides.length, 1);
+  assert.equal(slides[0].shotIds.length, 1);
+  assert.equal(slides[0].shotIds[0], id);
+
+  await host.context().close();
+});

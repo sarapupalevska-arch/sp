@@ -260,3 +260,38 @@ test('a missing player does not stop the host revealing by hand', async () => {
   const last = await vote('Sara');
   assert.equal(last.body.revealed, true, 'only the people actually in the room have to vote');
 });
+
+test('a screenshot can be replaced in place without moving in the slide', async () => {
+  await fresh();
+  await login('redaction');
+  const first = (await upload('Carla')).body.id;
+  const second = (await upload('Carla')).body.id;
+  await act('start');
+
+  const before = await (await fetch(server.url + '/api/image/' + first)).arrayBuffer();
+  const boxed = 'iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAEklEQVR42mNk+M+ACzDiVQAAWFsCAd4LxvcAAAAASUVORK5CYII=';
+  const res = await asJson(call('POST', '/api/host/shot/' + first + '/image', { data: boxed, mime: 'image/png' }));
+  assert.equal(res.status, 200);
+
+  const after = await (await fetch(server.url + '/api/image/' + first)).arrayBuffer();
+  assert.notEqual(Buffer.from(before).toString('base64'), Buffer.from(after).toString('base64'), 'the bytes must change');
+
+  const state = await hostState();
+  assert.deepEqual(state.body.slides[0].shotIds, [first, second], 'it keeps its place in the slide');
+  assert.equal(state.body.shots.length, 2);
+});
+
+test('only the host can replace a screenshot', async () => {
+  const res = await asJson(fetch(server.url + '/api/host/shot/anything/image', {
+    method: 'POST',
+    headers: { 'content-type': 'application/json' },
+    body: JSON.stringify({ data: 'x' })
+  }));
+  assert.equal(res.status, 401);
+});
+
+test('a redacted screenshot is never served from a cache', async () => {
+  const shots = (await hostState()).body.shots;
+  const res = await fetch(server.url + '/api/image/' + shots[0].id);
+  assert.match(res.headers.get('cache-control'), /no-store/);
+});

@@ -243,7 +243,7 @@ export async function handle(req, store) {
       status: 200,
       headers: {
         'content-type': parsed.mime || 'image/jpeg',
-        'cache-control': 'private, max-age=300'
+        'cache-control': 'no-store'
       },
       body: Buffer.from(data, 'base64'),
       isBinary: true
@@ -342,6 +342,24 @@ export async function handle(req, store) {
     // added by hand rather than waiting for it to turn up.
     await applySlides(store, state, known.concat([{ id, owner, position }]));
     return json(200, { id, owner, position });
+  }
+
+  const redact = route.match(/^\/host\/shot\/([^/]+)\/image$/);
+  if (redact && method === 'POST') {
+    const id = redact[1];
+    const raw = await store.get('shot:' + id);
+    if (!raw) return json(404, { error: 'No such screenshot' });
+    const { data, mime } = body || {};
+    if (typeof data !== 'string' || data.length === 0) return json(400, { error: 'No image data' });
+    const bytes = Buffer.from(data, 'base64');
+    if (bytes.length > MAX_IMAGE_BYTES) return json(413, { error: 'That image is too large' });
+    const shot = JSON.parse(raw);
+    shot.mime = mime || 'image/jpeg';
+    await store.set('img:' + id, bytes.toString('base64'));
+    await store.set('shot:' + id, JSON.stringify(shot));
+    // The id, the owner and the position are all untouched, so the running
+    // order does not move.
+    return json(200, { ok: true, id });
   }
 
   if (route.startsWith('/host/shot/')) {
