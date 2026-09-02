@@ -81,6 +81,16 @@ function slidesOf(state) {
   return Array.isArray(state.slides) ? state.slides : [];
 }
 
+// A game state written before the running order was stored has no slides at
+// all, which is not the same as having none. Build them once and keep them,
+// so an upgrade in the middle of a live game cannot empty the show.
+async function ensureSlides(store, state) {
+  if (Array.isArray(state.slides)) return state.slides;
+  state.slides = buildSlides(state.order, await knownShots(store, state));
+  await writeState(store, state);
+  return state.slides;
+}
+
 // What the stored running order remembers, as plain screenshot records.
 function shotsFromState(state) {
   const out = [];
@@ -156,7 +166,7 @@ export async function handle(req, store) {
   // ---- the player facing state ----
   if (route === '/state' && method === 'GET') {
     const state = await readState(store);
-    const slides = slidesOf(state);
+    const slides = await ensureSlides(store, state);
     const subject = subjectOf(slides, state);
     const votes = await readVotes(store, subject, state);
     const scores = await currentScores(store, state);
@@ -178,7 +188,7 @@ export async function handle(req, store) {
     if (!claim || JSON.parse(claim).token !== voterToken) return json(401, { error: 'Not your name' });
     const state = await readState(store);
     if (state.phase !== 'voting') return json(409, { error: 'Voting is not open' });
-    const slides = slidesOf(state);
+    const slides = await ensureSlides(store, state);
     const subject = subjectOf(slides, state);
     if (!subject) return json(409, { error: 'No slide is live' });
     if (name === subject) return json(403, { error: 'You have been caught. You do not get to vote.' });
@@ -196,7 +206,7 @@ export async function handle(req, store) {
     const state = await readState(store);
     const config = await hostConfig(store);
     if (!isHost(config, token)) {
-      const allowed = allowedShotIds(state, slidesOf(state));
+      const allowed = allowedShotIds(state, await ensureSlides(store, state));
       if (!allowed.has(id)) return json(404, { error: 'Not found' });
     }
     const meta = await store.get('shot:' + id);
@@ -245,7 +255,7 @@ export async function handle(req, store) {
   if (route === '/host/state' && method === 'GET') {
     const state = await readState(store);
     const shots = await readShots(store);
-    let slides = slidesOf(state);
+    let slides = await ensureSlides(store, state);
     // Before a game starts, heal the stored running order against the locker,
     // so a listing that was lagging during an upload cannot leave a slide out.
     if (state.phase === 'lobby') {
@@ -374,7 +384,7 @@ export async function handle(req, store) {
   if (route === '/host/action' && method === 'POST') {
     const action = body && body.action;
     const state = await readState(store);
-    let slides = slidesOf(state);
+    let slides = await ensureSlides(store, state);
     // Starting a game settles the running order from whatever is in the locker.
     if (action === 'start') slides = buildSlides(state.order, await knownShots(store, state));
     const subject = subjectOf(slides, state);

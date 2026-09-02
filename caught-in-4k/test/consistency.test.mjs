@@ -96,3 +96,23 @@ test('a screenshot still refuses to serve when it belongs to a later slide', asy
   const res = await call(store, 'GET', '/api/image/' + noelShot);
   assert.equal(res.status, 404, 'the fix must not open up screenshots from later rounds');
 });
+
+test('a game state written before slides were stored keeps playing', async () => {
+  const { store, token } = await setup();
+  const carla = await upload(store, token, 'Carla');
+  await upload(store, token, 'Noel');
+  await call(store, 'POST', '/api/host/order', { order: ['Carla', 'Noel'] }, token);
+  await call(store, 'POST', '/api/host/action', { action: 'start' }, token);
+
+  // Exactly what a game looked like before the running order was stored:
+  // mid round, with no slides recorded at all.
+  const old = JSON.parse(await store.get('state'));
+  delete old.slides;
+  await store.set('state', JSON.stringify(old));
+
+  const view = JSON.parse((await call(store, 'GET', '/api/state')).body);
+  assert.equal(view.totalRounds, 2, 'the show must not empty itself on an upgrade');
+  assert.equal(view.round, 1);
+  assert.equal(view.shotIds.length, 1);
+  assert.equal((await call(store, 'GET', '/api/image/' + carla)).status, 200);
+});
