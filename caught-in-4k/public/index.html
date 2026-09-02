@@ -99,6 +99,9 @@ input, select, textarea {
 .name-card.taken { opacity: 0.4; }
 .name-card.picked { border-color: #3bd4a7; box-shadow: 0 0 0 2px rgba(59,212,167,0.35); }
 
+.pick-line { text-align: center; font-size: clamp(1.6rem, 4vw, 2.6rem); color: #35b4ec; margin-bottom: 18px; }
+.pick-hint { text-align: center; font-size: 0.85rem; margin-top: 16px; }
+
 /* ---------- lobby ---------- */
 .checklist { display: grid; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap: 10px; }
 .check { display: flex; align-items: center; gap: 10px; padding: 10px 12px; border: 1px solid #1b2740; border-radius: 10px; }
@@ -245,9 +248,12 @@ input, select, textarea {
     <div class="title-hero">
       <div class="kicker">EIGHT SUSPECTS. ONE BROWSER HISTORY AT A TIME.</div>
       <h1 class="display">Who Searched That?</h1>
-      <p class="muted">Pick your name. Then sit there and look innocent.</p>
+      <p class="muted">No sign up, no password, no email. Nobody has to remember anything.</p>
     </div>
+    <h2 class="display pick-line">Please click your name</h2>
     <div class="name-grid" id="nameGrid"></div>
+    <p class="muted pick-hint">A greyed out name has already been taken by somebody else.
+      If that somebody is you, on another device, ask the host to release it.</p>
     <p id="identityError" class="muted"></p>
   </section>
 
@@ -404,6 +410,7 @@ input, select, textarea {
   var HOST_MODE = location.pathname.replace(/\/+$/, "") === "/host";
   var el = function (id) { return document.getElementById(id); };
   var show = function (id, on) { el(id).classList.toggle("hidden", !on); };
+  var plural = function (n, word) { return n + " " + word + (n === 1 ? "" : "s"); };
   var esc = function (s) { return String(s).replace(/[&<>"]/g, function (c) {
     return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]; }); };
 
@@ -800,7 +807,7 @@ input, select, textarea {
     el("hTotal").textContent = s.totalRounds;
     el("hPhase").textContent = s.phase;
     el("hSubject").textContent = s.subject || "nobody yet";
-    el("hShots").textContent = s.subject ? "(" + s.shotIds.length + " screenshots)" : "";
+    el("hShots").textContent = s.subject ? "(" + plural(s.shotIds.length, "screenshot") + ")" : "";
 
     var move = nextMoveFor(s);
     el("nextMove").textContent = move.label;
@@ -845,7 +852,7 @@ input, select, textarea {
       if (list.length === 0) return '<div class="owner-group"><strong>' + esc(name) + '</strong> <span class="muted">no screenshots, this person is skipped</span></div>';
       var index = s.slides.map(function (sl) { return sl.owner; }).indexOf(name);
       return '<div class="owner-group"><div class="row" style="justify-content:space-between;"><strong>' + esc(name) +
-        '</strong> <span class="muted">' + list.length + " screenshots</span>" +
+        '</strong> <span class="muted">' + plural(list.length, "screenshot") + "</span>" +
         (index >= 0 ? '<button data-preview="' + index + '">Preview slide</button>' : "") + "</div>" +
         '<div class="thumbs">' + list.map(function (shot, i) {
           return '<div class="thumb"><img src="/api/image/' + shot.id + "?host=" + encodeURIComponent(hostToken) + '" alt="">' +
@@ -901,7 +908,7 @@ input, select, textarea {
     s.slides.forEach(function (sl) { counts[sl.owner] = sl.count; });
     list.innerHTML = s.order.map(function (n) {
       return '<li draggable="true" data-name="' + n + '"' + (counts[n] ? "" : ' class="empty"') + ">" +
-        esc(n) + (counts[n] ? " (" + counts[n] + " screenshots)" : " (no screenshots, skipped)") + "</li>";
+        esc(n) + (counts[n] ? " (" + plural(counts[n], "screenshot") + ")" : " (no screenshots, skipped)") + "</li>";
     }).join("");
     var dragged = null;
     Array.prototype.forEach.call(list.children, function (li) {
