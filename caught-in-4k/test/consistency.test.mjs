@@ -116,3 +116,26 @@ test('a game state written before slides were stored keeps playing', async () =>
   assert.equal(view.shotIds.length, 1);
   assert.equal((await call(store, 'GET', '/api/image/' + carla)).status, 200);
 });
+
+test('a vote that lands just before the reveal still counts', async () => {
+  const { store, token } = await setup();
+  await upload(store, token, 'Carla');
+  await call(store, 'POST', '/api/host/action', { action: 'start' }, token);
+  await call(store, 'POST', '/api/host/action', { action: 'open-voting' }, token);
+
+  const join = async (name) => JSON.parse((await call(store, 'POST', '/api/join', { name })).body).token;
+  const ivan = await join('Ivan');
+  const sara = await join('Sara');
+  await call(store, 'POST', '/api/vote', { name: 'Ivan', token: ivan, guess: 'Carla' });
+
+  // Sara's vote is written but the listing has not caught up with it yet.
+  await store.freeze();
+  await call(store, 'POST', '/api/vote', { name: 'Sara', token: sara, guess: 'Carla' });
+  setTimeout(() => store.thaw(), 200);
+
+  await call(store, 'POST', '/api/host/action', { action: 'reveal' }, token);
+  const view = JSON.parse((await call(store, 'GET', '/api/state')).body);
+  assert.equal(view.reveal.caught, 2, 'both votes must count');
+  const scores = Object.fromEntries(view.leaderboard.map((r) => [r.name, r.score]));
+  assert.equal(scores.Sara, 1, 'Sara must not lose her point to a lagging listing');
+});

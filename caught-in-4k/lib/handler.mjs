@@ -408,8 +408,13 @@ export async function handle(req, store) {
       state.phase = 'closed';
     } else if (action === 'reveal') {
       if (!subject) return json(409, { error: 'No slide is live' });
-      const keys = await store.list('vote:' + subject + ':');
-      const votes = parseVoteKeys(keys, subject);
+      // Read the votes twice, a beat apart, and take the union. A key listing
+      // can lag a second behind a write, and a vote cast just before the host
+      // presses reveal must not cost somebody their point.
+      const first = parseVoteKeys(await store.list('vote:' + subject + ':'), subject);
+      await new Promise((resolve) => setTimeout(resolve, 450));
+      const second = parseVoteKeys(await store.list('vote:' + subject + ':'), subject);
+      const votes = Object.assign({}, second, first);
       // Scoring is settled here, on the server, from the stored votes only.
       state.revealed[subject] = { votes, at: Date.now() };
       state.phase = 'revealed';
