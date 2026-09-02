@@ -10,3 +10,16 @@
 
 [functions]
   node_bundler = "esbuild"
+
+# The whole UI is one file, so the host screen has no file of its own.
+# Serve index.html at /host and let the page work out which screen to show.
+# Status 200 is a rewrite, so the address bar still reads /host.
+[[redirects]]
+  from = "/host"
+  to = "/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/host/*"
+  to = "/index.html"
+  status = 200

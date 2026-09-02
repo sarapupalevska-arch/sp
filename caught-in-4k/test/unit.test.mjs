@@ -155,3 +155,17 @@ test('an unchanged payload keeps the same signature', () => {
   assert.equal(buildPlayerView(ctx({})).sig, buildPlayerView(ctx({})).sig);
   assert.notEqual(buildPlayerView(ctx({})).sig, buildPlayerView(ctx({ state: { phase: 'closed' } })).sig);
 });
+
+// ---- deploy configuration ----
+
+test('netlify serves the single page at /host, which has no file of its own', async () => {
+  const { readFile } = await import('node:fs/promises');
+  const toml = await readFile(new URL('../netlify.toml', import.meta.url), 'utf8');
+  const rules = toml.split('[[redirects]]').slice(1);
+  const hostRule = rules.find((r) => /from\s*=\s*"\/host"/.test(r));
+  assert.ok(hostRule, 'netlify.toml needs a redirect for /host, or the host screen is a 404');
+  assert.match(hostRule, /to\s*=\s*"\/index\.html"/);
+  assert.match(hostRule, /status\s*=\s*200/);
+  // A rewrite of everything would swallow the API, so it must stay specific.
+  assert.equal(/from\s*=\s*"\/\*"/.test(toml), false);
+});
