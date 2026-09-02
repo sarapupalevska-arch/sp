@@ -3,5 +3,10 @@
   functions = "netlify/functions"
   command = ""
 
+[build.environment]
+  # Playwright is only used by the browser tests. Netlify must not try to
+  # download a browser during the deploy.
+  PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD = "1"
+
 [functions]
   node_bundler = "esbuild"
