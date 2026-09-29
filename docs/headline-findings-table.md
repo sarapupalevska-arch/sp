@@ -1,41 +1,52 @@
-# Headline findings so far: Main promise + 9 pillars
+# Commercial headlines: Main promise + 9 pillars (round 6: short spoken headlines)
 
-Status: compiled by the lead from the seven iteration-1 sets (website, Noel-voice, feeling-first writers; trust, neuromarketing, premium-boutique, passion psychologists). The master reviewer's unified scoring and the independent red-team did NOT complete (session limit), so scores below are the specialists' own, not independently checked. None of it has been tested on a real reader or shown to Noel.
+Status: nothing here is approved, tested on a reader, or seen by Noel. Scores and "Noel would…" statements are model judgement. The three round-6 writers read the same brief and audit, so their agreement is NOT independent evidence. Earlier sentence-length lines are now the Sentence-column copy; the Headline column is the short spoken line.
 
-## Table 1: where the seven sets converge, item by item
+## Table 1: three writers side by side, with the lead's proposed set
 
-| Item | Convergent line (how many of 7 sets) | Best alternates (who) | Still open / risk | Your feedback |
-|---|---|---|---|---|
-| **Main** (first principle: the founder's time is the scarcest asset and a wrong hire is costly, so they need the whole hire done plus a straight answer on who to pick) | All 7 keep Noel's "We take the whole hire off your plate" and "You decide with confidence". They differ only on the stake clause: **"…and recommend the person we'd hire ourselves. You decide with confidence."** (neuromarketer; 19 words) | "…and only recommend people we'd hire ourselves." (Noel-voice, trust) · "…and don't stop until we'd hire the person ourselves." (passion) · "…and recommend only people we'd hire for our own team." (premium) · "…then tell you who we'd hire ourselves, so you can decide with confidence." (website) · short: "We take the whole hire off your plate. You decide with confidence." | "As if for our own team" ranked lowest for trust (a cliché the reader has heard); "ourselves" is one inference step from the agreed promise; plural "people" vs the singular clear recommendation; 19–21 words vs "short" | |
-| **P1** 30–50% less (principle: the same experience costs 30–50% less from E. Europe / S. Africa than from a comparable US/UK hire) | **High-quality, experienced people, at 30–50% below comparable US or UK salaries.** (5 of 7) | "Experienced people who can own the role, 30–50% below comparable US or UK salaries." (passion) · "High-calibre…" (premium) · "Experienced people for 30–50% less than a comparable US or UK salary." (feeling-first) | Clear but flat (excitement 2–3 by every scorer); "you can afford" removed by all; "same calibre" held back (auditor: overclaim); salary vs hiring-cost basis unconfirmed | |
-| **P2** hand-selected (principle: "right" exists only for one role, team and business, so someone has to choose for that) | **Each candidate is hand-selected by a person for the job you actually have.** (6 of 7) | "Hand-selected for your business, so you can picture each of them in the role." (website) · "…for your role, team and business" (Noel's own pillar words) | Best-scoring plain line; "role, team and business" is a noun list | |
-| **P3** real part of your team (principle: someone is only on your team if they can talk to you, work when you work and belong to you contractually) | **A real member of your team, in your meetings, contracted directly by you.** (5 of 7) | Without "in your meetings": "A real member of your team, contracted directly by you." (feeling-first, neuromarketer) | "In your meetings" is inferred from hour overlap, not in the framework; direct contract is new to the site; reads dry (excitement 3) | |
-| **P4** four weeks, not rushed (principle: speed is safe only when the search starts at full strength on day one and nothing is skipped) | **A hire in about four weeks, and we never rush your decision.** (3 of 7) / **"…and you decide when you're ready."** (2 of 7) | "About four weeks on average, and we never rush your decision." (trust) · "Shortlist by week three. You decide when you're ready." | "About" = an average, not a promise; site says shortlist in three weeks; "never" used twice in the set | |
-| **P5** one flat fee (principle: a fee that does not change with salary cannot reward us for a pricier recommendation) | **A flat fee of $6,500, so we've no reason to push the pricier hire.** (5 of 7) | Number-free: "A flat fee, so we've no reason to push the pricier hire." (Noel-voice) · "Whoever you hire, we earn the same $6,500…" (website) | Trust psychologist: best trust line in the set. Is $6,500 public? Not on Noel's site. Never use "vs 15–25%": not cheaper below roughly a $26–43k salary | |
-| **P6** guarantees (principle: our own money and work are at risk if the hire is wrong) | **Thrilled to hire, or refunded. Replaced free if they leave within twelve months.** (6 of 7) | "Thrilled to hire, or we refund you. If they leave within a year, we replace them free." (passion) | All 7 dropped "so you can hire at peace"; refund terms unconfirmed (site: "in full, no questions asked"; Playbook: upfront fee); 3-month replacement not in the line | |
-| **P7** we run the work (principle: a hire is a long list of jobs and every one you do is time you lose) | **We run every step of the hiring process** + either "…so you don't have to become the hiring department" (5 of 7) or "…You meet only people worth meeting." (2 of 7) | "We're your hiring department: we run every step of the process." (Noel-voice) | "Hiring department" appears only here; trust: avoid "never" (the reader still briefs and decides); "worth meeting" is subjective | |
-| **P8** human judgment (principle: whether someone is right can only be judged by people who understand the role and watched them do real work; the output must be a call) | **Split: 4 of 7 → "Real people assess every candidate live, on real work, including how they use AI."** · 3 of 7 keep **"We tell you who we'd hire, and why, so you're never deciding alone."** | Config A / Config B (see decision 3) | Config A gives AI fluency a home but loses the set's warmest felt line; "who we'd hire" would then live only in the Main | |
-| **P9** honest, close, knows your business (principle: a hire goes right when the person advising you knows your business, has time for you and tells you the truth) | **One senior recruitment partner who knows your business, on a deliberately limited client load.** (all 7 add "limited client load") | "…who updates you before you ask." (Noel-voice) · "…who never leaves you chasing." (neuromarketer) · bolder, pending Noel: "We'll tell you when we think you're wrong." (trust: the most trust-raising line available) | Every writer's weakest slot; site says "me and our team of partners" vs framework "one senior partner"; "limited" with no number | |
+| Item | Wordsmith | Noel-voice | Brand + story | **Lead's proposed headline** | Sentence beneath (Sentence column) | Your feedback |
+|---|---|---|---|---|---|---|
+| **Main** | We'll tell you who we'd hire. (ICP: You run the agency. We run the hire.) | Brief us. We'll tell you who we'd hire. (alts: We run the hire. You make the call. / ICP twin) | We do the hiring. You make the call. | **We do the hiring. You make the call.** | We take the whole hire off your plate and tell you who we'd hire, so you can decide with confidence. | |
+| **P1** | Experienced people on 30–50% lower salaries. | Experienced people for 30–50% less. (2nd: A bigger team without a bigger burn rate.) | Experienced people, 30–50% below comparable US or UK salaries. | **Experienced people, 30–50% below comparable US or UK salaries.** | Experienced people from Eastern Europe and South Africa, at salary costs 30–50% below comparable US or UK hires. | |
+| **P2** | Hand-selected for how your team works. | Hand-selected for your business. | Every candidate, hand-selected for your business. | **Hand-selected for your business.** | Every candidate is chosen by a person for fit with your role, business and team, not just the job description. | |
+| **P3** | On your team. On your contract. | A real member of your team. | They join your team, on your contract. | **They join your team, on your contract.** | A real member of your team: strong English, working hours that overlap with yours, and contracted directly by you. | |
+| **P4** | About four weeks. Nothing skipped. | Four weeks on average. No rushed decisions. | About four weeks, without rushing your decision. | **About four weeks, without rushing your decision.** | About four weeks to hire on average: shortlist by week three, every candidate tested first. | |
+| **P5** | We earn the same whoever you hire. | Whoever you hire, our fee is the same. | We earn the same whoever you hire. | **We earn the same whoever you hire.** | One flat fee of $6,500, whatever the salary, so we gain nothing from recommending a more expensive hire. | |
+| **P6** | Nobody you're thrilled to hire? Refunded. | Nobody you're thrilled to hire? We refund. | We carry the risk of the hire. | **We carry the risk of the hire.** (Noel's own edited words) | If no shortlisted candidate is one you're thrilled to hire, we refund you. If a hire leaves within a year, we replace them free. | |
+| **P7** | You brief. We run the search. You decide. | You don't have to become the hiring department. | Hiring doesn't have to be your second job. | **You don't have to become the hiring department.** | We shape the role with you, then run every step of the hiring process until you've made your choice. | |
+| **P8** | We see them work before you meet them. | You're not deciding alone. | We tell you who we'd hire, and why. | **We tell you who we'd hire, and why.** | We assess every candidate live on real work, and how they use AI, then say who we'd hire and why. | |
+| **P9** | A senior partner with room for you. | We don't hand over a CV and disappear. (Noel's live line) | One senior partner, in constant contact. | **We don't hand over a CV and disappear.** | One senior partner in constant contact, from brief to after the hire starts, on a deliberately limited client load. | |
+| *AI fluency* (point 8.4) | We test how they use AI. | We assess how well they use AI. | We assess how well they use AI. | **We assess how well they use AI.** | (framework 8.4: capability, judgment, communication and AI fluency) | |
 
-## Table 2: findings and decisions
+Reading order the storyteller suggests: Main, P7, P9, P2, P8, P4, P3, P1, P5, P6 (instead of 1–9).
 
-| # | Finding | What it means | Decision needed |
-|---|---|---|---|
-| 1 | **Correction:** the "same determination we'd bring to our own team / we don't rest" wording is the Main promise itself, not something Noel deleted | Restoring that standard in the Main does not conflict with Noel | None: already applied |
-| 2 | **All seven dropped naming the feeling** ("hire at peace", "so you can trust our advice"); feelings are now earned by facts (e.g. "Thrilled to hire, or refunded") | Your wow example ("guarantees so you can feel at peace") is not in any final line | **Sara:** accept facts-earn-feeling, or overrule and keep one named feeling (P6 is the natural place) |
-| 3 | **P8 / AI fluency:** Config A puts AI in P8 and moves "who we'd hire" to the Main only; Config B keeps "so you're never deciding alone" and leaves AI at point level | You said AI fluency stays in; neither config puts "AI-fluent" as a headline adjective (all say "assessed") | **Sara:** A (recommended by neuromarketer) or B (kept by three sets) |
-| 4 | **Main stake wording:** "the person we'd hire ourselves" vs "only people we'd hire" vs "don't stop until" vs "own team" | The trust ranking favours a testable act over an analogy; the passion set adds effort; all are AMBER for the claims audit | **Sara:** pick the stake, or ask Noel which he'd stand behind |
-| 5 | **Length:** the Main is now 19–21 words in two sentences | Earlier brief: "short, concise, precise" | **Sara:** long Main plus short version, or one line |
-| 6 | **Premium vs '30–50% less':** keep "boutique"/"premium" out; premium comes from the limited client load, hand-selection and restraint | P1 stays the flattest line | None |
-| 7 | **The set reads as a serious, honest firm, not yet a startling one** (neuromarketer and website writer both say they would not call it wow) | Real wow needs facts Noel must confirm, not more copywriting | Use the Noel questions below |
+## Table 2: decisions for Sara
+
+| # | Decision | Recommendation |
+|---|---|---|
+| 1 | **Main direction.** Options: division of labour ("We do the hiring. You make the call."), named pick ("We'll tell you who we'd hire."), recognition ("Hiring shouldn't be your second job."), ICP mirror ("You run the agency. We run the hire."), passion stake ("We don't rest until we believe in the hire.", Sara's proposal, not agreed copy) | Division of labour in the Headline; the named pick lives in the sentence and in P8. Then send Noel 2–3 Main options as a forced choice |
+| 2 | **Name the ICP** ("agency") in headlines, or neutral? | Name it in the Main only; keep the rest neutral |
+| 3 | **Name a feeling** (Sara's "at peace") or let facts earn the feeling? | Facts earn the feeling; if one feeling is named, do it in the P6 sentence, not a headline |
+| 4 | **AI fluency home:** P8 sentence and point 8.4 headline (current), or P8 headline | Current placement; the site's hero already says "AI-fluent" |
+| 5 | **Reused Noel lines** ("We don't hand over a CV and disappear", "hiring department") | Approve: they are his own words |
+| 6 | **Proof numbers** (1,000+ hires, 90%+ in role after a year, 93% hire from first shortlist) in headlines? | Keep in sentences and proof lines for now; ask Noel |
+| 7 | **The 34 point rows:** same standard, or one lighter option each? | One recommended line plus one alternate each |
 
 ## Facts only Noel can confirm
 
-1. Refund: what triggers it, upfront fee or whole fee, "full" / "no questions asked"?
+1. Refund: trigger (shortlist has nobody thrilled), amount (upfront half or whole fee), and whether "full" / "no questions asked" still stand.
 2. May the homepage say $6,500, and is it per hire on every role?
-3. One senior partner, or Noel plus a team of partners?
+3. One senior partner, or Noel plus a team of partners? Is there a number behind "limited"?
 4. Is 30–50% salary-only or all-in hiring cost?
-5. Is every hire contracted directly? Can we say "in your meetings"?
-6. Is "about four weeks" an average, and is "shortlist by week three" a promise?
-7. Is every hire AI-fluent, or assessed against what the role needs (site wording)?
-8. Would he stand behind "we'd hire ourselves" as a promise?
+5. Is every hire contracted directly by the client?
+6. Is "about four weeks" an average, and is "shortlist by week three" a commitment?
+7. Is every hire AI-fluent, or assessed against what the role needs?
+8. Will he stand behind naming who we'd hire on every search?
+
+## Errors we found in our own process (so they are not repeated)
+
+- The "own team / we don't rest" wording is Sara's proposal, not agreed copy, and there is no evidence Noel endorses it.
+- The specialists' earlier "headlines" were sentence-length; the Headline column needs short spoken lines.
+- "Convergence" across specialists is not independent evidence; simulated readers and predicted Noel verdicts are not data.
+- Banning "agency" / "founder" was the lead's compromise, not Sara's decision.
+- Lines removed for overreach: "the person we'd hire ourselves", "in your meetings", "you decide when you're ready", "never…" absolutes, "until your final interviews", "We're your hiring department".
