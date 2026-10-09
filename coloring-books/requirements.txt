@@ -1,0 +1,4 @@
+openai>=1.40
+pillow>=10
+numpy>=1.26
+reportlab>=4
